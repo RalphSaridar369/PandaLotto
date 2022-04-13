@@ -38,6 +38,11 @@ const Register = () => {
             </div>
             <Checkbox right={<div className='checkbox-text'>Accept Terms and Conditions</div>} />  
             <Checkbox right={<div className='checkbox-text'>I’m 18 years old or older</div>} />  
+            <div className='register-button'>
+              <div className='register-button-text'>
+                Create Account
+              </div>
+            </div>
           </div>
         </div>
 
@@ -57,7 +62,7 @@ const Register = () => {
           </div>
           <div className='sign-in-button'>
             <div className="sign-in-button-text-1">
-              Already have an account ? <div className="sign-in-button-text-1"> Sign in!</div>
+              Already have an account ? <div className="sign-in-button-text-2"> Sign in!</div>
             </div>
           </div>
         </div>

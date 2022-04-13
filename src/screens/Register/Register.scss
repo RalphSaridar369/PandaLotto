@@ -42,6 +42,28 @@
                 font-size: global_variables.$md-text;
                 color:#fff;
             }
+
+            .register-button{
+                background-color: global_variables.$yellow;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                margin-top: 30px;
+
+                .register-button-text{
+                    font-size: global_variables.$md-text;
+                    color: global_variables.$primary;
+                    font-weight: bold;
+                }
+            }
+
+            .register-button:hover{
+                cursor: pointer;
+            }
         }
         
     }
@@ -71,6 +93,7 @@
         }
 
         .sign-in-button{
+            transition: background-color 1s, border 1s;
             padding:20px 0;
             border-radius: 16px;
             background-color: #520d8c;
@@ -84,11 +107,26 @@
             .sign-in-button-text-2{
                 color:#fff;
                 font-size: global_variables.$bg-text!important;
+                text-decoration: underline;
             }
         }
 
         .sign-in-button:hover{
             cursor: pointer;
+            background-color: #fff;
+            border:2px solid #520d8c;
+
+            
+            .sign-in-button-text-1{
+                color:#520d8c;
+                font-size: global_variables.$md-text;
+            }
+
+            .sign-in-button-text-2{
+                color:#520d8c;
+                font-size: global_variables.$bg-text!important;
+                text-decoration: underline;
+            }
         }
 
     }
