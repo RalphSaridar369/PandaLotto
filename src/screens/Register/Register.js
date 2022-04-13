@@ -9,6 +9,8 @@ const Register = () => {
     email: '',
     password: '',
     confirm: '',
+    accept_1:false,
+    accept_2:false
   })
 
   return (
@@ -36,8 +38,9 @@ const Register = () => {
               </div>
               <TextInput hideText onChange={(e) => setData({ ...data, confirm: e.target.value })} />
             </div>
-            <Checkbox right={<div className='checkbox-text'>Accept Terms and Conditions</div>} />  
-            <Checkbox right={<div className='checkbox-text'>I’m 18 years old or older</div>} />  
+            <Checkbox right={<div className='checkbox-text'>Accept Terms and Conditions</div>} value={data.accept_1} onChange={(e)=>setData({...data,accept_1:e.target.checked})}/>  
+            <Checkbox right={<div className='checkbox-text'>I’m 18 years old or older</div>} 
+            value={data.accept_2} onChange={(e)=>setData({...data,accept_2:e.target.checked})}/>  
             <div className='register-button'>
               <div className='register-button-text'>
                 Create Account
