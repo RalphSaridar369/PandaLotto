@@ -14,7 +14,7 @@ const forms = {
         .test('passwords-match', 'Passwords must match', function(value){
           return this.parent.password === value
         }),
-        password: yup.string().required(),
+        password: yup.string().required().min(8),
         email: yup.string().required().email(),
     }),
 
