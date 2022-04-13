@@ -54,7 +54,7 @@ const Login = () => {
         <div className='social-media-container'>
           <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }}>
             <div className='social-button-text'>
-              <img src={require("../../icons/twitter.png")} className="social-button-icon"/>
+              <img src={require("../../icons/facebook.png")} className="social-button-icon"/>
               Login with Facebook
             </div>
           </div>
