@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
 import { TextInput } from '../../components/TextInput/Textinput';
 import './Login.scss';
 import Background from '../../images/background.jpeg';
+import { formValidator } from '../../utils/FormValidator';
+import { setItem } from '../../utils/LocalStorage';
 
 const Login = () => {
 
+  const navigate = useNavigate();
   const [data, setData] = useState({
-    email: '',
+    userId: '',
     password: '',
     remember_me: '',
   })
@@ -18,6 +21,15 @@ const Login = () => {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+
+  const handleLogin = () => {
+    let { userId, password } = data
+    formValidator({ userId, password }, 'login', () => {
+      setItem("user-data",{userId,password});
+      setItem("token",1231);
+      navigate("/");
+    })
+  }
 
   return (
     <div className='main-login' style={myStyle}>
@@ -30,7 +42,7 @@ const Login = () => {
             <div className='input-label'>
               User ID*
             </div>
-            <TextInput value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} />
+            <TextInput value={data.userId} onChange={(e) => setData({ ...data, userId: e.target.value })} />
           </div>
           <div className='input'>
             <div className='input-label'>
@@ -50,7 +62,7 @@ const Login = () => {
         </div>
 
 
-        <div className='signin-button'>
+        <div className='signin-button' onClick={handleLogin}>
           <div className='signin-button-text'>
             Sign in
           </div>

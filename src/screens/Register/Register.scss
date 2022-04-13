@@ -1,180 +1,178 @@
-@use '../../utils/global_variables.scss';
+@use "../../utils/global_variables.scss";
 
-.main-register{
-    height:100vh;
-    padding:0 300px;
+.main-register {
+    height: 100vh;
+    padding: 0 300px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    .main-containers{
-        width: 100%!important;
+
+    .main-containers {
+        width: 100% !important;
         height: 80%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
-    .left{
-        display: flex;
-        flex-direction: column;
-        background-color: global_variables.$primary;
-        border-radius: 16px;
-        width: 75%;
-        height: 80%;
-        margin: 0 10px;
-        max-width: 744px;
-        padding:40px 80px;
-        flex:1;
-
-        .header-text{
-            font-size:  global_variables.$bg-text;
-            color:#fff;
-            text-align: center;
-        }
-
-        .inputs-container{
+        .left {
             display: flex;
-            justify-content: center;
             flex-direction: column;
-            padding:30px 0;
-
-            .input{
-                margin-bottom: 10px;
-
-                .input-label{
-                    font-size: global_variables.$md-text;
-                    color:#fff;
-                }
-            }
-
-            .checkbox-text{
-                margin:0 20px;
-                font-size: global_variables.$md-text;
-                color:#fff;
-            }
-
-            .register-button{
-                background-color: global_variables.$yellow;
-                width: 100%;
-                height: 50px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                border-radius: 8px;
-
-                .register-button-text{
-                    font-size: global_variables.$md-text;
-                    color: global_variables.$primary;
-                    font-weight: bold;
-                }
-            }
-
-            .register-button:hover{
-                cursor: pointer;
-            }
-        }
-        
-    }
-
-    .right{
-        background-color: global_variables.$white;
-        border-radius: 16px;
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        height: 80%;
-        margin: 0 10px;
-        max-width: 744px;
-        padding:40px 80px;
-        flex:1;
-
-        .header-text{
-            text-align: center;
-            color:#090021;
-            font-weight: bold;
-            font-size: global_variables.$md-text;
-            margin-bottom: 40px;
-        }
-
-        .text{
-            text-align: center;
-            color:#090021;
-            font-size: global_variables.$md-text;
-            margin-bottom: 40px;
-        }
-
-        .sign-in-button{
-            transition: background-color 1s, border 1s;
-            padding:20px 0;
+            background-color: global_variables.$primary;
             border-radius: 16px;
-            background-color: #520d8c;
-            text-align: center;
+            width: 75%;
+            height: 80%;
+            margin: 0 10px;
+            max-width: 744px;
+            padding: 40px 80px;
+            flex: 1;
 
-            .sign-in-button-text-1{
-                text-decoration: none!important;
-                color:#fff;
-                font-size: global_variables.$md-text;
+            .header-text {
+                font-size: global_variables.$bg-text;
+                color: #fff;
+                text-align: center;
             }
 
-            .sign-in-button-text-2{
-                color:#fff;
-                font-size: global_variables.$bg-text!important;
-                text-decoration: underline;
+            .inputs-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 30px 0;
+
+                .input {
+                    margin-bottom: 10px;
+
+                    .input-label-container {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .input-label {
+                        font-size: global_variables.$md-text;
+                        color: #fff;
+                    }
+                }
+
+                .checkbox-text {
+                    margin: 0 20px;
+                    font-size: global_variables.$md-text;
+                    color: #fff;
+                }
+
+                .register-button {
+                    background-color: global_variables.$yellow;
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    .register-button-text {
+                        font-size: global_variables.$md-text;
+                        color: global_variables.$primary;
+                        font-weight: bold;
+                    }
+                }
+
+                .register-button:hover {
+                    cursor: pointer;
+                }
             }
         }
 
-        .sign-in-button:hover{
-            cursor: pointer;
-            background-color: #fff;
-            border:2px solid #520d8c;
+        .right {
+            background-color: global_variables.$white;
+            border-radius: 16px;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            margin: 0 10px;
+            max-width: 744px;
+            padding: 40px 80px;
+            flex: 1;
 
-            
-            .sign-in-button-text-1{
-                color:#520d8c;
+            .header-text {
+                text-align: center;
+                color: #090021;
+                font-weight: bold;
                 font-size: global_variables.$md-text;
+                margin-bottom: 40px;
             }
 
-            .sign-in-button-text-2{
-                color:#520d8c;
-                font-size: global_variables.$bg-text!important;
-                text-decoration: underline;
+            .text {
+                text-align: center;
+                color: #090021;
+                font-size: global_variables.$md-text;
+                margin-bottom: 40px;
+            }
+
+            .sign-in-button {
+                transition: background-color 1s, border 1s;
+                padding: 20px 0;
+                border-radius: 16px;
+                background-color: #520d8c;
+                text-align: center;
+
+                .sign-in-button-text-1 {
+                    text-decoration: none !important;
+                    color: #fff;
+                    font-size: global_variables.$md-text;
+                }
+
+                .sign-in-button-text-2 {
+                    color: #fff;
+                    font-size: global_variables.$bg-text !important;
+                    text-decoration: underline;
+                }
+            }
+
+            .sign-in-button:hover {
+                cursor: pointer;
+                background-color: #fff;
+                border: 2px solid #520d8c;
+
+                .sign-in-button-text-1 {
+                    color: #520d8c;
+                    font-size: global_variables.$md-text;
+                }
+
+                .sign-in-button-text-2 {
+                    color: #520d8c;
+                    font-size: global_variables.$bg-text !important;
+                    text-decoration: underline;
+                }
             }
         }
-
-        
-    }
-
     }
 
     @media (max-width: 1600px) {
-        .left, .right{
-
-            height: 100%!important;
+        .left,
+        .right {
+            height: 100% !important;
         }
     }
 
-    
     @media (max-width: 1400px) {
         height: 100%;
-        padding:0px!important;
-        
-        .main-containers{
+        padding: 0px !important;
+
+        .main-containers {
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
         }
 
-        .left, .right{
-            border-radius: 0px!important;
-            padding:40px 20px;
+        .left,
+        .right {
+            border-radius: 0px !important;
+            padding: 40px 20px;
         }
-
     }
-
-
 }
-
