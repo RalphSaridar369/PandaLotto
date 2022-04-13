@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.scss';
 import { TextInput } from '../../components/TextInput/Textinput';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
@@ -63,9 +64,9 @@ const Register = () => {
             The email address you enter here is only used for verification and cannot be used for signing in or recovery.
           </div>
           <div className='sign-in-button'>
-            <div className="sign-in-button-text-1">
+            <Link to="/login" className="sign-in-button-text-1">
               Already have an account ? <div className="sign-in-button-text-2"> Sign in!</div>
-            </div>
+            </Link>
           </div>
         </div>
         </div>
