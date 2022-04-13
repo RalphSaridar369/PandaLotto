@@ -1,10 +1,13 @@
 @use '../../utils/global_variables.scss';
 
-.main{
+.main-login{
+    height:100vh;
+    padding:0 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // background-image: ;
 
     .sign-in-container{
         border-radius: 16px;
@@ -57,7 +60,7 @@
 
         
 
-        .register-button{
+        .signin-button{
             background-color: global_variables.$yellow;
             width: 100%;
             height: 50px;
@@ -68,14 +71,14 @@
             border-radius: 8px;
             margin-top: 30px;
 
-            .register-button-text{
+            .signin-button-text{
                 font-size: global_variables.$md-text;
                 color: global_variables.$primary;
                 font-weight: bold;
             }
         }
 
-        .register-button:hover{
+        .signin-button:hover{
             cursor: pointer;
         }
 
@@ -100,6 +103,93 @@
                     font-weight: bold;
                 }
             }
+        }
+    }
+
+
+
+    .register-button{
+        padding:40px 80px;
+        margin-top: 20px;
+        width: 40%;
+        transition: background-color 1s, border 1s;
+        border-radius: 16px;
+        background-color: #520d8c;
+        text-align: center;
+
+        .register-button-text-1{
+            text-decoration: none!important;
+            color:#fff;
+            font-size: global_variables.$md-text;
+        }
+
+        .register-button-text-2{
+            color:#fff;
+            font-size: global_variables.$bg-text!important;
+            text-decoration: underline;
+        }
+    }
+
+    .register-button:hover{
+        cursor: pointer;
+        background-color: #fff;
+        border:2px solid #520d8c;
+
+        
+        .register-button-text-1{
+            color:#520d8c;
+            font-size: global_variables.$md-text;
+        }
+
+        .register-button-text-2{
+            color:#520d8c;
+            font-size: global_variables.$bg-text!important;
+            text-decoration: underline;
+        }
+    }
+
+    
+
+    
+    @media (max-width: 1400px) {
+        padding:0px!important;
+    }
+
+    @media (max-width: global_variables.$tablet){
+        .social-media-container{
+            margin-top: 40px;
+            flex-direction: column!important;
+        }
+
+        .register-button{
+            padding:20px 80px;
+
+            
+
+        .register-button-text-2{
+            font-size: global_variables.$md-text!important;
+        }
+        }
+    }
+
+    @media (max-width: global_variables.$phone){
+        .sign-in-container{
+            padding: auto!important;
+            margin:0px!important;
+            width: 100%;
+            align-items: center!important;
+            border-radius: 0;
+
+            .signin-button{
+                align-self: center;
+                width: 50%;;
+            }
+        }
+
+        
+        .register-button{
+            width: 100%;
+            border-radius: 0;
         }
     }
 }

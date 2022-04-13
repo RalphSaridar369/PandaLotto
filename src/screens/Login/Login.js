@@ -13,7 +13,7 @@ const Login = () => {
   })
 
   return (
-    <div className='main'>
+    <div className='main-login'>
       <div className='sign-in-container'>
         <div className='sign-in-header'>
           Sign in
@@ -43,20 +43,35 @@ const Login = () => {
         </div>
 
 
-        <div className='register-button'>
-          <div className='register-button-text'>
+        <div className='signin-button'>
+          <div className='signin-button-text'>
             Sign in
+          </div>
+        </div>
+
+
+
+        <div className='social-media-container'>
+          <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }}>
+            <div className='social-button-text'>
+              <img src="../../icons/icons8-twitter-48.png" />
+              Login with Facebook
+            </div>
+          </div>
+          <div className='social-button' style={{ backgroundColor: '#5fbcdd', marginLeft: '5px' }}>
+            <div className='social-button-text'>
+              Login with Twitter
+            </div>
           </div>
         </div>
       </div>
 
-      <div className='social-media-container'>
-        <div className='social-button' style={{backgroundColor:'#505eba'}}>
-          <div className='social-button-text'>
-            Sign in
+
+          <div className='register-button'>
+            <Link to="/register" className="register-button-text-1">
+              Don't have an account yet ?{'\n'} <div className="register-button-text-2">Create one for free!</div>
+            </Link>
           </div>
-        </div>
-      </div>
     </div>
   )
 }
