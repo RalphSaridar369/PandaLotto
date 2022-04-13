@@ -98,9 +98,17 @@
                 margin-top: 30px;
 
                 .social-button-text{
+                    align-items: center;
+                    text-align: center;
                     font-size: global_variables.$md-text;
                     color: #fff;
                     font-weight: bold;
+
+                    .social-button-icon{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 10px;
+                    }
                 }
             }
         }
@@ -159,7 +167,13 @@
         .social-media-container{
             margin-top: 40px;
             flex-direction: column!important;
+
         }
+
+            
+        .forgot-password-container{
+            flex-direction: column!important;
+           }
 
         .register-button{
             padding:20px 80px;
@@ -168,15 +182,15 @@
 
         .register-button-text-2{
             font-size: global_variables.$md-text!important;
-        }
+            }
         }
     }
 
     @media (max-width: global_variables.$phone){
         .sign-in-container{
-            padding: auto!important;
+            padding: 40px 0px;
             margin:0px!important;
-            width: 100%;
+            width: 100%!important;
             align-items: center!important;
             border-radius: 0;
 

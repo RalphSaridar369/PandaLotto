@@ -54,12 +54,13 @@ const Login = () => {
         <div className='social-media-container'>
           <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }}>
             <div className='social-button-text'>
-              <img src="../../icons/icons8-twitter-48.png" />
+              <img src={require("../../icons/twitter.png")} className="social-button-icon"/>
               Login with Facebook
             </div>
           </div>
           <div className='social-button' style={{ backgroundColor: '#5fbcdd', marginLeft: '5px' }}>
             <div className='social-button-text'>
+            <img src={require("../../icons/twitter.png")} className="social-button-icon"/>
               Login with Twitter
             </div>
           </div>
