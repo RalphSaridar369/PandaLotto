@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { MainContext } from './utils/MainContext';
 import Header from './components/Header/Header';
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route, Navigate, BrowserRouter as Router } from "react-router-dom";
 import { loggedInRoutes, normalRoutes } from './utils/Routes';
 import { getItem } from './utils/LocalStorage';
+import ProtectedRoute from './utils/ProtectedRoute';
 
 function App() {
 
-  useEffect(()=>{
-    setLoggedIn(getItem('token')?true:false)
-  },[])
+  useEffect(() => {
+    setLoggedIn(getItem('token') ? true : false)
+  }, [])
 
   const [loggedIn, setLoggedIn] = useState(false);
 
@@ -30,7 +31,13 @@ function App() {
 
         <Routes>
           {returnNormalRoutes()}
-          {loggedIn && returnLoggedRoutes()}
+          <Route element={<ProtectedRoute />} >
+            {returnLoggedRoutes()}
+          </Route>
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
         </Routes>
       </MainContext.Provider>
     </Router>
