@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MainContext } from './utils/MainContext';
 import Header from './components/Header/Header';
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { loggedInRoutes, normalRoutes } from './utils/Routes';
-import Home from './screens/Home/Home';
+import { getItem } from './utils/LocalStorage';
 
 function App() {
+
+  useEffect(()=>{
+    setLoggedIn(getItem('token')?true:false)
+  },[])
+
   const [loggedIn, setLoggedIn] = useState(false);
 
   const returnNormalRoutes = () => {

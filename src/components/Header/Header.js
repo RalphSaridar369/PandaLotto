@@ -1,10 +1,17 @@
 import React, { useContext } from 'react'
+import { getItem, removeItem, setItem } from '../../utils/LocalStorage';
 import { MainContext } from '../../utils/MainContext';
 import './Header.scss';
 
 const Header = () => {
   const {loggedIn, setLogIn} = useContext(MainContext)
   const handleLogin = () =>{
+      if(loggedIn){
+          removeItem('token');
+      }
+      else{
+        setItem('token',123);
+      }
     setLogIn(loggedIn?false:true)
   }
   return (
