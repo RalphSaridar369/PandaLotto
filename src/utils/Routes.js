@@ -7,17 +7,20 @@ export const normalRoutes = [
     {   
         exact:true,
         path:"/",
-        component:<Home/>
+        component:<Home/>,
+        header:true
     },
     {   
         exact:false,
         path:"/login",
-        component:<Login/>
+        component:<Login/>,
+        header:false
     },
     {   
         exact:false,
         path:"/register",
-        component:<Register/>
+        component:<Register/>,
+        header:false
     },
 ]
 
@@ -25,6 +28,7 @@ export const loggedInRoutes = [
     {   
         exact:false,
         path:"/protected",
-        component:<ProtectedPath/>
+        component:<ProtectedPath/>,
+        header:true
     },
 ]

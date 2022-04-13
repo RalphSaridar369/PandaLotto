@@ -15,7 +15,10 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const returnNormalRoutes = () => {
-    return normalRoutes.map((item, index) => <Route key={index} path={item.path} exact={item.exact} element={item.component} />)
+    return normalRoutes.map((item, index) => {
+      let element = item.header?<><Header/>{item.element}</>:item.component;
+    return <Route key={index} path={item.path} exact={item.exact} element={element} />
+    })
   }
 
   const returnLoggedRoutes = () => {
@@ -25,10 +28,6 @@ function App() {
   return (
     <Router>
       <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }} >
-        <div>
-          <Header />
-        </div>
-
         <Routes>
           {returnNormalRoutes()}
           <Route element={<ProtectedRoute />} >

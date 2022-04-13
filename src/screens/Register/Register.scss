@@ -1,0 +1,53 @@
+@use '../../utils/global_variables.scss';
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding:0 300px;
+    
+    .left{
+        background-color: global_variables.$primary;
+        border-radius: 16px;
+        width: 500px;
+        margin: 0 10px;
+        max-width: 744px;
+        padding:10px 80px;
+        flex:1;
+
+        .header-text{
+            font-size:  global_variables.$bg-text;
+            color:#fff;
+            text-align: center;
+        }
+
+        .inputs-container{
+            display: flex;
+            flex-direction: column;
+            padding:60px 0;
+
+            .input{
+                margin-bottom: 30px;
+
+                .input-label{
+                    font-size: global_variables.$md-text;
+                    color:#fff;
+                }
+            }
+        }
+        
+    }
+
+    .right{
+        background-color: global_variables.$white;
+        border-radius: 16px;
+        width: 500px;
+        height: 500px;
+        margin: 0 10px;
+        max-width: 744px;
+        padding:10px 40px;
+        flex:1
+    }
+}
