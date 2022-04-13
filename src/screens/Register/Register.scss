@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:100vh;
     padding:0 300px;
     
     .left{
@@ -14,7 +14,7 @@
         width: 500px;
         margin: 0 10px;
         max-width: 744px;
-        padding:10px 80px;
+        padding:40px 80px;
         flex:1;
 
         .header-text{
@@ -36,6 +36,12 @@
                     color:#fff;
                 }
             }
+
+            .checkbox-text{
+                margin:0 20px;
+                font-size: global_variables.$md-text;
+                color:#fff;
+            }
         }
         
     }
@@ -44,10 +50,46 @@
         background-color: global_variables.$white;
         border-radius: 16px;
         width: 500px;
-        height: 500px;
         margin: 0 10px;
         max-width: 744px;
-        padding:10px 40px;
-        flex:1
+        padding:40px 80px;
+        flex:1;
+
+        .header-text{
+            text-align: center;
+            color:#090021;
+            font-weight: bold;
+            font-size: global_variables.$md-text;
+            margin-bottom: 40px;
+        }
+
+        .text{
+            text-align: center;
+            color:#090021;
+            font-size: global_variables.$md-text;
+            margin-bottom: 40px;
+        }
+
+        .sign-in-button{
+            padding:20px 0;
+            border-radius: 16px;
+            background-color: #520d8c;
+            text-align: center;
+
+            .sign-in-button-text-1{
+                color:#fff;
+                font-size: global_variables.$md-text;
+            }
+
+            .sign-in-button-text-2{
+                color:#fff;
+                font-size: global_variables.$bg-text!important;
+            }
+        }
+
+        .sign-in-button:hover{
+            cursor: pointer;
+        }
+
     }
 }

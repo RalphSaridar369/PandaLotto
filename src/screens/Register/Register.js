@@ -1,43 +1,66 @@
 import React, { useState } from 'react';
 import './Register.scss';
 import { TextInput } from '../../components/TextInput/Textinput';
+import { Checkbox } from '../../components/Checkbox/Checkbox';
 
 const Register = () => {
 
-  const [data,setData] = useState({
-    email:'',
-    password:'',
-    confirm:'',
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+    confirm: '',
   })
 
   return (
     <div>
       <div className='main'>
+
         <div className='left'>
           <div className='header-text'>Create an account</div>
-          <div class="inputs-container">
+          <div className="inputs-container">
             <div className='input'>
               <div className='input-label'>
                 Email*
               </div>
-              <TextInput onChange={(e)=>setData({...data,email:e.target.value})}/>
+              <TextInput onChange={(e) => setData({ ...data, email: e.target.value })} />
             </div>
             <div className='input'>
               <div className='input-label'>
                 Password*
               </div>
-              <TextInput password onChange={(e)=>setData({...data,password:e.target.value})}/>
+              <TextInput hideText onChange={(e) => setData({ ...data, password: e.target.value })} />
             </div>
             <div className='input'>
               <div className='input-label'>
                 Confirm Password*
               </div>
-              <TextInput password onChange={(e)=>setData({...data,confirm:e.target.value})}/>
+              <TextInput hideText onChange={(e) => setData({ ...data, confirm: e.target.value })} />
+            </div>
+            <Checkbox right={<div className='checkbox-text'>Accept Terms and Conditions</div>} />  
+            <Checkbox right={<div className='checkbox-text'>I’m 18 years old or older</div>} />  
+          </div>
+        </div>
+
+        <div className='right'>
+          <div className='header-text'>Creating an account with Panda Lotto</div>
+          <div className='text'>You need in account to be able to buy a ticket
+            and play with Panda Lotto.</div>
+          <div className='text'>
+            After registering, we will send your User Id by email.
+          </div>
+          <div className='text'>
+            When logging in, make sure to use the User Id sent by email, together with the Password registered here. Please keep them in a safe place.
+          </div>
+          <div className='text'>
+
+            The email address you enter here is only used for verification and cannot be used for signing in or recovery.
+          </div>
+          <div className='sign-in-button'>
+            <div className="sign-in-button-text-1">
+              Already have an account ? <div className="sign-in-button-text-1"> Sign in!</div>
             </div>
           </div>
         </div>
-      </div>
-      <div className='right'>
 
       </div>
     </div>
