@@ -27,7 +27,7 @@ function App() {
 
   return (
     <Router>
-      <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }} >
+      <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}>
         <Routes>
           {returnNormalRoutes()}
           <Route element={<ProtectedRoute />} >

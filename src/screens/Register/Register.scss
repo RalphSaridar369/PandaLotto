@@ -1,17 +1,28 @@
 @use '../../utils/global_variables.scss';
 
 .main{
+    height:100vh;
+    padding:0 300px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height:100vh;
-    padding:0 300px;
     
+    .main-containers{
+        width: 100%!important;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
     .left{
+        display: flex;
+        flex-direction: column;
         background-color: global_variables.$primary;
         border-radius: 16px;
-        width: 500px;
+        width: 75%;
+        height: 80%;
         margin: 0 10px;
         max-width: 744px;
         padding:40px 80px;
@@ -25,11 +36,12 @@
 
         .inputs-container{
             display: flex;
+            justify-content: center;
             flex-direction: column;
-            padding:60px 0;
+            padding:30px 0;
 
             .input{
-                margin-bottom: 30px;
+                margin-bottom: 10px;
 
                 .input-label{
                     font-size: global_variables.$md-text;
@@ -71,7 +83,10 @@
     .right{
         background-color: global_variables.$white;
         border-radius: 16px;
-        width: 500px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        height: 80%;
         margin: 0 10px;
         max-width: 744px;
         padding:40px 80px;
@@ -129,5 +144,37 @@
             }
         }
 
+        
     }
+
+    }
+
+    @media (max-width: 1600px) {
+        .left, .right{
+
+            height: 100%!important;
+        }
+    }
+
+    
+    @media (max-width: 1400px) {
+        height: 100%;
+        padding:0px!important;
+        
+        .main-containers{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left, .right{
+            border-radius: 0px!important;
+            padding:40px 20px;
+        }
+
+    }
+
+
 }
+

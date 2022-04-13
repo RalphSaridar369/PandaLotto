@@ -14,9 +14,8 @@ const Register = () => {
   })
 
   return (
-    <div>
       <div className='main'>
-
+        <div className='main-containers'>
         <div className='left'>
           <div className='header-text'>Create an account</div>
           <div className="inputs-container">
@@ -69,9 +68,8 @@ const Register = () => {
             </div>
           </div>
         </div>
-
+        </div>
       </div>
-    </div>
   )
 }
 
