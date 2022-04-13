@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Register.scss';
 import { TextInput } from '../../components/TextInput/Textinput';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
+import Background from '../../images/background.jpeg';
 
 const Register = () => {
 
@@ -14,8 +15,14 @@ const Register = () => {
     accept_2:false
   })
 
+  const myStyle = {
+    backgroundImage: `url(${Background})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-      <div className='main-register'>
+      <div className='main-register' style={myStyle}>
         <div className='main-containers'>
         <div className='left'>
           <div className='header-text'>Create an account</div>

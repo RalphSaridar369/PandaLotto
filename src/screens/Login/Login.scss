@@ -1,8 +1,8 @@
 @use '../../utils/global_variables.scss';
 
 .main-login{
-    height:100vh;
-    padding:0 300px;
+    height: 100vh;
+    padding:20px 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,7 +117,7 @@
 
 
 
-    .register-button{
+    .create-button{
         padding:40px 80px;
         margin-top: 20px;
         width: 40%;
@@ -126,31 +126,31 @@
         background-color: #520d8c;
         text-align: center;
 
-        .register-button-text-1{
+        .create-button-text-1{
             text-decoration: none!important;
             color:#fff;
             font-size: global_variables.$md-text;
         }
 
-        .register-button-text-2{
+        .create-button-text-2{
             color:#fff;
             font-size: global_variables.$bg-text!important;
             text-decoration: underline;
         }
     }
 
-    .register-button:hover{
+    .create-button:hover{
         cursor: pointer;
         background-color: #fff;
         border:2px solid #520d8c;
 
         
-        .register-button-text-1{
+        .create-button-text-1{
             color:#520d8c;
             font-size: global_variables.$md-text;
         }
 
-        .register-button-text-2{
+        .create-button-text-2{
             color:#520d8c;
             font-size: global_variables.$bg-text!important;
             text-decoration: underline;
@@ -176,12 +176,12 @@
             flex-direction: column!important;
            }
 
-        .register-button{
+        .create-button{
             padding:20px 80px;
 
             
 
-        .register-button-text-2{
+        .create-button-text-2{
             font-size: global_variables.$md-text!important;
             }
         }
@@ -197,14 +197,14 @@
 
             .signin-button{
                 align-self: center;
-                width: 50%;;
+                width: 50%;
             }
         }
 
         
-        .register-button{
-            width: 100%;
-            border-radius: 0;
-        }
+        // .create-button{
+        //     width: 100%;
+        //     border-radius: 0;
+        // }
     }
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
 import { TextInput } from '../../components/TextInput/Textinput';
 import './Login.scss';
+import Background from '../../images/background.jpeg';
 
 const Login = () => {
 
@@ -12,8 +13,14 @@ const Login = () => {
     remember_me: '',
   })
 
+  const myStyle = {
+    backgroundImage: `url(${Background})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <div className='main-login'>
+    <div className='main-login' style={myStyle}>
       <div className='sign-in-container'>
         <div className='sign-in-header'>
           Sign in
@@ -54,13 +61,13 @@ const Login = () => {
         <div className='social-media-container'>
           <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }}>
             <div className='social-button-text'>
-              <img src={require("../../icons/facebook.png")} className="social-button-icon"/>
+              <img src={require("../../icons/facebook.png")} className="social-button-icon" />
               Login with Facebook
             </div>
           </div>
           <div className='social-button' style={{ backgroundColor: '#5fbcdd', marginLeft: '5px' }}>
             <div className='social-button-text'>
-            <img src={require("../../icons/twitter.png")} className="social-button-icon"/>
+              <img src={require("../../icons/twitter.png")} className="social-button-icon" />
               Login with Twitter
             </div>
           </div>
@@ -68,11 +75,11 @@ const Login = () => {
       </div>
 
 
-          <div className='register-button'>
-            <Link to="/register" className="register-button-text-1">
-              Don't have an account yet ?{'\n'} <div className="register-button-text-2">Create one for free!</div>
-            </Link>
-          </div>
+      <div className='create-button'>
+        <Link to="/register" className="create-button-text-1">
+          Don't have an account yet ?{'\n'} <div className="create-button-text-2">Create one for free!</div>
+        </Link>
+      </div>
     </div>
   )
 }
