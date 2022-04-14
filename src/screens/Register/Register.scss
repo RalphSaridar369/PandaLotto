@@ -1,249 +1,254 @@
 @use "../../utils/global_variables.scss";
 
-.main-register {
-    height: 100vh;
-    padding: 0px 300px !important;
+.main-containers {
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #090021;
+  margin: 0 auto;
+  padding: 0 5vw;
+
+  .logo {
+    position: absolute;
+    top: 5%;
+    height: 11vh;
+  }
+  .left {
     display: flex;
-    flex-direction: row;
-    // justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    background-color: global_variables.$primary;
+    border-radius: 16px;
+    width: 38.75%;
+    margin: 20vh 0vw 0;
+    max-height: 70vh;
+    padding: 0% 4%;
+    overflow: auto;
 
-    .main-containers {
-        width: 100% !important;
-        height: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        // align-items: center;
-
-        .left {
-            display: flex;
-            flex-direction: column;
-            background-color: global_variables.$primary;
-            border-radius: 16px;
-            width: 80%;
-            height: 80%;
-            margin: 0 10px;
-            max-width: 744px;
-            padding: 40px 80px;
-            flex: 1;
-
-            .header-text {
-                font-size: global_variables.$bg-text;
-                color: #fff;
-                text-align: center;
-            }
-
-            .inputs-container {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                padding: 30px 0;
-                width: 100%;
-
-                .input {
-                    width: 100%!important;
-                    margin-bottom: 10px;
-
-                    .input-label-container {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-
-                    .input-label {
-                        font-size: global_variables.$md-text;
-                        color: #fff;
-                    }
-                }
-
-                .checkbox-container {
-                    margin-bottom: 20px;
-                    .checkbox {
-                        margin-bottom: 5px;
-                    }
-                }
-
-                .checkbox-text {
-                    margin: 0 20px;
-                    font-size: global_variables.$md-text;
-                    color: #fff;
-                }
-
-                .register-button {
-                    background-color: global_variables.$yellow;
-                    width: 100%;
-                    height: 50px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 8px;
-
-                    .register-button-text {
-                        font-size: global_variables.$md-text;
-                        color: global_variables.$primary;
-                        font-weight: bold;
-                    }
-                }
-
-                .register-button:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .right {
-            background-color: global_variables.$white;
-            border-radius: 16px;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            height: 80%;
-            margin: 0 10px;
-            max-width: 744px;
-            padding: 40px 80px;
-            flex: 1;
-
-            .header-text {
-                text-align: center;
-                color: #090021;
-                font-weight: bold;
-                font-size: global_variables.$md-text;
-                margin-bottom: 40px;
-            }
-
-            .text {
-                text-align: center;
-                color: #090021;
-                font-size: global_variables.$md-text;
-                margin-bottom: 40px;
-            }
-
-            .sign-in-button {
-                transition: background-color 1s, border 1s;
-                padding: 20px 0;
-                border-radius: 16px;
-                background-color: #520d8c;
-                text-align: center;
-
-                .sign-in-button-text-1 {
-                    text-decoration: none !important;
-                    color: #fff;
-                    font-size: global_variables.$md-text;
-                }
-
-                .sign-in-button-text-2 {
-                    color: #fff;
-                    font-size: global_variables.$bg-text;
-                    text-decoration: underline;
-                }
-            }
-
-            .sign-in-button:hover {
-                cursor: pointer;
-                background-color: #fff;
-                border: 2px solid #520d8c;
-
-                .sign-in-button-text-1 {
-                    color: #520d8c;
-                    font-size: global_variables.$md-text;
-                }
-
-                .sign-in-button-text-2 {
-                    color: #520d8c;
-                    font-size: global_variables.$bg-text;
-                    text-decoration: underline;
-                }
-            }
-        }
+    .header-text {
+      font-size: global_variables.$bg-text;
+      color: #fff;
+      text-align: center;
+      margin-top: 5%;
+      height: 15%;
     }
-}
 
-@media (max-width: 1600px) {
-    .left,
-    .right {
-        padding: 40px 20px !important;
-        height: 90% !important;
-        width: 100% !important;
+    .inputs-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      //   padding: 30px 0;
+      height: 85%;
+      width: 100%;
+      margin: 0 auto 5%;
 
-        .text {
-            margin-bottom: 5px !important;
-        }
-
-        .sign-in-button {
-            margin-top: 10px;
-            padding: 5px 0 !important;
-
-            .sign-in-button-text-2 {
-                font-size: global_variables.$md-text !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 1250px) {
-    .main-register {
-        padding: 0px 100px !important;
-    }
-}
-
-@media (max-width: 1200px) {
-    .inputs-container{
-        padding:10px 0!important;
-
-        input{
-            margin-bottom: 5px!important;
-        }
+      .input {
+        width: 100%;
 
         .input-label-container {
-            flex-direction: column !important;
-            align-items: flex-start !important;
-    
-            .input-label:nth-child(2) {
-                display: none;
-                margin-top: 5px;
-            }
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
         }
 
-        .input-label, .checkbox-text{
-            font-size: global_variables.$sm-text!important;
+        .input-label {
+          font-size: global_variables.$md-text;
+          color: #fff;
         }
+      }
+
+      .checkbox-text {
+        margin: 0 20px;
+        font-size: global_variables.$md-text;
+        color: #fff;
+      }
+
+      .register-button {
+        background-color: global_variables.$yellow;
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+
+        .register-button-text {
+          font-size: global_variables.$md-text;
+          color: global_variables.$primary;
+          font-weight: bold;
+        }
+      }
+
+      .register-button:hover {
+        cursor: pointer;
+      }
     }
+  }
+
+  .right {
+    position: relative;
+    background-color: global_variables.$white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 38.75%;
+    margin: 20vh 0vw 0;
+    max-height: 70vh;
+    padding: 0% 4%;
+    .header-text {
+      text-align: center;
+      color: #090021;
+      font-weight: bold;
+      font-size: global_variables.$md-text;
+      margin: 5% 0;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 65%;
+      overflow: auto;
+      text-align: center;
+    }
+    .text {
+      text-align: center;
+      color: #090021;
+      font-size: global_variables.$md-text;
+    }
+
+    .sign-in-button {
+      display: flex;
+      margin: 2% auto 5%;
+      width: 70%;
+      max-height: 19%;
+      transition: background-color 1s, border 1s;
+      padding: 1vw 0;
+      border-radius: 16px;
+      background-color: #520d8c;
+      text-align: center;
+      align-items: center;
+
+      .sign-in-button-text-1 {
+        width: 90%;
+        margin: 0% auto;
+        text-decoration: none !important;
+        color: #fff;
+        font-size: global_variables.$md-text;
+      }
+
+      .sign-in-button-text-2 {
+        width: 90%;
+        margin: 0% auto;
+        color: #fff;
+        font-size: global_variables.$bg-text;
+        text-decoration: underline;
+      }
+    }
+
+    .sign-in-button:hover {
+      cursor: pointer;
+      background-color: #fff;
+      border: 2px solid #520d8c;
+
+      .sign-in-button-text-1 {
+        color: #520d8c;
+        font-size: global_variables.$md-text;
+      }
+
+      .sign-in-button-text-2 {
+        color: #520d8c;
+        font-size: global_variables.$bg-text;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
+// @media (max-width: 1600px) {
+//   .left,
+//   .right {
+//     padding: 40px 20px !important;
+//     // height: 90% !important;
+//     width: 100% !important;
+
+//     .text {
+//       margin-bottom: 5px !important;
+//     }
+
+//     .sign-in-button {
+//       margin-top: 10px;
+//       padding: 5px 0 !important;
+
+//       .sign-in-button-text-2 {
+//         font-size: global_variables.$md-text !important;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 1250px) {
+//   .main-register {
+//     padding: 0px 100px !important;
+//   }
+// }
+
+// @media (max-width: 1200px) {
+//   .inputs-container {
+//     padding: 10px 0 !important;
+
+//     input {
+//       margin-bottom: 5px !important;
+//     }
+
+//     .input-label-container {
+//       flex-direction: column !important;
+//       align-items: flex-start !important;
+
+//       .input-label:nth-child(2) {
+//         display: none;
+//         margin-top: 5px;
+//       }
+//     }
+
+//     .input-label,
+//     .checkbox-text {
+//       font-size: global_variables.$sm-text !important;
+//     }
+//   }
+// }
+
 @media (max-width: global_variables.$tablet) {
-    .main-register {
-        overflow-x: hidden;
-        height: 100%;
-        // width: 100%!important;
-        padding: 0px !important;
+  .main-containers {
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    .inputs-container {
+      width: 90% !important;
     }
-
-    .inputs-container{
-        width: 90%!important;
-    }
-
-    .sign-in-button{
-        width: 90%!important;
-    }
-
-    .main-containers {
-        height: 100%;
-        width: 100%!important;
-        display: flex;
-        flex-direction: column !important;
+    .logo {
+      display: none;
     }
 
     .left,
     .right {
-        margin:0!important;
-        border-radius: 0px !important;
-    }
+      width: 90%;
+      //   height: 350px;
 
+      margin: 5% auto;
+      .sign-in-button {
+        width: 90% !important;
+      }
+    }
+    .left {
+      margin-top: 50px;
+    }
 
     .sign-in-button {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
+  }
 }
