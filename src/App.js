@@ -17,8 +17,7 @@ function App() {
 
   const returnNormalRoutes = () => {
     return normalRoutes.map((item, index) => {
-      let element = item.header?<><Header/>{item.element}</>:item.component;
-    return <Route key={index} path={item.path} exact={item.exact} element={element} />
+      return <Route key={index} path={item.path} exact={item.exact} element={item.component} />
     })
   }
 
@@ -29,18 +28,19 @@ function App() {
   return (
     <Router>
       <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}>
-            <div className='App'>
+        <div className='App'>
+          <Header />
           <Routes>
-              {returnNormalRoutes()}
-              <Route element={<ProtectedRoute />} >
-                {returnLoggedRoutes()}
-              </Route>
-              <Route
-                path="*"
-                element={<Navigate to="/" replace />}
-              />
+            {returnNormalRoutes()}
+            <Route element={<ProtectedRoute />} >
+              {returnLoggedRoutes()}
+            </Route>
+            <Route
+              path="*"
+              element={<Navigate to="/" replace />}
+            />
           </Routes>
-          </div>
+        </div>
       </MainContext.Provider>
     </Router>
   );
