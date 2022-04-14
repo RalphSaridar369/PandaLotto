@@ -46,7 +46,7 @@ const Register = () => {
           <div className="input">
             <div className="input-label-container">
               <div className="input-label">Password*</div>
-              <div className="input-label">
+              <div className="input-label-2">
                 Your password should be 8 characters or longer.
               </div>
             </div>
@@ -62,7 +62,7 @@ const Register = () => {
               onChange={(e) => setData({ ...data, confirm: e.target.value })}
             />
           </div>
-          <div class="checkbox-container">
+          <div className="checkbox-container">
             <Checkbox
               className="checkbox"
               right={
@@ -88,7 +88,7 @@ const Register = () => {
 
       <div className="right">
         <div className="header-text">Creating an account with Panda Lotto</div>
-        <div className="text-container" style={{ padding: "0 40px" }}>
+        <div className="text-container">
           <div className="text">
             You need in account to be able to buy a ticket and play with Panda
             Lotto.
