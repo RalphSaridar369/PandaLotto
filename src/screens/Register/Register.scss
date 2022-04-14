@@ -190,13 +190,25 @@
 }
 
 @media (max-width: 1200px) {
-    .input-label-container {
-        flex-direction: column !important;
-        align-items: flex-start !important;
+    .inputs-container{
+        padding:10px 0!important;
 
-        .input-label:nth-child(2) {
-            display: none;
-            margin-top: 5px;
+        input{
+            margin-bottom: 5px!important;
+        }
+
+        .input-label-container {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+    
+            .input-label:nth-child(2) {
+                display: none;
+                margin-top: 5px;
+            }
+        }
+
+        .input-label, .checkbox-text{
+            font-size: global_variables.$sm-text!important;
         }
     }
 }
