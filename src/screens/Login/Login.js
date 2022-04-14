@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
 import { TextInput } from '../../components/TextInput/Textinput';
@@ -17,6 +17,10 @@ const Login = () => {
     password: '',
     remember_me: false,
   })
+
+  useEffect(()=>{
+    console.log('effect cookie: ',cookie.get('user'))
+  },[])
 
   const myStyle = {
     backgroundColor:'#090021',
