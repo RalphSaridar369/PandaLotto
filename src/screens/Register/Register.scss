@@ -2,7 +2,7 @@
 
 .main-register {
     height: 100vh;
-    padding: 0 300px;
+    padding: 0px 300px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -10,7 +10,7 @@
 
     .main-containers {
         width: 100% !important;
-        height: 80%;
+        height: 90%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -21,7 +21,7 @@
             flex-direction: column;
             background-color: global_variables.$primary;
             border-radius: 16px;
-            width: 75%;
+            width: 80%;
             height: 80%;
             margin: 0 10px;
             max-width: 744px;
@@ -88,7 +88,7 @@
         .right {
             background-color: global_variables.$white;
             border-radius: 16px;
-            width: 75%;
+            width: 80%;
             display: flex;
             flex-direction: column;
             height: 80%;
@@ -127,7 +127,7 @@
 
                 .sign-in-button-text-2 {
                     color: #fff;
-                    font-size: global_variables.$bg-text !important;
+                    font-size: global_variables.$bg-text;
                     text-decoration: underline;
                 }
             }
@@ -144,7 +144,7 @@
 
                 .sign-in-button-text-2 {
                     color: #520d8c;
-                    font-size: global_variables.$bg-text !important;
+                    font-size: global_variables.$bg-text;
                     text-decoration: underline;
                 }
             }
@@ -154,11 +154,28 @@
     @media (max-width: 1600px) {
         .left,
         .right {
-            height: 100% !important;
+            padding: 40px 20px!important;
+            height: 90% !important;
+            width: 100%!important;
+
+            .text {
+                margin-bottom: 5px!important;
+            }
+
+            
+
+            .sign-in-button {
+                margin-top: 10px;
+                padding: 5px 0!important;
+
+                .sign-in-button-text-2 {
+                    font-size: global_variables.$md-text !important;
+                }
+            }
         }
     }
 
-    @media (max-width: 1400px) {
+    @media (max-width: 800px) {
         height: 100%;
         padding: 0px !important;
 
