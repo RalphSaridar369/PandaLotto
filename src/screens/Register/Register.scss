@@ -11,11 +11,6 @@
   margin: 0 auto;
   padding: 0 5vw;
 
-  .logo {
-    position: absolute;
-    top: 5%;
-    height: 11vh;
-  }
   .left {
     display: flex;
     flex-direction: column;
@@ -232,9 +227,6 @@
     overflow: auto;
     .inputs-container {
       width: 90% !important;
-    }
-    .logo {
-      display: none;
     }
 
     .left,

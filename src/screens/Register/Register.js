@@ -31,9 +31,7 @@ const Register = () => {
   };
 
   return (
-    <div className="main-containers">
-      <img src={logo} className="logo" />
-
+    <div className="main-containers" style={myStyle}>
       <div className="left">
         <div className="header-text">Create an account</div>
         <div className="inputs-container">
