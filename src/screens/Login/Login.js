@@ -16,7 +16,7 @@ const Login = () => {
   const [data, setData] = useState({
     userId: '',
     password: '',
-    remember_me: '',
+    remember_me: false,
   })
 
   const myStyle = {
@@ -36,20 +36,21 @@ const Login = () => {
   const handleCookie = (e) => {
     console.log(e)
     let { userId, password } = data;
-    formValidator({ userId, password }, 'login', () => {
-      if (!e.target.checked) {
-        console.log(1)
+    if(userId.length<1 || password.length<1){
+      alert("Make sure you fill both id and password first")
+    }
+      else if (!e.target.checked) {
         setData({ ...data, remember_me: e.target.checked })
-        // setCookie("user", { userId, password }, {
-        //   path: "/"
-        // });
+        console.log(1)
+        setCookie("user", { userId, password }, {
+          path: "/"
+        });
       }
       else {
         setData({ ...data, remember_me: e.target.checked })
-        // removeCookie('user');
+        removeCookie('user');
         console.log(2)
       }
-    })
   }
 
   const handleLogin = () => {
@@ -96,7 +97,7 @@ const Login = () => {
             </div>
           </div>
           <div className='social-media-container'>
-            <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }}>
+            <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }} onClick={()=>console.log(cookies)}>
               <div className='social-button-text'>
                 <img src={require("../../icons/facebook.png")} className="social-button-icon" />
                 Login with Facebook
