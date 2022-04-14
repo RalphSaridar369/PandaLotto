@@ -2,7 +2,7 @@
 
 .main-register {
     height: 100vh;
-    padding: 0px 300px!important;
+    padding: 0px 300px !important;
     display: flex;
     flex-direction: row;
     // justify-content: center;
@@ -42,7 +42,7 @@
                 width: 100%;
 
                 .input {
-                    width:100%;
+                    width: 100%;
                     margin-bottom: 10px;
 
                     .input-label-container {
@@ -58,9 +58,9 @@
                     }
                 }
 
-                .checkbox-container{
+                .checkbox-container {
                     margin-bottom: 20px;
-                    .checkbox{
+                    .checkbox {
                         margin-bottom: 5px;
                     }
                 }
@@ -161,24 +161,20 @@
     }
 }
 
-
-
 @media (max-width: 1600px) {
     .left,
     .right {
-        padding: 40px 20px!important;
+        padding: 40px 20px !important;
         height: 90% !important;
-        width: 100%!important;
+        width: 100% !important;
 
         .text {
-            margin-bottom: 5px!important;
+            margin-bottom: 5px !important;
         }
-
-        
 
         .sign-in-button {
             margin-top: 10px;
-            padding: 5px 0!important;
+            padding: 5px 0 !important;
 
             .sign-in-button-text-2 {
                 font-size: global_variables.$md-text !important;
@@ -188,31 +184,25 @@
 }
 
 @media (max-width: 1250px) {
-
-    .main-register{
-        padding: 0px 100px!important;
+    .main-register {
+        padding: 0px 100px !important;
     }
 }
 
 @media (max-width: 1200px) {
-
     .input-label-container {
-        flex-direction: column!important;
-        align-items: flex-start!important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
 
-        .input-label:nth-child(2){
+        .input-label:nth-child(2) {
             display: none;
             margin-top: 5px;
         }
     }
-
-
-
-
 }
 
 @media (max-width: 800px) {
-    .main-register{
+    .main-register {
         height: 100%;
         padding: 0px !important;
     }
@@ -221,12 +211,16 @@
         height: 100%;
         width: 100%;
         display: flex;
-        flex-direction: column!important;
+        flex-direction: column !important;
     }
 
     .left,
     .right {
         border-radius: 0px !important;
-        padding: 40px 0px!important;
+        padding: 40px 20px 0 20px !important;
+    }
+
+    .sign-in-button {
+        margin-bottom: 20px;
     }
 }
