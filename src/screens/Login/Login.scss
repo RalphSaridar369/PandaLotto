@@ -1,6 +1,7 @@
 @use "../../utils/global_variables.scss";
 
 .main-login {
+    overflow-x: hidden;
     padding: 20px 300px!important;
     display: flex;
     flex-direction: column;
