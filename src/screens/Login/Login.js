@@ -7,9 +7,11 @@ import Background from '../../images/background.png';
 import Dots from '../../images/dots.png';
 import { formValidator } from '../../utils/FormValidator';
 import { setItem } from '../../utils/LocalStorage';
+import { useCookies } from "react-cookie";
 
 const Login = () => {
 
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   const navigate = useNavigate();
   const [data, setData] = useState({
     userId: '',
@@ -18,7 +20,7 @@ const Login = () => {
   })
 
   const myStyle = {
-    backgroundImage: `url(${Background})`,
+    backgroundColor:'#090021',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
@@ -31,18 +33,36 @@ const Login = () => {
   //   height:'100vh'
   // }
 
+  const handleCookie = (e) => {
+    console.log(e)
+    let { userId, password } = data;
+    formValidator({ userId, password }, 'login', () => {
+      if (!e.target.checked) {
+        console.log(1)
+        setData({ ...data, remember_me: e.target.checked })
+        // setCookie("user", { userId, password }, {
+        //   path: "/"
+        // });
+      }
+      else {
+        setData({ ...data, remember_me: e.target.checked })
+        // removeCookie('user');
+        console.log(2)
+      }
+    })
+  }
+
   const handleLogin = () => {
     let { userId, password } = data
     formValidator({ userId, password }, 'login', () => {
-      setItem("user-data",{userId,password});
-      setItem("token",1231);
+      setItem("user-data", { userId, password });
+      setItem("token", 1231);
       navigate("/");
     })
   }
 
   return (
     <div className='main-login' style={myStyle}>
-      {/* <span style={dotsStyle}></span> */}
       <div className='containers'>
         <div className='sign-in-container'>
           <div className='sign-in-header'>
@@ -64,7 +84,7 @@ const Login = () => {
           </div>
           <div className='forgot-password-container'>
             <div>
-              <Checkbox right={<div className='checkbox-text'>Remember me</div>} value={data.remember_me} onChange={(e) => setData({ ...data, remember_me: e.target.checked })} />
+              <Checkbox right={<div className='checkbox-text'>Remember me</div>} value={data.remember_me} onChange={(e) => handleCookie(e)} />
             </div>
             <Link to="/" className="forgot-password-link">
               Forgot your password ?

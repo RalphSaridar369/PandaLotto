@@ -5,6 +5,8 @@ import { Routes, Route, Navigate, BrowserRouter as Router } from "react-router-d
 import { loggedInRoutes, normalRoutes } from './utils/Routes';
 import { getItem } from './utils/LocalStorage';
 import ProtectedRoute from './utils/ProtectedRoute';
+import { CookiesProvider } from 'react-cookie';
+import './App.css';
 
 function App() {
 
@@ -26,22 +28,24 @@ function App() {
   }
 
   return (
-    <div>
     <Router>
       <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}>
-        <Routes>
-          {returnNormalRoutes()}
-          <Route element={<ProtectedRoute />} >
-            {returnLoggedRoutes()}
-          </Route>
-          <Route
-            path="*"
-            element={<Navigate to="/" replace />}
-          />
-        </Routes>
+        <CookiesProvider>
+            <div className='App'>
+          <Routes>
+              {returnNormalRoutes()}
+              <Route element={<ProtectedRoute />} >
+                {returnLoggedRoutes()}
+              </Route>
+              <Route
+                path="*"
+                element={<Navigate to="/" replace />}
+              />
+          </Routes>
+          </div>
+        </CookiesProvider>
       </MainContext.Provider>
     </Router>
-    </div>
   );
 }
 
