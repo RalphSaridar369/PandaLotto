@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
 
         .left {
             display: flex;
@@ -204,18 +204,20 @@
 @media (max-width: 800px) {
     .main-register {
         height: 100%;
+        width: 100%!important;
         padding: 0px !important;
     }
 
     .main-containers {
         height: 100%;
-        width: 100%;
+        width: 100%!important;
         display: flex;
         flex-direction: column !important;
     }
 
     .left,
     .right {
+        margin:0!important;
         border-radius: 0px !important;
         padding: 40px 20px 0 20px !important;
     }
