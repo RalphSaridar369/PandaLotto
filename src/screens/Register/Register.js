@@ -59,9 +59,11 @@ const Register = () => {
               </div>
               <TextInput hideText onChange={(e) => setData({ ...data, confirm: e.target.value })} />
             </div>
-            <Checkbox right={<div className='checkbox-text'>Accept Terms and Conditions</div>} value={data.accept_1} onChange={(e)=>setData({...data,accept_1:e.target.checked})}/>  
-            <Checkbox right={<div className='checkbox-text'>I’m 18 years old or older</div>} 
-            value={data.accept_2} onChange={(e)=>setData({...data,accept_2:e.target.checked})}/>  
+            <div class="checkbox-container">
+              <Checkbox className="checkbox" right={<div className='checkbox-text'>Accept Terms and Conditions</div>} value={data.accept_1} onChange={(e)=>setData({...data,accept_1:e.target.checked})}/>
+              <Checkbox className="checkbox" right={<div className='checkbox-text'>I’m 18 years old or older</div>}
+              value={data.accept_2} onChange={(e)=>setData({...data,accept_2:e.target.checked})}/>
+            </div>  
             <div className='register-button' onClick={handleRegister}>
               <div className='register-button-text'>
                 Create Account
