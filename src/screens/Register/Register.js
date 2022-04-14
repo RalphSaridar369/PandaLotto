@@ -74,17 +74,18 @@ const Register = () => {
 
         <div className='right'>
           <div className='header-text'>Creating an account with Panda Lotto</div>
-          <div className='text'>You need in account to be able to buy a ticket
-            and play with Panda Lotto.</div>
-          <div className='text'>
-            After registering, we will send your User Id by email.
-          </div>
-          <div className='text'>
-            When logging in, make sure to use the User Id sent by email, together with the Password registered here. Please keep them in a safe place.
-          </div>
-          <div className='text'>
-
-            The email address you enter here is only used for verification and cannot be used for signing in or recovery.
+          <div style={{padding:'0 40px'}}>
+            <div className='text'>You need in account to be able to buy a ticket
+              and play with Panda Lotto.</div>
+            <div className='text'>
+              After registering, we will send your User Id by email.
+            </div>
+            <div className='text'>
+              When logging in, make sure to use the User Id sent by email, together with the Password registered here. Please keep them in a safe place.
+            </div>
+            <div className='text'>
+              The email address you enter here is only used for verification and cannot be used for signing in or recovery.
+            </div>
           </div>
           <div className='sign-in-button'>
             <Link to="/login" className="sign-in-button-text-1">
