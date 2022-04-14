@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.scss';
 import { TextInput } from '../../components/TextInput/Textinput';
 import { Checkbox } from '../../components/Checkbox/Checkbox';
-import Background from '../../images/background.jpeg';
+import Background from '../../images/background.png';
 import { formValidator } from '../../utils/FormValidator';
 
 const Register = () => {

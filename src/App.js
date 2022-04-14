@@ -26,6 +26,7 @@ function App() {
   }
 
   return (
+    <div>
     <Router>
       <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}>
         <Routes>
@@ -40,6 +41,7 @@ function App() {
         </Routes>
       </MainContext.Provider>
     </Router>
+    </div>
   );
 }
 
