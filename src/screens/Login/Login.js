@@ -7,11 +7,10 @@ import Background from '../../images/background.png';
 import Dots from '../../images/dots.png';
 import { formValidator } from '../../utils/FormValidator';
 import { setItem } from '../../utils/LocalStorage';
-import { useCookies } from "react-cookie";
+import Cookies from 'universal-cookie';
 
 const Login = () => {
-
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const cookie = new Cookies();
   const navigate = useNavigate();
   const [data, setData] = useState({
     userId: '',
@@ -42,13 +41,14 @@ const Login = () => {
       else if (!e.target.checked) {
         setData({ ...data, remember_me: e.target.checked })
         console.log(1)
-        setCookie("user", { userId, password }, {
+        cookie.set("user", { userId, password }, {
           path: "/"
         });
       }
       else {
+        console.log('cookie: ',cookie.get('user'))
         setData({ ...data, remember_me: e.target.checked })
-        removeCookie('user');
+        cookie.remove('user');
         console.log(2)
       }
   }
@@ -97,7 +97,7 @@ const Login = () => {
             </div>
           </div>
           <div className='social-media-container'>
-            <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }} onClick={()=>console.log(cookies)}>
+            <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }} onClick={()=>cookie.get('user')}>
               <div className='social-button-text'>
                 <img src={require("../../icons/facebook.png")} className="social-button-icon" />
                 Login with Facebook

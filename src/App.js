@@ -5,7 +5,6 @@ import { Routes, Route, Navigate, BrowserRouter as Router } from "react-router-d
 import { loggedInRoutes, normalRoutes } from './utils/Routes';
 import { getItem } from './utils/LocalStorage';
 import ProtectedRoute from './utils/ProtectedRoute';
-import { CookiesProvider } from 'react-cookie';
 import './App.css';
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
   return (
     <Router>
       <MainContext.Provider value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}>
-        <CookiesProvider>
             <div className='App'>
           <Routes>
               {returnNormalRoutes()}
@@ -43,7 +41,6 @@ function App() {
               />
           </Routes>
           </div>
-        </CookiesProvider>
       </MainContext.Provider>
     </Router>
   );
