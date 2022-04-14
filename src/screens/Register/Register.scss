@@ -42,7 +42,7 @@
                 width: 100%;
 
                 .input {
-                    width: 100%;
+                    width: 100%!important;
                     margin-bottom: 10px;
 
                     .input-label-container {
@@ -213,7 +213,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: global_variables.$tablet) {
     .main-register {
         height: 100%;
         width: 100%!important;
@@ -231,8 +231,9 @@
     .right {
         margin:0!important;
         border-radius: 0px !important;
-        padding: 40px 20px 0 20px !important;
+        padding: 40px 5% !important;
     }
+
 
     .sign-in-button {
         margin-bottom: 20px;
