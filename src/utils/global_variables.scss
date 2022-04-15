@@ -1,12 +1,21 @@
-$primary:#1a1132;
+$primary: #1a1132;
 $secondary: #520d8c;
-$yellow:#fad221;
+$yellow: #fad221;
 $white: #f1f1f1;
 
-$lg-text:50px;
-$bg-text:38px;
-$md-text: 18px;
+$lg-text: 50px;
+$bg-text: 38px;
+$md-text: 24px;
 $sm-text: 12px;
-
 $tablet: 800px;
 $phone: 500px;
+
+$lg-text: calc(31px + 1vw);
+$bg-text: calc(19px + 1vw);
+$md-text: calc(6px + 1vw);
+$sm-text: calc(1vw);
+
+// $lg-text: calc(50px * 0.5);
+// $bg-text: calc(38px * 0.5);
+// $md-text: calc(18px * 0.5);
+// $sm-text: calc(12px * 0.5);

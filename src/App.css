@@ -1,5 +1,27 @@
-.App{
-    /* overflow-x: hidden; */
-    /* width:100vw;
+.App {
+  /* overflow-x: hidden; */
+  /* width:100vw;
     height:100vh; */
+  /* width */
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #090021; */
+  background: rgba(9, 0, 33, 0.1);
+
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #090021;
 }
