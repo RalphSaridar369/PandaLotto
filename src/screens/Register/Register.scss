@@ -2,6 +2,7 @@
 
 .main-containers {
   max-width: 100vw;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   position: relative;
@@ -10,7 +11,34 @@
   background-color: #090021;
   margin: 0 auto;
   padding: 0 5vw;
-
+  .image {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 60px;
+    height: 60px;
+  }
+  .animation {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 8px;
+    height: 80px;
+    transform: rotate(0.56turn);
+    stroke-dasharray: 0;
+    /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+    animation: 3s ease-in 1s infinite normal forwards running dash;
+    @keyframes dash {
+      to {
+        width: 150px;
+        // top: 10%;
+        left: 100%;
+        stroke-dasharray: 10;
+        stroke-dashoffset: 1000;
+      }
+    }
+  }
   .left {
     display: flex;
     flex-direction: column;
