@@ -252,7 +252,8 @@ iteration-count | direction | fill-mode | play-state | name */
   .main-containers {
     flex-direction: column;
     height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     .inputs-container {
       width: 90% !important;
     }
