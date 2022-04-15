@@ -1,0 +1,144 @@
+@use "../../utils/global_variables.scss";
+
+.main-play {
+  overflow-x: hidden;
+  padding: 20px 300px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .containers {
+    width: 100% !important;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    .title {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      .title-part1 {
+        display: flex;
+        align-items: baseline;
+        h2 {
+          color: global_variables.$white;
+          font-size: 40px;
+        }
+
+        .separator {
+          height: 30px;
+          width: 1px;
+          background-color: global_variables.$white;
+          margin: 0 10px;
+        }
+
+        h3 {
+          color: global_variables.$white;
+          font-size: 24px;
+        }
+      }
+
+      .title-part2 {
+        display: flex;
+        align-items: baseline;
+        h3 {
+          font-size: 24px;
+          color: global_variables.$white;
+          margin-right: 10px;
+        }
+
+        h2 {
+          font-size: 40px;
+          color: global_variables.$yellow;
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      background-color: #707070;
+      height: 0.5px;
+      margin-top: -15px;
+    }
+
+    .choose-character {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .box1 {
+        width: 48%;
+        height: 583px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid white;
+
+        p {
+          font-size: 24;
+          color: white;
+        }
+      }
+
+      .box1:hover {
+        background-image: url("../../images/back.png");
+      }
+
+      .box2 {
+        width: 48%;
+        height: 583px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid white;
+
+        p {
+          font-size: 24;
+          color: white;
+        }
+      }
+
+      .box2:hover {
+        background-image: url("../../images/back2.png");
+      }
+    }
+
+    .Buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .Button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        height: 65px;
+        width: 48%;
+        border: 2px solid #fad221;
+
+        h2 {
+          font-size: 32;
+          color: white;
+        }
+      }
+
+      .Button:hover {
+        background-color: #fad221;
+      }
+    }
+  }
+}
