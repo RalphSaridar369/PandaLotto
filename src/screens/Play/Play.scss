@@ -1,69 +1,72 @@
 @use "../../utils/global_variables.scss";
 
-.main-play {
-  overflow-x: hidden;
-  padding: 20px 300px !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-
-  .containers {
-    width: 100% !important;
-    height: 90%;
+.main{
+  .main-play {
+    overflow-x: hidden;
+    padding: 20px 300px !important;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-
-    .title {
-      width: 100%;
+    justify-content: center;
+    height: 100%;
+  
+    .containers {
+      width: 100% !important;
+      height: 90%;
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      .title-part1 {
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+  
+      .title {
+        width: 100%;
         display: flex;
         align-items: baseline;
-        h2 {
-          color: global_variables.$white;
-          font-size: 40px;
+        justify-content: space-between;
+        .title-part1 {
+          display: flex;
+          align-items: baseline;
+          h2 {
+            color: global_variables.$white;
+            font-size: 40px;
+          }
+  
+          .separator {
+            height: 30px;
+            width: 1px;
+            background-color: global_variables.$white;
+            margin: 0 10px;
+          }
+  
+          h3 {
+            color: global_variables.$white;
+            font-size: 24px;
+          }
         }
-
-        .separator {
-          height: 30px;
-          width: 1px;
-          background-color: global_variables.$white;
-          margin: 0 10px;
-        }
-
-        h3 {
-          color: global_variables.$white;
-          font-size: 24px;
+  
+        .title-part2 {
+          display: flex;
+          align-items: baseline;
+          h3 {
+            font-size: 24px;
+            color: global_variables.$white;
+            margin-right: 10px;
+          }
+  
+          h2 {
+            font-size: 40px;
+            color: global_variables.$yellow;
+          }
         }
       }
-
-      .title-part2 {
-        display: flex;
-        align-items: baseline;
-        h3 {
-          font-size: 24px;
-          color: global_variables.$white;
-          margin-right: 10px;
-        }
-
-        h2 {
-          font-size: 40px;
-          color: global_variables.$yellow;
-        }
+  
+      .line {
+        width: 100%;
+        background-color: #707070;
+        height: 0.5px;
+        margin-top: -15px;
       }
-    }
-
-    .line {
-      width: 100%;
-      background-color: #707070;
-      height: 0.5px;
-      margin-top: -15px;
     }
   }
 }
+

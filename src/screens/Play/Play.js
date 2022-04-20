@@ -11,7 +11,7 @@ const myStyle = {
 
 const Play = () => {
   return (
-    <>
+    <div className="main"> 
       <div className="main-play" style={myStyle}>
         <div className="containers">
           <div className="title">
@@ -30,7 +30,7 @@ const Play = () => {
         </div>
       </div>
       <Stepper />
-    </>
+    </div>
   );
 };
 

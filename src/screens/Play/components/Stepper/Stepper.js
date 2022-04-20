@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextInput } from "../../../../components/TextInput/Textinput";
 // import Box from "@mui/material/Box";
 // import Stepper from "@mui/material/Stepper";
 // import Step from "@mui/material/Step";
@@ -13,6 +14,22 @@ import './Stepper.scss';
 
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = useState(0);
+  const [ticket,setTicket] = useState();
+
+  const tickets = [
+    {id:1,value:20,},
+    {id:2,value:50,},
+    {id:3,value:100,},
+    {id:4,value:200,},
+    {id:5,value:300,},
+    {id:6,value:400,},
+    {id:7,value:500,},
+    {id:8,value:750,},
+    {id:9,value:1000,},
+    {id:10,value:2000,},
+    {id:11,value:3000,},
+    {id:12,value:5000,}
+  ]
 
   const steps = [
     {
@@ -34,10 +51,10 @@ export default function VerticalLinearStepper() {
 
 
           <div className="Buttons">
-            <div className="Button">
+            <div className="Button" onClick={()=>setActiveStep(1)}  >
               <h2>Select</h2>
             </div>
-            <div className="Button">
+            <div className="Button" onClick={()=>setActiveStep(1)}  >
               <h2>Select</h2>
             </div>
           </div>
@@ -47,16 +64,45 @@ export default function VerticalLinearStepper() {
     {
       step: 2,
       label: "Place your bet",
-      description:
-        "An ad group contains one or more ads which target a shared set of keywords.",
+      description:(
+      <div className="amount-container">
+        <h3>
+          Select a ticket or add an amount:
+        </h3>
+        <div className="ticket-container">
+          {tickets.map((item,index)=><div onClick={()=>setTicket(item.id)} className={`ticket-button ${ticket==item.id && "active-ticket"}`} key={index}>{item.value}$</div>)}
+        </div>
+        <div className="input-container">
+          <h4>
+            Add Amount:
+          </h4>
+          <TextInput type="number" style={{borderRadius:'5px'}}/>
+        </div>
+        <hr></hr>
+        <div className="submit-button" onClick={()=>setActiveStep(2)}>
+          Next
+        </div>
+      </div>
+      ),
     },
     {
       step: 3,
       label: "Select Payment Method",
-      description: `Try out different ad text to see what brings in the most customers,
-                and learn how to enhance your ads using features like ad extensions.
-                If you run into any problems with your ads, find out how to tell if
-                they're running and how to resolve approval issues.`,
+      description: (
+        <div className="payment-container">
+          <div className="payment-options">
+            <div>
+              <img src={require('../../../../icons/Paypal.png')} />
+            </div>
+            <div>
+              <img src={require('../../../../icons/BTC.png')} />
+            </div>
+            <div>
+              <img src={require('../../../../icons/Wallet.png')} />
+            </div>
+          </div>
+        </div>
+      ),
     },
   ];
 

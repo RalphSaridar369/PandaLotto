@@ -12,7 +12,6 @@
 
     .step-left {
         color: #fff;
-        flex:1;
         align-self: flex-start;
 
         .step-left-container {
@@ -47,11 +46,17 @@
 }
 
 .step-right {
+    height: 100%;
     align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-self: center;
-    flex:3;
+    // background-color: blue;
+    flex:2;
+
+
+
 
     .choose-character-container {
         .choose-character {
@@ -127,6 +132,98 @@
 
             .Button:hover {
                 background-color: #fad221;
+            }
+        }
+    }
+
+
+
+
+
+    .amount-container{
+        color:#fff;
+        display: flex;
+        flex-direction: column;
+
+        h3{
+            color:#fff;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .ticket-container{
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-gap: 10px;
+
+            .ticket-button{
+                padding:20px 50px;
+                background-color: (0,0,0,0);
+                color:white;
+                border-radius: 10px;
+                border:1px solid white;
+                transition:background-color 0.5s, color 0.5s
+            }
+
+            .ticket-button:hover{
+                cursor: pointer;
+                background-color: global_variables.$yellow;
+                color:global_variables.$primary;
+            }
+
+            .active-ticket{
+                background-color: global_variables.$yellow;
+                color:global_variables.$primary;
+            }
+        }
+
+        .input-container{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+
+            h4{
+                margin-right: 10px;
+            }
+        }
+
+        hr{
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .submit-button{
+            margin-top: 30px;
+            align-self: center;
+            font-size: 26px!important;
+            border:2px solid global_variables.$yellow;
+            padding:5px 60px;
+            border-radius: 5px;
+            transition:background-color 0.5s, color 0.5s
+        }
+
+        .submit-button:hover{
+            cursor: pointer;
+            background-color: global_variables.$yellow;
+            color:global_variables.$primary;
+        }
+    }
+
+
+
+
+
+    .payment-container{
+        display: flex;
+        flex-direction: column;
+
+        .payment-options{
+            display: flex;
+            flex-direction: row;
+
+            .option{
+                border-radius: 10px;
+                border:2px solid #fff
             }
         }
     }
