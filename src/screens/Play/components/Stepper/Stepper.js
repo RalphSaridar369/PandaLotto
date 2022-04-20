@@ -38,12 +38,12 @@ export default function VerticalLinearStepper() {
       description: (
         <div className="choose-character-container">
           <div className="choose-character">
-            <div className="box1">
+            <div className="box1" onClick={()=>setActiveStep(1)}>
               <img src={Panda1} />
               <p>Space Panda</p>
             </div>
 
-            <div className="box2">
+            <div className="box2" onClick={()=>setActiveStep(1)}>
               <img src={Panda2} />
               <p>Viking Panda</p>
             </div>
