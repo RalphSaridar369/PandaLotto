@@ -66,6 +66,7 @@ export default function VerticalLinearStepper() {
       label: "Place your bet",
       description:(
       <div className="amount-container">
+        <img src={require('../../../../icons/Tickets.png')} className="tickets-image"/>
         <h3>
           Select a ticket or add an amount:
         </h3>
@@ -131,7 +132,10 @@ export default function VerticalLinearStepper() {
         <div className="step-left">
           {steps.map((item, index) => {
             return <div key={index} className="step-left-container">
-              <div className="step-left-circle">
+              <div className="step-left-circle" onClick={()=>{
+               if(activeStep + 1 > item.step)
+               setActiveStep(index)
+              }}>
                 {activeStep + 1 > item.step ?
                   <img src={require("../../../../icons/tick.png")} className="tick" />
                   : index + 1}
