@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import Box from "@mui/material/Box";
 // import Stepper from "@mui/material/Stepper";
 // import Step from "@mui/material/Step";
@@ -16,42 +16,42 @@ export default function VerticalLinearStepper() {
 
   const steps = [
     {
-      step:1,
+      step: 1,
       label: "Choose your panda",
       description: (
         <div className="choose-character-container">
-        <div className="choose-character">
-          <div className="box1">
-            <img src={Panda1} />
-            <p>Space Panda</p>
+          <div className="choose-character">
+            <div className="box1">
+              <img src={Panda1} />
+              <p>Space Panda</p>
+            </div>
+
+            <div className="box2">
+              <img src={Panda2} />
+              <p>Viking Panda</p>
+            </div>
           </div>
 
-          <div className="box2">
-            <img src={Panda2} />
-            <p>Viking Panda</p>
-          </div>
-        </div>
-        
 
           <div className="Buttons">
             <div className="Button">
-            <h2>Select</h2>
+              <h2>Select</h2>
             </div>
             <div className="Button">
-            <h2>Select</h2>
+              <h2>Select</h2>
             </div>
-        </div>
+          </div>
         </div>
       ),
     },
     {
-      step:2,
+      step: 2,
       label: "Place your bet",
       description:
         "An ad group contains one or more ads which target a shared set of keywords.",
     },
     {
-      step:3,
+      step: 3,
       label: "Select Payment Method",
       description: `Try out different ad text to see what brings in the most customers,
                 and learn how to enhance your ads using features like ad extensions.
@@ -72,8 +72,8 @@ export default function VerticalLinearStepper() {
     setActiveStep(0);
   };
 
-  const returnData = () =>{
-    if(activeStep ==1 ){
+  const returnData = () => {
+    if (activeStep == 1) {
       return steps[0].description
     }
   }
@@ -84,20 +84,20 @@ export default function VerticalLinearStepper() {
         <div className="step-left">
           {steps.map((item, index) => {
             return <div key={index} className="step-left-container">
-              <div  className="step-left-circle">
-                {activeStep+1>item.step?
-                <img src={require("../../../../icons/tick.png")} className="tick"/>
-                : index+ 1}
+              <div className="step-left-circle">
+                {activeStep + 1 > item.step ?
+                  <img src={require("../../../../icons/tick.png")} className="tick" />
+                  : index + 1}
               </div>
-              <p className="step-left-header">{item.label}</p>
-             {item.label!="Select Payment Method" && <div class="vertical-line"></div>}
+              <span className="step-left-header">{item.label}</span>
+              {item.label != "Select Payment Method" && <div class="vertical-line"></div>}
             </div>
           })}
-          </div>
-          <div className="step-right">
-            {steps[activeStep].description}
-          </div>
         </div>
+        <div className="step-right">
+          {steps[activeStep].description}
+        </div>
+      </div>
     </div>
     // <Box style={{ width: "100%", marginLeft: "-400px" }}>
     //   <Stepper activeStep={activeStep} orientation="vertical">

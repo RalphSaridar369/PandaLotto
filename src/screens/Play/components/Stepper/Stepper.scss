@@ -12,6 +12,7 @@
 
     .step-left {
         color: #fff;
+        flex:1;
         align-self: flex-start;
 
         .step-left-container {
@@ -29,7 +30,7 @@
                 border-color: global_variables.$yellow;
                 border-radius: 100px;
                 padding: 10px 20px;
-                margin: 20px 0;
+                margin:0;
 
                 .tick {
                     width: 20px !important;
@@ -50,6 +51,7 @@
     display: flex;
     flex-direction: row;
     align-self: center;
+    flex:3;
 
     .choose-character-container {
         .choose-character {
