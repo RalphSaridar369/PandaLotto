@@ -90,14 +90,15 @@ export default function VerticalLinearStepper() {
       label: "Select Payment Method",
       description: (
         <div className="payment-container">
+          <img src={require('../../../../icons/hand.png')} className="hand-image"/>
           <div className="payment-options">
-            <div>
+            <div className="payment-option">
               <img src={require('../../../../icons/Paypal.png')} />
             </div>
-            <div>
+            <div className="payment-option">
               <img src={require('../../../../icons/BTC.png')} />
             </div>
-            <div>
+            <div className="payment-option">
               <img src={require('../../../../icons/Wallet.png')} />
             </div>
           </div>

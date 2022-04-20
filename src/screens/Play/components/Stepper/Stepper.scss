@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-self: center;
+    // align-self: center;
     // background-color: blue;
     flex:2;
 
@@ -217,13 +217,22 @@
         display: flex;
         flex-direction: column;
 
+        .hand-image{
+            height: 100px;
+            width: 100px;
+            align-self: center;
+            margin-bottom: 100px;
+        }
+
         .payment-options{
             display: flex;
             flex-direction: row;
 
-            .option{
+            .payment-option{
                 border-radius: 10px;
-                border:2px solid #fff
+                border:2px solid #fff;
+                padding:20px 80px;
+                margin:0 20px
             }
         }
     }
