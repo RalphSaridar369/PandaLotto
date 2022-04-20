@@ -68,5 +68,35 @@
       }
     }
   }
+
+  
+  @media (max-width:global_variables.$phone) {
+      .main-play{
+        padding: 20px 50px !important;
+      }
+      .title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center!important;
+        justify-content: space-between;
+
+        
+        .title-part1, .title-part2 {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+
+          
+          h3 {
+            margin-right: 0px;
+          }
+        }
+      }
+  
+      .separator {
+        display:none!important;
+      }
+  }
 }
 

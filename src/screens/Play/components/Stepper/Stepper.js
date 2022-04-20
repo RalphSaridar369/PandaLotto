@@ -129,6 +129,22 @@ export default function VerticalLinearStepper() {
   return (
     <div>
       <div className="step">
+        <div className="step-left-mobile">
+        {steps.map((item, index) => {
+            return <div key={index} className="step-left-container">
+              <div className="step-left-circle" onClick={()=>{
+               if(activeStep + 1 > item.step)
+               setActiveStep(index)
+              }}>
+                {activeStep + 1 > item.step ?
+                  <img src={require("../../../../icons/tick.png")} className="tick" />
+                  : index + 1}
+              </div>
+              <span className="step-left-header">{item.label}</span>
+              {item.label != "Select Payment Method" && <div class="vertical-line"></div>}
+            </div>
+          })}
+        </div>
         <div className="step-left">
           {steps.map((item, index) => {
             return <div key={index} className="step-left-container">

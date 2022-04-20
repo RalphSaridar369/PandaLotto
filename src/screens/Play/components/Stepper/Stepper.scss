@@ -10,7 +10,13 @@
     flex-direction: row;
     justify-content: space-around;
 
-    .step-left {
+    .step-left-mobile{
+        display: none;
+    }
+
+    .step-left,
+    .step-left-mobile{
+
         color: #fff;
         align-self: flex-start;
 
@@ -170,6 +176,7 @@
             grid-gap: 10px;
 
             .ticket-button{
+                text-align: center;
                 padding:20px 50px;
                 background-color: (0,0,0,0);
                 color:white;
@@ -251,6 +258,61 @@
             .payment-option:hover{
                 cursor: pointer;
             }
+        }
+    }
+
+
+}
+@media (max-width:global_variables.$phone) {
+    
+    
+    .step{
+        flex-direction: column!important;
+        .step-left-mobile{
+            width: 200px!important;
+            justify-content: center;
+            align-self: center;
+            align-items: center!important;
+            display: flex;
+            margin-bottom: 20px;
+            
+
+            .step-left-container{
+
+                .step-left-circle{
+                    margin:0 20px!important;
+                    border-radius: 100px;
+                    padding: 6px 12px;
+                    margin:0;
+                }
+            }
+
+            
+            .vertical-line {
+                display: none;
+            }
+
+        }   
+        .step-left{
+             display: none;
+            .step-left-container{
+                flex-direction: row!important;
+            }
+        }
+    }
+
+    .step-left-header {
+        display: none;
+    }
+
+    .ticket-container{
+        display: grid;
+        grid-template-columns: 50% 50%!important;
+        grid-gap: 10px;
+
+        
+        .ticket-button{
+            padding:10px 30px!important;
         }
     }
 }
