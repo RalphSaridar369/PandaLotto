@@ -289,3 +289,16 @@ iteration-count | direction | fill-mode | play-state | name */
     }
   }
 }
+
+
+@media(min-height:800px){
+  .main-containers {
+      height: 100%;
+  }
+}
+
+@media(min-height:1000px){
+  .main-containers {
+      height: 100vh!important;
+  }
+}
