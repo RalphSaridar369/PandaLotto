@@ -4,7 +4,8 @@
   overflow: hidden;
   padding: 20px 300px !important;
   padding-bottom: 200px;
-  height: 100%;
+  // height: 100%;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,7 @@
 
   .containers {
     width: 100% !important;
-    height: 100vh;
+    height: 100%;
     // height: 90%;
     display: flex;
     flex-direction: column;
@@ -315,5 +316,17 @@
       margin-right: 0px !important;
       height: 20px !important;
     }
+  }
+}
+
+@media (min-height: 800px) {
+  .containers {
+    height: 100%;
+  }
+}
+
+@media (min-height: 1000px) {
+  .containers {
+    height: 100vh !important;
   }
 }
