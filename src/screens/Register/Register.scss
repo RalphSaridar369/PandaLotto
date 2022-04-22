@@ -260,16 +260,16 @@ iteration-count | direction | fill-mode | play-state | name */
     .inputs-container {
       width: 90% !important;
 
-      .checkbox-text{
-        font-size: 12px!important;
+      .checkbox-text {
+        font-size: 12px !important;
       }
     }
-    
+
     .left,
     .right {
       width: 90%;
       //   height: 350px;
-      
+
       margin: 5% auto;
       .sign-in-button {
         width: 90% !important;
@@ -281,10 +281,9 @@ iteration-count | direction | fill-mode | play-state | name */
 
     .sign-in-button {
       // margin: 20px 0px;
-        margin-top: 20px!important;
-      .sign-in-button-text-2{
-          font-size: 18px!important;
-      
+      margin-top: 20px !important;
+      .sign-in-button-text-2 {
+        font-size: 18px !important;
       }
     }
   }

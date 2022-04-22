@@ -19,8 +19,9 @@ const Header = () => {
   };
   return (
     <div className="main__header">
-      <div>
-        <img src={Logo} />
+      <div className="nav">
+        <img className="logo" src={Logo} />
+        <div className="burger">|||</div>
       </div>
       <div className="right">
         <p>Previous Results</p>
