@@ -18,12 +18,12 @@ const Login = () => {
     remember_me: false,
   })
 
-  useEffect(()=>{
-    console.log('effect cookie: ',cookie.get('user'))
-  },[])
+  useEffect(() => {
+    console.log('effect cookie: ', cookie.get('user'))
+  }, [])
 
   const myStyle = {
-    backgroundColor:'#090021',
+    backgroundColor: '#090021',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
@@ -39,22 +39,22 @@ const Login = () => {
   const handleCookie = (e) => {
     console.log(e)
     let { userId, password } = data;
-    if(userId.length<1 || password.length<1){
+    if (userId.length < 1 || password.length < 1) {
       alert("Make sure you fill both id and password first")
     }
-      else if (!e.target.checked) {
-        setData({ ...data, remember_me: e.target.checked })
-        console.log(1)
-        cookie.set("user", { userId, password }, {
-          path: "/"
-        });
-      }
-      else {
-        console.log('cookie: ',cookie.get('user'))
-        setData({ ...data, remember_me: e.target.checked })
-        cookie.remove('user');
-        console.log(2)
-      }
+    else if (!e.target.checked) {
+      setData({ ...data, remember_me: e.target.checked })
+      console.log(1)
+      cookie.set("user", { userId, password }, {
+        path: "/"
+      });
+    }
+    else {
+      console.log('cookie: ', cookie.get('user'))
+      setData({ ...data, remember_me: e.target.checked })
+      cookie.remove('user');
+      console.log(2)
+    }
   }
 
   const handleLogin = () => {
@@ -100,14 +100,23 @@ const Login = () => {
               Sign in
             </div>
           </div>
+
+          <div className='login-social-seperator'>
+            <div className='login-social-seperator-line'></div>
+            Or
+            <div className='login-social-seperator-line'></div>
+          </div>
+          
           <div className='social-media-container'>
-            <div className='social-button' style={{ backgroundColor: '#505eba', marginRight: '5px' }} onClick={()=>cookie.get('user')}>
+            <div className='social-button' style={{ backgroundColor: '#505eba' }} onClick={() => cookie.get('user')}>
               <div className='social-button-text'>
                 <img src={require("../../icons/facebook.png")} className="social-button-icon" />
                 Login with Facebook
               </div>
             </div>
-            <div className='social-button' style={{ backgroundColor: '#5fbcdd', marginLeft: '5px' }}>
+            <div className='social-media-separator'>
+            </div>
+            <div className='social-button' style={{ backgroundColor: '#5fbcdd' }}>
               <div className='social-button-text'>
                 <img src={require("../../icons/twitter.png")} className="social-button-icon" />
                 Login with Twitter

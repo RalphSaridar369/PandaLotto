@@ -2,15 +2,14 @@
 
 .main-login {
     overflow-x: hidden;
-    padding: 20px 300px!important;
+    padding: 20px 300px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
 
-    .containers{
-        
+    .containers {
         width: 100% !important;
         height: 90%;
         display: flex;
@@ -23,10 +22,29 @@
         border-radius: 16px;
         width: 50%;
         margin: 0 10px;
-        padding: 5%!important;
+        padding: 5% !important;
         display: flex;
         flex-direction: column;
         background-color: global_variables.$primary;
+        
+        .login-social-seperator{
+            display: none;
+            color:#fff;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            .login-social-seperator-line{
+                margin: 0 10px;
+                width: 35%;
+                opacity: 0.4;
+                background-color:lightgray;
+                height: 1px;
+            }
+        }
 
         .sign-in-header {
             font-size: global_variables.$lg-text;
@@ -97,11 +115,16 @@
             flex-direction: row;
             justify-content: space-between;
 
+            .social-media-separator{
+                width: 20px;
+            }
+
             .social-button {
                 width: 100%;
                 padding: 10px 0;
                 height: 50px;
                 display: flex;
+                text-align: center;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
@@ -114,6 +137,7 @@
                     font-size: global_variables.$md-text;
                     color: #fff;
                     font-weight: bold;
+                    word-wrap: break-word;
 
                     .social-button-icon {
                         width: 24px;
@@ -122,7 +146,7 @@
                     }
                 }
             }
-            
+
             .social-button:hover {
                 cursor: pointer;
             }
@@ -168,24 +192,26 @@
     }
 }
 
-
-
 @media (max-width: 1400px) {
-    .main-login{
-        padding:10px 0px!important;
+    .main-login {
+        padding: 10px 0px !important;
     }
 
-    .sign-in-container{
-        padding:0px!important;
+    .sign-in-container {
+        padding: 0px !important;
     }
-    
+
     .create-button {
         padding: 10px 80px;
     }
 }
+@media (min-width: global_variables.$tablet) {
+    .login-social-seperator{
+        display: none!important;
+    }
+}
 
 @media (max-width: global_variables.$tablet) {
-    
     // .main-login {
     //     height: 100vh;
     //     padding: 20px 300px!important;
@@ -194,6 +220,12 @@
     //     align-items: center;
     //     justify-content: center;
     // }
+
+
+    .login-social-seperator{
+        display: flex!important;
+    }
+
     .social-media-container {
         margin-top: 40px;
         flex-direction: column !important;
@@ -212,13 +244,28 @@
     }
 }
 
-@media (max-width: global_variables.$phone) {
-    .main-login{
-        width: 100vw!important;
+@media (max-width: global_variables.$tablet) {
+    .create-button {
+        padding: 20px 0px !important;
     }
-    
-    .containers{
-        
+
+    .social-button {
+        height: 20px !important;
+    }
+}
+
+@media (max-width: global_variables.$phone) {
+    .main-login {
+        width: 100vw !important;
+    }
+
+    .forgot-password-container{
+        .checkbox-text, .forgot-password-link{
+            font-size: 14px!important;
+        }
+    }
+
+    .containers {
         width: 90% !important;
         display: flex;
         flex-direction: column;
@@ -226,32 +273,45 @@
         align-items: center;
     }
     .sign-in-container {
-        padding: 40px 10px!important;
+        padding: 40px 10px !important;
         margin: 0px !important;
         width: inherit !important;
         align-items: center !important;
         border-radius: 0;
 
-
-    .inputs-container{
-        display: flex;
-        width: 80%!important;
-        align-items: center!important;
-        justify-content: center!important;
-    }
+        .inputs-container {
+            display: flex;
+            width: 80% !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
         .signin-button {
             align-self: center;
-            width: 50%!important;
+            width: 50% !important;
+
+            .signin-button-text{
+                font-size: 16px!important;
+            }
         }
-        
     }
 
-    .create-button{
+    .create-button {
         // padding:0px!important;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 80%!important;
-        height: 20px!important;
+        width: 80% !important;
+        padding: 10px 0px !important;
+    }
+
+    .social-media-container {
+        width: 50%;
+        margin-top: 0px;
+
+        .social-button {
+            margin-left: 0px!important;
+            margin-right: 0px!important;
+            height: 20px !important;
+        }
     }
 }
