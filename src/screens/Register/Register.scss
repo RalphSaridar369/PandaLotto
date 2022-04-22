@@ -39,6 +39,8 @@ iteration-count | direction | fill-mode | play-state | name */
     }
   }
   .left {
+    z-index: 10;
+    opacity: 0.9;
     display: flex;
     flex-direction: column;
     background-color: global_variables.$primary;
@@ -47,7 +49,7 @@ iteration-count | direction | fill-mode | play-state | name */
     margin: 20vh 0vw 0;
     max-height: 70vh;
     padding: 0% 4%;
-    overflow: auto;
+    // overflow: auto;
 
     .header-text {
       font-size: global_variables.$bg-text;
@@ -81,7 +83,7 @@ iteration-count | direction | fill-mode | play-state | name */
           color: #fff;
         }
         .input-label-2 {
-          font-size: global_variables.$sm-text;
+          font-size: 8px;
           color: #fff;
         }
       }
@@ -89,7 +91,6 @@ iteration-count | direction | fill-mode | play-state | name */
       .checkbox-text {
         font-size: 16px;
         margin: 0 20px;
-        font-size: global_variables.$md-text;
         color: #fff;
       }
 
@@ -118,6 +119,7 @@ iteration-count | direction | fill-mode | play-state | name */
   }
 
   .right {
+    z-index: 10;
     position: relative;
     background-color: global_variables.$white;
     display: flex;
@@ -252,11 +254,15 @@ iteration-count | direction | fill-mode | play-state | name */
 @media (max-width: global_variables.$tablet) {
   .main-containers {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-y: auto;
     .inputs-container {
       width: 90% !important;
+
+      .checkbox-text{
+        font-size: 12px!important;
+      }
     }
     
     .left,
