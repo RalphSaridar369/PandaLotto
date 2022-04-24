@@ -32,30 +32,37 @@
 
             img {
                 display: inline;
-                height: 8px;
-                width: 16px;
+                height: 30px;
+                width: 30px;
             }
 
-            .settings-option {
-                padding: 10px;
-                height: 25%;
-                font-size: 16px;
-                font-weight: 500;
-                color: #090121;
-                opacity: 0.3;
-            }
+            .settings-option-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
 
-            hr {
-                margin: 0;
-                background-color: lightgray;
-            }
+                .settings-option {
+                    padding: 10px;
+                    height: 25%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #090121;
+                    opacity: 0.3;
+                }
 
-            .active-setting {
-                opacity: 1 !important;
-            }
+                hr {
+                    margin: 0;
+                    background-color: lightgray;
+                }
 
-            .settings-option:hover {
-                cursor: pointer;
+                .active-setting {
+                    opacity: 1 !important;
+                }
+
+                .settings-option:hover {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -78,7 +85,7 @@
             .update-password-button {
                 width: 23%;
                 height: 17%;
-                padding:10px 0;
+                padding: 10px 0;
                 border-radius: 8px;
                 background-color: #090121;
                 text-align: center;

@@ -22,9 +22,12 @@ const Settings = () => {
         <div className='container-settings-left'>
           {screens.map((item, index) => {
             return <div>
+              <div  className='settings-option-container'> 
               <div className={`settings-option ${item.id === screenState && "active-setting"}`}
                 onClick={() => setScreenState(item.id)}>
                 {item.value}
+              </div>
+              {item.id === screenState && <img src={require('../../icons/chevron-right.png')}/>}
               </div>
               {index != 3 && <hr></hr>}
             </div>
