@@ -6,7 +6,6 @@ import './Settings.scss';
 
 const Settings = () => {
   const [screenState, setScreenState] = useState(1);
-
   const [changePasswordData, setChangePasswordData] = useState({
     email: '',
     password: '',
@@ -48,7 +47,12 @@ const Settings = () => {
       <div className='container-settings'>
         <div className='container-settings-left'>
           {screens.map((item, index) => {
-            return <div key={index} onClick={() => setScreenState(item.id)}>
+            return <div key={index} onClick={() =>{
+              if(item.id!=4){
+                setScreenState(item.id);
+              }
+              else{}
+            }}>
               <div className='settings-option-container'>
                 <div className={`settings-option ${item.id === screenState && "active-setting"}`}
                 >
