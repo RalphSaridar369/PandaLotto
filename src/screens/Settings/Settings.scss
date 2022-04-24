@@ -66,7 +66,7 @@
             }
         }
 
-        .container-settings-right {
+        .container-change-password-right {
             width: 75%;
             height: 38%;
             border-radius: 8px;
@@ -133,6 +133,7 @@
     padding: 0 !important;
     box-sizing: border-box;
     padding-left: 3px !important;
+    font-size: 16px !important;
     margin: 2vh 0px;
     width: 100% !important;
     background-color: #e6e6e6;
@@ -141,31 +142,37 @@
     width: inherit;
     font-size: global_variables.$md-text;
     height: 35px;
-    color: #fff;
+    color: #090121;
 }
 
 .settings-right-seperator {
     width: 40px;
 }
 
-@media (max-width:global_variables.$tablet){
-    .container-settings{
-        flex-direction: column!important;
+@media (max-width: global_variables.$tablet) {
+    .container-settings {
+        flex-direction: column !important;
         align-items: center;
 
-        .container-settings-left, .container-settings-right{
-            width: 100%!important;
-            margin-right: 0!important;
-            padding:20px!important;
+        .container-settings-left,
+        .container-change-password-right {
+            width: 100% !important;
+            margin-right: 0 !important;
+            padding: 20px !important;
         }
 
-        .container-settings-left{
+        .container-settings-left {
             margin-bottom: 40px;
         }
+    }
+}
 
-        // .container-settings-right{
-        //     padding:0!
-        // }
+@media (max-width: global_variables.$phone) {
+    .update-password-text {
+        font-size: 14px !important;
+    }
 
+    .settings-right-seperator {
+        width: 20px;
     }
 }

@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
-import { TextInput } from '../../components/TextInput/Textinput';
+import ChangePassword from './Screens/ChangePassword';
 import './Settings.scss';
 
 const Settings = () => {
   const [screenState, setScreenState] = useState(1);
+
+  const [changePasswordData, setChangePasswordData] = useState({
+    email:'',
+    password:'',
+    confirm:'',
+  })
+
+  const setChangePassword = (type,value) =>{
+    setChangePasswordData({...changePasswordData,[type]:value})
+  }
+
+  const handleSubmitPassword = () =>{
+    alert("Password changed successfully")
+  }
 
   let screens = [
     { id: 1, value: 'Edit Account' },
@@ -33,31 +47,7 @@ const Settings = () => {
             </div>
           })}
         </div>
-        <div className='container-settings-right'>
-          <div className='settings-input-label'>Email</div>
-          <TextInput className="settings-right-inputs" />
-          <div className='settings-input-label'>Change Password</div>
-          <div className='settings-password-container'>
-            <div className='settings-small-label-container'>
-              <div className='settings-small-label'>
-                Current password
-              </div>
-              <TextInput className="settings-right-inputs" />
-            </div>
-            <div className='settings-right-seperator'></div>
-            <div className='settings-small-label-container'>
-              <div className='settings-small-label'>
-                New password
-              </div>
-              <TextInput className="settings-right-inputs" />
-            </div>
-          </div>
-          <div className="update-password-button-container">
-            <div className='update-password-button'>
-              <div className="update-password-text">Update</div>
-            </div>
-          </div>
-        </div>
+        <ChangePassword setChangePassword={setChangePassword} handleSubmitPassword={handleSubmitPassword}/>
       </div>
     </div>
   )
