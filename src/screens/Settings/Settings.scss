@@ -121,6 +121,42 @@
                 }
             }
         }
+
+        .container-my-tickets-right {
+            width: 75%;
+            height: 71%;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: #e6e6e6;
+
+            .my-tickets-header {
+                color: #090021;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .my-tickets-helper {
+                opacity: 0.5;
+                color: #090021;
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 12px;
+            }
+
+            .my-tickets-table{
+                margin-top: 30px;
+                width: 100%;
+                overflow: scroll;
+                
+                thead{
+                    background-color: #090021;
+                    th{
+                        color:#fff
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -155,7 +191,7 @@
         align-items: center;
 
         .container-settings-left,
-        .container-change-password-right {
+        .container-change-password-right, .container-my-tickets-right {
             width: 100% !important;
             margin-right: 0 !important;
             padding: 20px !important;

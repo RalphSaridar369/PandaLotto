@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ChangePassword from './Screens/ChangePassword';
+import MyTickets from './Screens/MyTickets';
 import './Settings.scss';
 
 const Settings = () => {
@@ -26,6 +27,15 @@ const Settings = () => {
     { id: 4, value: 'Logout' },
   ]
 
+  const returnScreen =()=>{
+    switch(screenState){
+      case 1:
+        return <ChangePassword setChangePassword={setChangePassword} handleSubmitPassword={handleSubmitPassword}/>
+      case 3:
+          return <MyTickets />
+      }
+  }
+
   return (
     <div className='main-settings'>
 
@@ -47,7 +57,7 @@ const Settings = () => {
             </div>
           })}
         </div>
-        <ChangePassword setChangePassword={setChangePassword} handleSubmitPassword={handleSubmitPassword}/>
+        {returnScreen()}
       </div>
     </div>
   )
