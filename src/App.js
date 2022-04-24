@@ -10,7 +10,7 @@ import {
 import { loggedInRoutes, normalRoutes } from "./utils/Routes";
 import { getItem } from "./utils/LocalStorage";
 import ProtectedRoute from "./utils/ProtectedRoute";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   useEffect(() => {
@@ -44,11 +44,14 @@ function App() {
   };
 
   return (
+    // <div className='app-container'>
+    //   test
+    // </div>
     <Router>
       <MainContext.Provider
         value={{ loggedIn, setLogIn: (val) => setLoggedIn(val) }}
       >
-        <div className="App">
+        <div className="app-container">
           <Header />
           <Routes>
             {returnNormalRoutes()}

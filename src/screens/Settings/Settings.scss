@@ -1,0 +1,352 @@
+@use "../../utils/global_variables.scss";
+
+.main-settings {
+    background-color: #090021;
+    height: 100%;
+    // height: 100vh!important;
+    // width: 100%;
+    padding: 3% 8%;
+
+    .header-settings {
+        color: #ffffff !important;
+        font-size: 26px;
+        letter-spacing: -0.6px;
+        margin: 0;
+    }
+
+    .container-settings {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        background-color: #090021;
+
+        .container-settings-left {
+            width: 20%;
+            height: 27%;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: #e6e6e6;
+            margin-right: 3%;
+
+            img {
+                display: inline;
+                height: 30px;
+                width: 30px;
+            }
+
+            .settings-option-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .settings-option {
+                    padding: 10px;
+                    height: 25%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #090121;
+                    opacity: 0.3;
+                }
+
+                hr {
+                    margin: 0;
+                    background-color: lightgray;
+                }
+
+                .active-setting {
+                    opacity: 1 !important;
+                }
+
+                .settings-option:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .container-change-password-right {
+            width: 75%;
+            height: 38%;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: #e6e6e6;
+
+            .update-password-button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                // height: 100%;
+            }
+
+            .update-password-button {
+                width: 23%;
+                height: 17%;
+                padding: 10px 0;
+                border-radius: 8px;
+                background-color: #090121;
+                text-align: center;
+            }
+
+            .update-password-button:hover {
+                cursor: pointer;
+            }
+
+            .update-password-text {
+                color: #fad221;
+                font-size: 18px;
+                font-weight: 700;
+                font-style: normal;
+            }
+
+            .settings-input-label {
+                color: #090021;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .settings-password-container {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .settings-small-label-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .container-my-tickets-right {
+            // overflow-x: scroll;
+            width: 75%;
+            height: 71%;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: #e6e6e6;
+
+            .my-tickets-header {
+                color: #090021;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .my-tickets-helper {
+                opacity: 0.5;
+                color: #090021;
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 12px;
+            }
+
+            .my-tickets-table {
+                margin-top: 30px;
+                width: 100%;
+                overflow: scroll;
+
+                thead {
+                    background-color: #090021;
+                    font-size: 14px;
+                    th {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .container-my-wallet-right {
+            width: 75%;
+            height: 38%;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0);
+
+            .my-wallet-right-top {
+                padding: 10px 40px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                border-radius: 8px;
+                background-color: #e6e6e6;
+                height: 18%;
+
+                .labels-container-payment {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .label-payment {
+                        font-size: 12px;
+                        color: #090021;
+                        font-weight: 200;
+                        letter-spacing: -0.27px;
+                        margin-right: 10px;
+                    }
+
+                    .label-balance {
+                        margin: 0;
+                        color: #090021;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .my-wallet-right-bottom {
+                margin-top: 10px;
+                height: 38%;
+                border-radius: 8px;
+                padding: 40px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                background-color: #e6e6e6;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .my-wallet-seperator {
+                    border-left: 2px solid lightgray;
+                    height: 180px;
+                    margin: 0 20px;
+                }
+
+                .my-wallet-seperator-hr{
+                    height: 1px;
+                    margin:20px 0;
+                    background-color: lightgray;
+                    width: 100%;
+                    display: none;
+                }
+
+                .my-wallet-right-bottom-child {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .right-bottom-label {
+                        color: #090021;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .my-wallet-button {
+                        height: 40px;
+                        border-radius: 8px;
+                        background-color: #090121;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .my-wallet-button-text {
+                            color: #fad221;
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+                    
+                    .my-wallet-button:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.settings-small-label {
+    color: #090021;
+    font-size: 12px;
+}
+
+.settings-right-inputs {
+    padding: 0 !important;
+    box-sizing: border-box;
+    padding-left: 3px !important;
+    font-size: 16px !important;
+    margin: 2vh 0px;
+    width: 100% !important;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    border: 1px solid #090121;
+    width: inherit;
+    font-size: global_variables.$md-text;
+    height: 35px;
+    color: #090121;
+}
+
+.settings-right-seperator {
+    width: 40px;
+}
+
+@media (max-width: global_variables.$tablet) {
+    .container-settings {
+        flex-direction: column !important;
+        align-items: center;
+
+        .container-settings-left,
+        .container-change-password-right,
+        .container-my-tickets-right,
+        .container-my-wallet-right {
+            width: 100% !important;
+            margin-right: 0 !important;
+            padding: 20px !important;
+        }
+
+        .container-settings-left {
+            margin-bottom: 40px;
+        }
+    }
+
+    
+
+    .container-my-wallet-right {
+        width: 100%!important;
+        padding:0 20px;
+    }
+
+}
+
+@media (max-width: global_variables.$phone) {
+    .update-password-text {
+        font-size: 14px !important;
+    }
+
+    .settings-right-seperator {
+        width: 20px;
+    }
+
+
+
+    .my-tickets-table {
+        margin-top: 30px;
+        width: 100;
+        overflow: scroll;
+
+        thead {
+            background-color: #090021;
+            font-size: 10px !important;
+            th {
+                color: #fff;
+            }
+        }
+    }
+
+
+
+    .my-wallet-right-bottom {
+        flex-direction: column!important;
+    }
+
+    .my-wallet-seperator {
+        display: none;
+    }
+
+    .my-wallet-seperator-hr{
+        display: block!important;
+    }
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Helvetica";   /*Can be any text*/
+  src: local("Helvetica"),
+    url("./utils/fonts/Helvetica 67 Medium Condensed.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roobert";   /*Can be any text*/
+  src: local("Roobert"),
+    url("./utils/fonts/Roobert-Bold.ttf") format("truetype");
+}
+
+*{
+  font-family: "Helvetica";
+}
+
+h1,h2,h3{
+  font-family: "Roobert"!important;
+}
+
+.app-container {
+  /* overflow-x: hidden; */
+  /* width:100vw;
+    height:100vh; */
+  /* width */ 
+  // height: 100vh!important;
+  background-color:  #090021!important;
+}
+
+.helvetica-font{
+  font-family: "Helvetica"!important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #090021; */
+  background: rgba(9, 0, 33, 0.1);
+
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #090021;
+}

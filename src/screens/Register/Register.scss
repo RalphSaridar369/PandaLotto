@@ -254,15 +254,9 @@ iteration-count | direction | fill-mode | play-state | name */
 @media (max-width: global_variables.$tablet) {
   .main-containers {
     flex-direction: column;
-<<<<<<< HEAD
-    height: 100%;
-    overflow-x: hidden;
-    // overflow-y: auto;
-=======
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
->>>>>>> eed10321cca3301ce52e187a120c2bf08c1e3ec6
     .inputs-container {
       width: 90% !important;
 
