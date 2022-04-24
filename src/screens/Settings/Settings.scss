@@ -145,16 +145,104 @@
                 margin-top: 12px;
             }
 
-            .my-tickets-table{
+            .my-tickets-table {
                 margin-top: 30px;
                 width: 100%;
                 overflow: scroll;
-                
-                thead{
+
+                thead {
                     background-color: #090021;
                     font-size: 14px;
-                    th{
-                        color:#fff
+                    th {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .container-my-wallet-right {
+            width: 75%;
+            height: 38%;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0);
+
+            .my-wallet-right-top {
+                padding: 10px 40px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                border-radius: 8px;
+                background-color: #e6e6e6;
+                height: 18%;
+
+                .labels-container-payment {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .label-payment {
+                        font-size: 12px;
+                        color: #090021;
+                        font-weight: 200;
+                        letter-spacing: -0.27px;
+                        margin-right: 10px;
+                    }
+
+                    .label-balance {
+                        margin: 0;
+                        color: #090021;
+                        font-size: 26px;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .my-wallet-right-bottom {
+                margin-top: 10px;
+                height: 38%;
+                border-radius: 8px;
+                padding: 40px;
+                border: 1px solid rgba(0, 0, 0, 0);
+                background-color: #e6e6e6;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .my-wallet-seperator {
+                    border-left: 2px solid lightgray;
+                    height: 180px;
+                    margin: 0 20px;
+                }
+
+                .my-wallet-right-bottom-child {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .right-bottom-label {
+                        color: #090021;
+                        font-size: 18px;
+                        font-weight: 700;
+                    }
+
+                    .my-wallet-button {
+                        height: 40px;
+                        border-radius: 8px;
+                        background-color: #090121;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .my-wallet-button-text {
+                            color: #fad221;
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+                    
+                    .my-wallet-button:hover{
+                        cursor: pointer;
                     }
                 }
             }
@@ -193,7 +281,8 @@
         align-items: center;
 
         .container-settings-left,
-        .container-change-password-right, .container-my-tickets-right {
+        .container-change-password-right,
+        .container-my-tickets-right {
             width: 100% !important;
             margin-right: 0 !important;
             padding: 20px !important;
@@ -214,17 +303,16 @@
         width: 20px;
     }
 
-    
-    .my-tickets-table{
+    .my-tickets-table {
         margin-top: 30px;
         width: 100%;
         overflow: scroll;
-        
-        thead{
+
+        thead {
             background-color: #090021;
-            font-size: 10px!important;
-            th{
-                color:#fff
+            font-size: 10px !important;
+            th {
+                color: #fff;
             }
         }
     }

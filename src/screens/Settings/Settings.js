@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import ChangePassword from './Screens/ChangePassword';
 import MyTickets from './Screens/MyTickets';
+import MyWallet from './Screens/MyWallet';
 import './Settings.scss';
 
 const Settings = () => {
   const [screenState, setScreenState] = useState(1);
 
   const [changePasswordData, setChangePasswordData] = useState({
-    email:'',
-    password:'',
-    confirm:'',
+    email: '',
+    password: '',
+    confirm: '',
   })
 
-  const setChangePassword = (type,value) =>{
-    setChangePasswordData({...changePasswordData,[type]:value})
+  const setChangePassword = (type, value) => {
+    setChangePasswordData({ ...changePasswordData, [type]: value })
   }
 
-  const handleSubmitPassword = () =>{
+  const handleSubmitPassword = () => {
     alert("Password changed successfully")
   }
 
@@ -27,13 +28,15 @@ const Settings = () => {
     { id: 4, value: 'Logout' },
   ]
 
-  const returnScreen =()=>{
-    switch(screenState){
+  const returnScreen = () => {
+    switch (screenState) {
       case 1:
-        return <ChangePassword setChangePassword={setChangePassword} handleSubmitPassword={handleSubmitPassword}/>
+        return <ChangePassword setChangePassword={setChangePassword} handleSubmitPassword={handleSubmitPassword} />
+      case 2:
+        return <MyWallet />
       case 3:
-          return <MyTickets />
-      }
+        return <MyTickets />
+    }
   }
 
   return (
@@ -46,12 +49,12 @@ const Settings = () => {
         <div className='container-settings-left'>
           {screens.map((item, index) => {
             return <div key={index} onClick={() => setScreenState(item.id)}>
-              <div  className='settings-option-container'> 
-              <div className={`settings-option ${item.id === screenState && "active-setting"}`}
+              <div className='settings-option-container'>
+                <div className={`settings-option ${item.id === screenState && "active-setting"}`}
                 >
-                {item.value}
-              </div>
-              {item.id === screenState && <img src={require('../../icons/chevron-right.png')}/>}
+                  {item.value}
+                </div>
+                {item.id === screenState && <img src={require('../../icons/chevron-right.png')} />}
               </div>
               {index != 3 && <hr></hr>}
             </div>
