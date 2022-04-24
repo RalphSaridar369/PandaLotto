@@ -214,6 +214,14 @@
                     margin: 0 20px;
                 }
 
+                .my-wallet-seperator-hr{
+                    height: 1px;
+                    margin:20px 0;
+                    background-color: lightgray;
+                    width: 100%;
+                    display: none;
+                }
+
                 .my-wallet-right-bottom-child {
                     width: 100%;
                     display: flex;
@@ -292,6 +300,14 @@
             margin-bottom: 40px;
         }
     }
+
+    
+
+    .container-my-wallet-right {
+        width: 100%!important;
+        padding:0 20px;
+    }
+
 }
 
 @media (max-width: global_variables.$phone) {
@@ -302,6 +318,8 @@
     .settings-right-seperator {
         width: 20px;
     }
+
+
 
     .my-tickets-table {
         margin-top: 30px;
@@ -315,5 +333,20 @@
                 color: #fff;
             }
         }
+    }
+
+
+    
+
+    .my-wallet-right-bottom {
+        flex-direction: column!important;
+    }
+
+    .my-wallet-seperator {
+        display: none;
+    }
+
+    .my-wallet-seperator-hr{
+        display: block!important;
     }
 }

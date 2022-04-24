@@ -25,6 +25,7 @@ const MyWallet = () => {
                     </div>
                 </div>
                 <div className='my-wallet-seperator'></div>
+                <hr className='my-wallet-seperator-hr'></hr>
                 <div className='my-wallet-right-bottom-child'>
                     <div className='right-bottom-label'>
                         Checkout    
