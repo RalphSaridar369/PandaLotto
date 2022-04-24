@@ -147,3 +147,25 @@
 .settings-right-seperator {
     width: 40px;
 }
+
+@media (max-width:global_variables.$tablet){
+    .container-settings{
+        flex-direction: column!important;
+        align-items: center;
+
+        .container-settings-left, .container-settings-right{
+            width: 100%!important;
+            margin-right: 0!important;
+            padding:20px!important;
+        }
+
+        .container-settings-left{
+            margin-bottom: 40px;
+        }
+
+        // .container-settings-right{
+        //     padding:0!
+        // }
+
+    }
+}
