@@ -1,11 +1,14 @@
-.App {
+.app-container {
   /* overflow-x: hidden; */
   /* width:100vw;
     height:100vh; */
-  /* width */
+  /* width */ 
+  height: 100vh!important;
+  background-color:  #090021!important;
 }
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */
