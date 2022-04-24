@@ -123,6 +123,7 @@
         }
 
         .container-my-tickets-right {
+            // overflow-x: scroll;
             width: 75%;
             height: 71%;
             border-radius: 8px;
@@ -151,6 +152,7 @@
                 
                 thead{
                     background-color: #090021;
+                    font-size: 14px;
                     th{
                         color:#fff
                     }
@@ -210,5 +212,20 @@
 
     .settings-right-seperator {
         width: 20px;
+    }
+
+    
+    .my-tickets-table{
+        margin-top: 30px;
+        width: 100%;
+        overflow: scroll;
+        
+        thead{
+            background-color: #090021;
+            font-size: 10px!important;
+            th{
+                color:#fff
+            }
+        }
     }
 }

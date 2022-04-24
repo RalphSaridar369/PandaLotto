@@ -70,9 +70,9 @@ const Login = () => {
       <div className='main-login' style={myStyle}>
         <div className='containers'>
           <div className='sign-in-container'>
-            <div className='sign-in-header'>
+            <h2 className='sign-in-header'>
               Sign in
-            </div>
+            </h2>
             <div className='inputs-container'>
               <div className='input'>
                 <div className='input-label'>

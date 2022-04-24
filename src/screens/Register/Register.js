@@ -61,7 +61,7 @@ const Register = () => {
         </g>
       </svg>
       <div className="left">
-        <div className="header-text">Create an account</div>
+        <h2 className="header-text">Create an account</h2>
         <div className="inputs-container">
           <div className="input">
             <div className="input-label">Email*</div>
