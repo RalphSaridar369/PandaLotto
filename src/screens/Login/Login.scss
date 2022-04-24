@@ -159,7 +159,7 @@
   .create-button {
     padding: 40px 0px;
     margin-top: 20px;
-    width: 50%;
+    width: 60%;
     transition: background-color 1s, border 1s;
     border-radius: 16px;
     background-color: #520d8c;
@@ -278,9 +278,9 @@
   .sign-in-container {
     padding: 40px 10px !important;
     margin: 0px !important;
-    width: inherit !important;
+    width: 80% !important;
     align-items: center !important;
-    border-radius: 0;
+    border-radius: 16px !important;
 
     .inputs-container {
       display: flex;

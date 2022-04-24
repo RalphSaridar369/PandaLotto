@@ -3,6 +3,8 @@ import Login from "../screens/Login/Login";
 import ProtectedPath from "../screens/ProtectedPath/ProtectedPath";
 import Register from "../screens/Register/Register";
 import Play from "../screens/Play/Play";
+import Success from "../screens/Payment/Success/Success";
+import Failed from "../screens/Payment/Failed/Failed";
 
 export const normalRoutes = [
   {
@@ -27,6 +29,18 @@ export const normalRoutes = [
     exact: false,
     path: "/play",
     component: <Play />,
+    header: false,
+  },
+  {
+    exact: false,
+    path: "/success",
+    component: <Success />,
+    header: false,
+  },
+  {
+    exact: false,
+    path: "/failed",
+    component: <Failed />,
     header: false,
   },
 ];

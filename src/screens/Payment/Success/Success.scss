@@ -1,0 +1,108 @@
+@use "../../../utils/global_variables.scss";
+
+.main-success {
+  overflow: hidden;
+  padding: 20px 300px !important;
+  padding-bottom: 200px;
+  // height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .containers {
+    //width: 100% !important;
+    height: 100%;
+    // height: 90%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .text-1 {
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .text-2 {
+        font-size: 22px;
+        color: white;
+      }
+
+      .button {
+        margin-top: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 47px;
+        width: 350px;
+        border-radius: 8px;
+        border: 3px solid #fad221;
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .button:hover {
+        background-color: #fad221;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-success {
+    .containers {
+      .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+
+        .text-1 {
+          font-size: 32px;
+        }
+
+        .text-2 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: global_variables.$phone) {
+  .main-success {
+    margin-top: -100px;
+    padding: 0 !important;
+    width: auto;
+    .containers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-height: 800px) {
+  .containers {
+    height: 100%;
+  }
+}
+
+@media (min-height: 1000px) {
+  .containers {
+    height: 100vh !important;
+  }
+}
