@@ -61,11 +61,35 @@
 
         .container-settings-right {
             width: 75%;
-            height: 35%;
+            height: 38%;
             border-radius: 8px;
             padding: 20px;
             border: 1px solid rgba(0, 0, 0, 0);
             background-color: #e6e6e6;
+
+            .update-password-button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                // height: 100%;
+            }
+
+            .update-password-button {
+                width: 23%;
+                height: 17%;
+                padding:10px 0;
+                border-radius: 8px;
+                background-color: #090121;
+                text-align: center;
+            }
+
+            .update-password-text {
+                color: #fad221;
+                font-size: 18px;
+                font-weight: 700;
+                font-style: normal;
+            }
 
             .settings-input-label {
                 color: #090021;
@@ -105,41 +129,10 @@
     border: 1px solid #090121;
     width: inherit;
     font-size: global_variables.$md-text;
-    height: 6vh;
+    height: 35px;
     color: #fff;
 }
 
 .settings-right-seperator {
     width: 40px;
-}
-
-.update-password-button-container {
-    display: flex;
-    background-color: red;
-    flex-direction: column;
-    align-items: flex-end;
-
-    .update-password-button {
-        width: 23%;
-        height: 17%;
-        border-radius: 8px;
-        background-color: #090121;
-
-        .update-password-text {
-            /* Style for "Update" */
-            width: 82px;
-            height: 29px;
-            color: #fad221;
-            font-size: 18px;
-            font-weight: 700;
-            font-style: normal;
-            letter-spacing: -0.24px;
-            line-height: 70px;
-            text-align: left;
-            /* Text style for "Update" */
-            font-style: normal;
-            letter-spacing: normal;
-            line-height: normal;
-        }
-    }
 }

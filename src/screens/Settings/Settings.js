@@ -44,14 +44,14 @@ const Settings = () => {
             <div className='settings-right-seperator'></div>
             <div className='settings-small-label-container'>
               <div className='settings-small-label'>
-                Current password
+                New password
               </div>
               <TextInput className="settings-right-inputs" />
             </div>
           </div>
           <div className="update-password-button-container">
             <div className='update-password-button'>
-              <div>Update</div>
+              <div className="update-password-text">Update</div>
             </div>
           </div>
         </div>
