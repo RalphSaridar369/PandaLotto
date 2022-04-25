@@ -1,8 +1,9 @@
 import React from 'react';
+import Select from '../../../components/Select/Select';
 import { TextInput } from '../../../components/TextInput/Textinput';
 import '../Settings.scss';
 
-const MyWallet = () => {
+const MyWallet = ({options}) => {
     return (
         <div className='container-my-wallet-right'>
             <div className='my-wallet-right-top'>
@@ -17,7 +18,8 @@ const MyWallet = () => {
                         Load my wallet:
                     </div>
                     <TextInput className="settings-right-inputs" placeholder="Add amount"/>
-                    <TextInput className="settings-right-inputs" placeholder="Add amount"/>
+                    <Select items={options} className="select-input" label="Load Method"/>
+                    {/* <TextInput className="settings-right-inputs" placeholder="Add amount"/> */}
                     <div className='my-wallet-button'>
                         <div className='my-wallet-button-text'>
                             Load amount
@@ -31,7 +33,7 @@ const MyWallet = () => {
                         Checkout    
                     </div>
                     <TextInput className="settings-right-inputs" placeholder="Transfer amount"/>
-                    <TextInput className="settings-right-inputs" placeholder="Transfer amount"/>
+                    <Select items={options} className="select-input" label="Transfer Method"/>
                     <div className='my-wallet-button'>
                         <div className='my-wallet-button-text'>
                             Transfer amount
