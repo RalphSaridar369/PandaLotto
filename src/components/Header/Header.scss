@@ -1,141 +1,315 @@
 @use "../../utils/global_variables.scss";
 
-.main__header {
-  //   background-color: #090021;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-top: 48px;
-
-  .nav {
-    .burger {
-      display: none;
-      transform: rotate(90deg);
-      color: white;
-      font-size: 32px;
-    }
-
-    .burger:hover {
-      color: global_variables.$yellow;
-    }
-  }
-
-  .right {
+@media (min-width: 1901px) and (max-width: 3000px) {
+  .main__header {
+    background-color: transparent;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 48px;
 
-    .account {
+    .nav {
+      .logo {
+        width: 100%;
+      }
+    }
+
+    .right {
+      width: 688px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
-      p {
-        margin-left: 15px;
-        margin-right: 9px;
-      }
-
-      .money {
+      .account {
         display: flex;
-        margin-left: 55px;
+        align-items: center;
 
         p {
-          font-size: 24px;
-          font-weight: bold;
+          margin-left: 15px;
+          margin-right: 9px;
+        }
+
+        .money {
+          display: flex;
+          margin-left: 55px;
+
+          p {
+            font-size: 24px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p {
+        font-size: 24px;
+        color: global_variables.$white;
+        margin-right: 66px;
+      }
+
+      p:hover {
+        cursor: pointer;
+        color: global_variables.$yellow;
+        text-decoration: underline;
+      }
+
+      .special {
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 228px;
+        height: 70px;
+        border-radius: 12px;
+        border: 3px solid global_variables.$yellow;
+
+        p {
+          margin-right: 13px;
+        }
+
+        p:hover {
+          text-decoration: none;
+        }
+      }
+
+      .special:hover {
+        background-color: global_variables.$yellow;
+
+        p {
+          color: black;
+        }
+
+        svg g path {
+          fill: black;
         }
       }
     }
 
-    p {
-      font-size: 24px;
-      color: global_variables.$white;
-      margin-right: 66px;
-    }
-
-    p:hover {
-      cursor: pointer;
-      color: global_variables.$yellow;
-      text-decoration: underline;
-    }
-
-    .special {
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 228px;
-      height: 70px;
-      border-radius: 12px;
-      border: 3px solid global_variables.$yellow;
-
-      p {
-        margin-right: 13px;
-      }
-
-      p:hover {
-        text-decoration: none;
-      }
-    }
-
-    .special:hover {
-      background-color: global_variables.$yellow;
-
-      p {
-        color: black;
-      }
-
-      svg g path {
-        fill: black;
-      }
+    .main-mobile {
+      display: none;
     }
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) and (max-width: 1900px) {
   .main__header {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 33.75px;
+
+    .nav {
+      .logo {
+        width: 100%;
+      }
+      .burger {
+        display: none;
+        transform: rotate(90deg);
+        color: white;
+        font-size: 32px;
+      }
+
+      .burger:hover {
+        color: global_variables.$yellow;
+      }
+    }
+
+    .right {
+      width: 688px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .account {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 10.5px;
+          margin-right: 6.3px;
+        }
+
+        .money {
+          display: flex;
+          margin-left: 38.7px;
+
+          p {
+            font-size: 24px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      p {
+        font-size: 24px;
+        color: global_variables.$white;
+        margin-right: 66px;
+      }
+
+      p:hover {
+        cursor: pointer;
+        color: global_variables.$yellow;
+        text-decoration: underline;
+      }
+
+      .special {
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 228px;
+        height: 70px;
+        border-radius: 12px;
+        border: 3px solid global_variables.$yellow;
+
+        p {
+          margin-right: 13px;
+        }
+
+        p:hover {
+          text-decoration: none;
+        }
+      }
+
+      .special:hover {
+        background-color: global_variables.$yellow;
+
+        p {
+          color: black;
+        }
+
+        svg g path {
+          fill: black;
+        }
+      }
+    }
+
+    .main-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1399px) {
+  .main__header {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 30px;
 
     .nav {
       .logo {
-        height: 120px;
+        width: 80%;
+      }
+      .burger {
+        display: none;
+        transform: rotate(90deg);
+        color: white;
+        font-size: 32px;
+      }
+
+      .burger:hover {
+        color: global_variables.$yellow;
       }
     }
 
     .right {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       .account {
+        display: flex;
+        align-items: center;
+
         p {
-          margin-left: 10px;
-          margin-right: 4px;
+          margin-left: 15px;
+          margin-right: 9px;
         }
 
         .money {
-          margin-left: 40px;
+          display: flex;
+          margin-left: 55px;
 
           p {
-            font-size: 18px;
+            font-size: 24px;
+            font-weight: bold;
           }
         }
       }
 
       p {
-        font-size: 18px;
-        margin-right: 45px;
+        font-size: 20px;
+        white-space: nowrap;
+        color: global_variables.$white;
+        margin-right: 50px;
+      }
+
+      p:hover {
+        cursor: pointer;
+        color: global_variables.$yellow;
+        text-decoration: underline;
       }
 
       .special {
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle !important;
         width: 160px;
         height: 50px;
+        border-radius: 12px;
+        border: 3px solid global_variables.$yellow;
+
+        p {
+          margin-right: 9px;
+        }
+
+        p:hover {
+          text-decoration: none;
+        }
+
+        svg {
+          margin-top: 2px;
+          width: 20px;
+        }
       }
+
+      .special:hover {
+        background-color: global_variables.$yellow;
+
+        p {
+          color: black;
+        }
+
+        svg g path {
+          fill: black;
+        }
+      }
+    }
+
+    .main-mobile {
+      display: none;
     }
   }
 }
 
-@media (max-width: 999px) {
+@media (max-width: 1000px) and (min-width: 700px) {
   .main__header {
     padding-left: 50px;
     padding-right: 50px;
@@ -152,20 +326,37 @@
 
       .burger {
         display: block;
+        transform: rotate(90deg);
+        color: white;
+        font-size: 32px;
+      }
+
+      .close {
+        display: block;
+        color: white;
+        font-size: 32px;
+      }
+
+      .burger:hover {
+        color: global_variables.$yellow;
       }
     }
 
     .right {
       display: none;
     }
+
+    .main-mobile {
+      display: block;
+    }
   }
 }
 
-@media (max-width: global_variables.$phone) {
+@media (max-width: 701px) and (min-width: 0px) {
   .main__header {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 35px;
+    padding-top: 15px;
 
     .nav {
       width: 100%;
@@ -178,11 +369,98 @@
 
       .burger {
         display: block;
+        transform: rotate(90deg);
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+      }
+
+      .burger:hover {
+        color: global_variables.$yellow;
       }
     }
 
     .right {
       display: none;
+    }
+
+    .main-mobile {
+      display: block;
+      height: 100vh;
+
+      .nav {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .close {
+          cursor: pointer;
+          font-size: 40px;
+          color: white;
+        }
+
+        .close:hover {
+          color: global_variables.$yellow;
+        }
+      }
+
+      .body {
+        h1 {
+          text-align: center;
+          color: white;
+          font-size: 32px;
+        }
+
+        .download {
+          margin-top: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          .download-app {
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+
+        .menu {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            font-size: 18px;
+            color: white;
+          }
+        }
+
+        .footer {
+          margin-top: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .bar {
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 20px;
+            width: 1px;
+            background-color: white;
+          }
+
+          p {
+            color: white;
+          }
+        }
+      }
     }
   }
 }

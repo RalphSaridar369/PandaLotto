@@ -1,34 +1,41 @@
 @font-face {
-  font-family: "Helvetica";   /*Can be any text*/
+  font-family: "Helvetica"; /*Can be any text*/
   src: local("Helvetica"),
     url("./utils/fonts/Helvetica 67 Medium Condensed.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roobert";   /*Can be any text*/
+  font-family: "Roobert"; /*Can be any text*/
   src: local("Roobert"),
     url("./utils/fonts/Roobert-Bold.ttf") format("truetype");
 }
 
-*{
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(./utils/fonts/Helvetica-Neue-LT-Std-37-Thin-Condensed_22517.ttf);
+}
+
+* {
   font-family: "Helvetica";
 }
 
-h1,h2,h3{
-  font-family: "Roobert"!important;
+h1,
+h2,
+h3 {
+  font-family: "Roobert" !important;
 }
 
 .app-container {
   /* overflow-x: hidden; */
   /* width:100vw;
     height:100vh; */
-  /* width */ 
+  /* width */
   // height: 100vh!important;
-  background-color:  #090021!important;
+  background-color: #090021 !important;
 }
 
-.helvetica-font{
-  font-family: "Helvetica"!important;
+.helvetica-font {
+  font-family: "Helvetica" !important;
 }
 
 ::-webkit-scrollbar {
