@@ -21,6 +21,7 @@
         height: 100%;
         width: 100%;
         background-color: #090021;
+        
 
         .container-settings-left {
             width: 20%;
@@ -67,6 +68,7 @@
         }
 
         .container-change-password-right {
+            box-sizing:border-box!important;
             width: 75%;
             height: 38%;
             border-radius: 8px;
@@ -130,6 +132,7 @@
             padding: 20px;
             border: 1px solid rgba(0, 0, 0, 0);
             background-color: #e6e6e6;
+            box-sizing:border-box!important;
 
             .my-tickets-header {
                 color: #090021;
@@ -162,7 +165,7 @@
 
         .container-my-wallet-right {
             width: 75%;
-            height: 38%;
+            height: 71%;
             border-radius: 8px;
             border: 1px solid rgba(0, 0, 0, 0);
 
@@ -300,10 +303,14 @@
 
         .container-settings-left,
         .container-change-password-right,
-        .container-my-tickets-right,
-        .container-my-wallet-right {
+        .container-my-tickets-right{
             width: 100% !important;
             margin-right: 0 !important;
+        }
+
+        
+        .container-change-password-right,
+        .container-my-tickets-right{
             padding: 20px !important;
         }
 
@@ -313,8 +320,17 @@
     }
 
     .container-my-wallet-right {
-        width: 100% !important;
-        padding: 0 20px;
+        margin:0!important;
+        width: 100%!important;
+        flex:2;
+        // padding: 20px !important;
+
+        .my-wallet-right-top {
+        // width: 100%;
+        }
+
+        .my-wallet-right-bottom{
+        }
     }
 }
 
