@@ -214,9 +214,9 @@
                     margin: 0 20px;
                 }
 
-                .my-wallet-seperator-hr{
+                .my-wallet-seperator-hr {
                     height: 1px;
-                    margin:20px 0;
+                    margin: 20px 0;
                     background-color: lightgray;
                     width: 100%;
                     display: none;
@@ -231,6 +231,16 @@
                         color: #090021;
                         font-size: 18px;
                         font-weight: 700;
+                    }
+
+                    .select-input {
+                        margin: 1.5vh 0px;
+                        height: 5vh;
+                        width: 100% !important;
+                        border-radius: 5px !important;
+                        width: inherit;
+                        background-color: #e6e6e6;
+                        border: 1px solid #090121;
                     }
 
                     .my-wallet-button {
@@ -248,8 +258,8 @@
                             font-weight: 700;
                         }
                     }
-                    
-                    .my-wallet-button:hover{
+
+                    .my-wallet-button:hover {
                         cursor: pointer;
                     }
                 }
@@ -268,7 +278,7 @@
     box-sizing: border-box;
     padding-left: 3px !important;
     font-size: 16px !important;
-    margin: 2vh 0px;
+    margin: 1vh 0px;
     width: 100% !important;
     background-color: #e6e6e6;
     border-radius: 5px;
@@ -302,13 +312,10 @@
         }
     }
 
-    
-
     .container-my-wallet-right {
-        width: 100%!important;
-        padding:0 20px;
+        width: 100% !important;
+        padding: 0 20px;
     }
-
 }
 
 @media (max-width: global_variables.$phone) {
@@ -319,8 +326,6 @@
     .settings-right-seperator {
         width: 20px;
     }
-
-
 
     .my-tickets-table {
         margin-top: 30px;
@@ -336,17 +341,15 @@
         }
     }
 
-
-
     .my-wallet-right-bottom {
-        flex-direction: column!important;
+        flex-direction: column !important;
     }
 
     .my-wallet-seperator {
         display: none;
     }
 
-    .my-wallet-seperator-hr{
-        display: block!important;
+    .my-wallet-seperator-hr {
+        display: block !important;
     }
 }
