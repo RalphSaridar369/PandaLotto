@@ -160,12 +160,12 @@ html {
   left: 0%;
   top: 0%;
   width: 100vw;
-  height: 400vh;
+  height: 100vh;
   z-index: 0;
-  // animation: 0.5s linear 0s infinite alternate forwards running dotes;
-  // @keyframes dotes {
-  //   to {
-  //     left: 1%;
-  //   }
-  // }
+  animation: 1s linear 0s infinite alternate forwards running dotes;
+  @keyframes dotes {
+    to {
+      left: 1%;
+    }
+  }
 }

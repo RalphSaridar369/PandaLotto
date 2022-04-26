@@ -1,9 +1,12 @@
-@use '../../utils/global_variables.scss';
+@use "../../utils/global_variables.scss";
 
-.main__header{
-    background-color: global_variables.$primary;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.main__header {
+  background-color: global_variables.$primary;
+  opacity: 1;
+  height: 10vh;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 5;
 }

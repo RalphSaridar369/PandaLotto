@@ -5,6 +5,7 @@ import mercury from "../../images/mercury.png";
 import rocket from "../../images/rocket.svg";
 import rocketSmall from "../../images/rocketSmall.png";
 
+import dots from "../../images/dots.png";
 import ancient from "../../images/Character_ancient.png";
 import Background from "../../images/Rectangle_52.png";
 import astro from "../../images/panda.png";
@@ -69,7 +70,7 @@ const Home = () => {
     // onScroll={onScroll}
     <>
       <div className="home" style={myStyle}>
-        <svg
+        {/* <svg
           id="points"
           width="100vw"
           height="400vh"
@@ -3394,7 +3395,7 @@ const Home = () => {
             stroke-miterlimit="20"
             stroke-width="2"
           ></path>
-        </svg>
+        </svg> */}
         <svg
           id="SVGDoc"
           width="1825"
@@ -3418,6 +3419,8 @@ const Home = () => {
             </g>
           </g>
         </svg>
+        <img src={dots} id="points" alt="dots" />
+
         <img src={rocket} className="rocket" alt="rocket" />
         <img src={rocketSmall} className="rocketSmall" alt="rocketSmall" />
         <img src={mercury} className="mercury" alt="mercury" />
