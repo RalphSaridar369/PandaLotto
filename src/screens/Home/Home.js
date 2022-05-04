@@ -4,7 +4,7 @@ import title from "../../images/title.png";
 import mercury from "../../images/mercury.png";
 import rocket from "../../images/rocket.svg";
 import rocketSmall from "../../images/rocketSmall.png";
-
+import pandaLaptop from "../../images/pandaLaptop.png";
 import dots from "../../images/dots.png";
 import ancient from "../../images/Character_ancient.png";
 import Background from "../../images/Rectangle_52.png";
@@ -19,7 +19,7 @@ const steps = ["", "", ""];
 const Home = () => {
   const { loggedIn } = useContext(MainContext);
   const myStyle = {
-    backgroundImage: `url(${Background})`,
+    // backgroundImage: `url(${Background})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
@@ -3419,10 +3419,10 @@ const Home = () => {
             </g>
           </g>
         </svg>
-        <img src={dots} id="points" alt="dots" />
 
         <img src={rocket} className="rocket" alt="rocket" />
         <img src={rocketSmall} className="rocketSmall" alt="rocketSmall" />
+        {/* {overFlow} */}
         <img src={mercury} className="mercury" alt="mercury" />
         <img src={title} className="title" alt="title" />
         <img src={ancient} className="ancient" alt="ancient" />
@@ -3585,6 +3585,7 @@ const Home = () => {
             />
           </svg>
           <p>Step 1</p>
+          <img src={pandaLaptop} className="pandaLaptop" alt="pandaLaptop" />
           <img src={createAccount} className="createAccount" />
         </div>
         <div className="step2" ref={myRef1}></div>

@@ -5,6 +5,8 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-image: url("../../images/dots.png");
+  background-repeat: repeat;
   .title {
     width: 40vw;
     margin: 0 auto;
@@ -55,6 +57,7 @@
 }
 .steps {
   position: relative;
+
   .stepper {
     position: fixed;
     bottom: 50%;
@@ -65,10 +68,14 @@
   .step1 {
     width: 100vw;
     height: 100vh;
-    // background-color: red;
+    background-image: url("../../images/dots.png");
+    background-repeat: repeat;
+    position: relative;
     .loopSVG {
+      position: absolute;
+      top: 5%;
+      right: 5%;
       width: 150px;
-      margin: 0% auto;
 
       .path {
         fill: #090021;
@@ -114,16 +121,26 @@
       width: 50vw;
       margin: 0 auto;
     }
+    .pandaLaptop {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      bottom: 5%;
+      right: 5%;
+    }
   }
   .step2 {
     width: 100vw;
     height: 100vh;
-    // background-color: chartreuse;
+    background-image: url("../../images/dots.png");
+    background-repeat: repeat;
+    position: relative;
   }
   .step3 {
     width: 100vw;
     height: 100vh;
-    // background-color: peachpuff;
+    background-image: url("../../images/dots.png");
+    background-repeat: repeat;
     position: relative;
     button {
       position: absolute;
@@ -139,7 +156,8 @@
   .step4 {
     width: 100vw;
     height: 100vh;
-    // background-color: aqua;
+    background-image: url("../../images/dots.png");
+    background-repeat: repeat;
   }
 }
 html {
@@ -162,10 +180,12 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  animation: 1s linear 0s infinite alternate forwards running dotes;
-  @keyframes dotes {
-    to {
-      left: 1%;
+  path {
+    animation: 1s linear 0s infinite alternate forwards running dotes;
+    @keyframes dotes {
+      to {
+        stroke-width: 0px;
+      }
     }
   }
 }
