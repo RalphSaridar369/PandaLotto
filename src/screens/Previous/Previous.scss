@@ -1,0 +1,31 @@
+@use "../../utils/global_variables.scss";
+
+.previous-seperator{
+    height: 0.5px!important;
+    background-color: #090021!important;
+    opacity: 0.3;
+    margin-bottom: 30px;
+}
+
+.previous-header-label{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+
+.show-latest-result{
+    display: none;
+}
+
+@media (max-width: global_variables.$tablet) {
+    .hide-latest-result{
+        display: none;
+    }
+
+    .show-latest-result{
+        display: block;
+    }
+}
+
+@media (max-width: global_variables.$phone) {
+}
