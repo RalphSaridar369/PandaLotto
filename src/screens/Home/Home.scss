@@ -210,13 +210,10 @@
       background-color: #1aedd242;
     }
 
-    // .pandaLaptop {
-    //   position: absolute;
-    //   width: 250px;
-    //   height: 250px;
-    //   bottom: 5%;
-    //   right: 5%;
-    // }
+    .pandaLaptop {
+      width: 40vw;
+      // height: 250px;
+    }
   }
   .step2 {
     h1 {
@@ -224,6 +221,9 @@
     }
     .boxColored {
       background-color: #3c096442;
+    }
+    .pandasTwo {
+      width: 55vw;
     }
   }
   .step3 {
@@ -233,6 +233,9 @@
     .boxColored {
       background-color: #f81ad742;
     }
+    .Missile {
+      width: 45vw;
+    }
   }
   .step4 {
     h1 {
@@ -240,6 +243,9 @@
     }
     .boxColored {
       background-color: #d0fd0242;
+    }
+    .FlyingCar {
+      width: 50vw;
     }
   }
 }
