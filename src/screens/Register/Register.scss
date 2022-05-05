@@ -1,289 +1,623 @@
 @use "../../utils/global_variables.scss";
 
-.main-containers {
-  max-width: 100vw;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #090021;
-  margin: 0 auto;
-  padding: 0 5vw;
-  .image {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 60px;
-    height: 60px;
-  }
-  .animation {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 8px;
-    height: 80px;
-    transform: rotate(0.56turn);
-    stroke-dasharray: 0;
-    /* @keyframes duration | easing-function | delay |
+@media (min-width: 1201px) and (max-width: 3000px) {
+  .main-containers {
+    max-width: 100vw;
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #090021;
+    margin: 0 auto;
+    padding: 0 5vw;
+    .image {
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 60px;
+      height: 60px;
+    }
+    .animation {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 8px;
+      height: 80px;
+      transform: rotate(0.56turn);
+      stroke-dasharray: 0;
+      /* @keyframes duration | easing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
-    animation: 3s ease-in 0s infinite normal forwards running dash;
-    @keyframes dash {
-      to {
-        width: 150px;
-        left: 100%;
-        stroke-dasharray: 10;
-        stroke-dashoffset: 1000;
+      animation: 3s ease-in 0s infinite normal forwards running dash;
+      @keyframes dash {
+        to {
+          width: 150px;
+          left: 100%;
+          stroke-dasharray: 10;
+          stroke-dashoffset: 1000;
+        }
       }
     }
-  }
-  .left {
-    z-index: 10;
-    opacity: 0.9;
-    display: flex;
-    flex-direction: column;
-    background-color: global_variables.$primary;
-    border-radius: 16px;
-    width: 38.75%;
-    margin: 5vh 0vw 0;
-    max-height: 70vh;
-    padding: 0% 4%;
-    // overflow: auto;
-
-    .header-text {
-      font-size: global_variables.$bg-text;
-      color: #fff;
-      text-align: center;
-      margin-top: 5%;
-      height: 15%;
-    }
-
-    .inputs-container {
+    .left {
+      z-index: 10;
+      opacity: 0.9;
       display: flex;
-      justify-content: space-between;
       flex-direction: column;
-      //   padding: 30px 0;
-      height: 85%;
-      width: 100%;
-      margin: 0 auto 5%;
+      background-color: global_variables.$primary;
+      border-radius: 16px;
+      width: 38.75%;
+      margin: 5vh 0vw 0;
+      max-height: fit-content;
+      padding: 0% 4%;
+      // overflow: auto;
 
-      .input {
+      .header-text {
+        font-size: global_variables.$bg-text;
+        color: #fff;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 50px;
+      }
+
+      .inputs-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        //height: 85%;
         width: 100%;
+        gap: 15px;
+        margin: 0 auto 5%;
 
-        .input-label-container {
+        .input {
+          width: 100%;
+
+          .input-label-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .input-label {
+            font-family: "Helvetica Neue";
+            font-size: global_variables.$md-text;
+            color: #fff;
+          }
+          .input-label-2 {
+            font-size: 14px;
+            font-family: "Helvetica Neue";
+            color: #fff;
+          }
+        }
+
+        .checkbox-text {
+          font-size: 16px;
+          font-family: "Helvetica Neue";
+          margin: 0 20px;
+          color: #fff;
+        }
+
+        .register-button {
+          margin-top: 20px;
+          background-color: global_variables.$yellow;
+          width: 100%;
+          height: 50px;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
           align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+
+          .register-button-text {
+            font-size: global_variables.$md-text;
+            color: global_variables.$primary;
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+          }
         }
 
-        .input-label {
-          font-size: global_variables.$md-text;
-          color: #fff;
+        .register-button:hover {
+          cursor: pointer;
         }
-        .input-label-2 {
-          font-size: 8px;
-          color: #fff;
-        }
-      }
-
-      .checkbox-text {
-        font-size: 16px;
-        margin: 0 20px;
-        color: #fff;
-      }
-
-      .register-button {
-        margin-top: 20px;
-        background-color: global_variables.$yellow;
-        width: 100%;
-        height: 5vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-
-        .register-button-text {
-          font-size: global_variables.$md-text;
-          color: global_variables.$primary;
-          font-weight: bold;
-        }
-      }
-
-      .register-button:hover {
-        cursor: pointer;
       }
     }
-  }
 
-  .right {
-    z-index: 10;
-    position: relative;
-    background-color: global_variables.$white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px;
-    width: 38.75%;
-    margin: 5vh 0vw 0;
-    max-height: 70vh;
-    padding: 0% 4%;
-    .header-text {
-      text-align: center;
-      color: #090021;
-      font-weight: bold;
-      font-size: global_variables.$md-text;
-      margin: 5% 0;
-    }
-    .text-container {
+    .right {
+      z-index: 10;
+      position: relative;
+      background-color: global_variables.$white;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      height: 65%;
-      overflow: auto;
-      text-align: center;
-    }
-    .text {
-      text-align: center;
-      color: #090021;
-      font-size: global_variables.$md-text;
-    }
-
-    .sign-in-button {
-      display: flex;
-      margin: 2% auto 5%;
-      width: 70%;
-      max-height: 19%;
-      transition: background-color 1s, border 1s;
-      padding: 1vw 0;
       border-radius: 16px;
-      background-color: #520d8c;
-      text-align: center;
-      align-items: center;
-
-      .sign-in-button-text-1 {
-        width: 90%;
-        margin: 0% auto;
-        text-decoration: none !important;
-        color: #fff;
+      width: 38.75%;
+      margin: 5vh 0vw 0;
+      max-height: fit-content;
+      padding: 0% 4%;
+      .header-text {
+        text-align: center;
+        color: #090021;
         font-size: global_variables.$md-text;
+        margin: 8% 0;
+        font-family: "Roobert";
       }
-
-      .sign-in-button-text-2 {
-        width: 90%;
-        margin: 0% auto;
-        color: #fff;
-        font-size: global_variables.$bg-text;
-        text-decoration: underline;
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 65%;
+        overflow: auto;
+        text-align: center;
       }
-    }
-
-    .sign-in-button:hover {
-      cursor: pointer;
-      background-color: #fff;
-      border: 2px solid #520d8c;
-
-      .sign-in-button-text-1 {
-        color: #520d8c;
+      .text {
+        text-align: center;
+        color: #090021;
+        font-family: "Helvetica Neue";
         font-size: global_variables.$md-text;
+        opacity: 0.7;
       }
 
-      .sign-in-button-text-2 {
-        color: #520d8c;
-        font-size: global_variables.$bg-text;
-        text-decoration: underline;
+      .sign-in-button {
+        display: flex;
+        margin: 2% auto 5%;
+        width: 70%;
+        max-height: 19%;
+        transition: background-color 1s, border 1s;
+        padding: 1vw 0;
+        border-radius: 16px;
+        background-color: #520d8c;
+        text-align: center;
+        align-items: center;
+
+        .sign-in-button-text-1 {
+          width: 90%;
+          margin: 0% auto;
+          font-family: "Helvetica Neue";
+          text-decoration: none !important;
+          color: #fff;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          width: 90%;
+          margin: 0% auto;
+          color: #fff;
+          font-size: 24px;
+          text-decoration: underline;
+        }
+      }
+
+      .sign-in-button:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border: 2px solid #520d8c;
+
+        .sign-in-button-text-1 {
+          color: #520d8c;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          color: #520d8c;
+          font-size: 24px;
+          text-decoration: underline;
+        }
       }
     }
   }
 }
 
-// @media (max-width: 1600px) {
-//   .left,
-//   .right {
-//     padding: 40px 20px !important;
-//     // height: 90% !important;
-//     width: 100% !important;
-
-//     .text {
-//       margin-bottom: 5px !important;
-//     }
-
-//     .sign-in-button {
-//       margin-top: 10px;
-//       padding: 5px 0 !important;
-
-//       .sign-in-button-text-2 {
-//         font-size: global_variables.$md-text !important;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 1250px) {
-//   .main-register {
-//     padding: 0px 100px !important;
-//   }
-// }
-
-// @media (max-width: 1200px) {
-//   .inputs-container {
-//     padding: 10px 0 !important;
-
-//     input {
-//       margin-bottom: 5px !important;
-//     }
-
-//     .input-label-container {
-//       flex-direction: column !important;
-//       align-items: flex-start !important;
-
-//       .input-label:nth-child(2) {
-//         display: none;
-//         margin-top: 5px;
-//       }
-//     }
-
-//     .input-label,
-//     .checkbox-text {
-//       font-size: global_variables.$sm-text !important;
-//     }
-//   }
-// }
-
-@media (max-width: global_variables.$tablet) {
+@media (min-width: 701px) and (max-width: 1200px) {
   .main-containers {
-    flex-direction: column;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    .inputs-container {
-      width: 90% !important;
-
-      .checkbox-text {
-        font-size: 12px !important;
-      }
+    max-width: 100vw;
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #090021;
+    margin: 0 auto;
+    padding: 0 5vw;
+    .image {
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 60px;
+      height: 60px;
     }
-
-    .left,
-    .right {
-      width: 90%;
-      //   height: 350px;
-
-      margin: 5% auto;
-      .sign-in-button {
-        width: 90% !important;
+    .animation {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 8px;
+      height: 80px;
+      transform: rotate(0.56turn);
+      stroke-dasharray: 0;
+      /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+      animation: 3s ease-in 0s infinite normal forwards running dash;
+      @keyframes dash {
+        to {
+          width: 150px;
+          left: 100%;
+          stroke-dasharray: 10;
+          stroke-dashoffset: 1000;
+        }
       }
     }
     .left {
-      margin-top: 50px;
+      z-index: 10;
+      opacity: 0.9;
+      display: flex;
+      flex-direction: column;
+      background-color: global_variables.$primary;
+      border-radius: 16px;
+      width: 40%;
+      margin: 5vh 0vw 0;
+      max-height: 80vh;
+      padding: 0% 4%;
+      // overflow: auto;
+
+      .header-text {
+        font-size: global_variables.$bg-text;
+        color: #fff;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 50px;
+      }
+
+      .inputs-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        //height: 85%;
+        width: 100%;
+        gap: 15px;
+        margin: 0 auto 5%;
+
+        .input {
+          width: 100%;
+
+          .input-label-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .input-label {
+            font-family: "Helvetica Neue";
+            font-size: global_variables.$md-text;
+            color: #fff;
+          }
+          .input-label-2 {
+            font-size: 14px;
+            font-family: "Helvetica Neue";
+            color: #fff;
+          }
+        }
+
+        .checkbox-text {
+          font-size: 16px;
+          font-family: "Helvetica Neue";
+          margin: 0 20px;
+          color: #fff;
+        }
+
+        .register-button {
+          margin-top: 20px;
+          background-color: global_variables.$yellow;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+
+          .register-button-text {
+            font-size: global_variables.$md-text;
+            color: global_variables.$primary;
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+          }
+        }
+
+        .register-button:hover {
+          cursor: pointer;
+        }
+      }
     }
 
-    .sign-in-button {
-      // margin: 20px 0px;
-      margin-top: 20px !important;
-      .sign-in-button-text-2 {
-        font-size: 18px !important;
+    .right {
+      z-index: 10;
+      position: relative;
+      background-color: global_variables.$white;
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      width: 38.75%;
+      margin: 5vh 0vw 0;
+      max-height: 80vh;
+      padding: 0% 4%;
+      .header-text {
+        text-align: center;
+        color: #090021;
+        font-size: global_variables.$md-text;
+        margin: 8% 0;
+        font-family: "Roobert";
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 65%;
+        overflow: auto;
+        text-align: center;
+      }
+      .text {
+        text-align: center;
+        color: #090021;
+        font-family: "Helvetica Neue";
+        font-size: global_variables.$md-text;
+        opacity: 0.7;
+      }
+
+      .sign-in-button {
+        display: flex;
+        margin: 2% auto 5%;
+        width: 70%;
+        max-height: 19%;
+        transition: background-color 1s, border 1s;
+        padding: 1vw 0;
+        border-radius: 16px;
+        background-color: #520d8c;
+        text-align: center;
+        align-items: center;
+
+        .sign-in-button-text-1 {
+          width: 90%;
+          margin: 0% auto;
+          font-family: "Helvetica Neue";
+          text-decoration: none !important;
+          color: #fff;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          width: 90%;
+          margin: 0% auto;
+          color: #fff;
+          font-size: 24px;
+          text-decoration: underline;
+        }
+      }
+
+      .sign-in-button:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border: 2px solid #520d8c;
+
+        .sign-in-button-text-1 {
+          color: #520d8c;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          color: #520d8c;
+          font-size: 24px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 251px) and (max-width: 700px) {
+  .main-containers {
+    max-width: 100vw;
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #090021;
+    margin: 0 auto;
+    padding: 0 5vw;
+    .image {
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 60px;
+      height: 60px;
+    }
+    .animation {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 8px;
+      height: 80px;
+      transform: rotate(0.56turn);
+      stroke-dasharray: 0;
+      /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+      animation: 3s ease-in 0s infinite normal forwards running dash;
+      @keyframes dash {
+        to {
+          width: 150px;
+          left: 100%;
+          stroke-dasharray: 10;
+          stroke-dashoffset: 1000;
+        }
+      }
+    }
+    .left {
+      z-index: 10;
+      opacity: 0.9;
+      display: flex;
+      flex-direction: column;
+      background-color: global_variables.$primary;
+      border-radius: 16px;
+      width: 90%;
+      margin: 5vh 0vw 0;
+      max-height: fit-content;
+      padding: 0% 4%;
+      // overflow: auto;
+
+      .header-text {
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 50px;
+      }
+
+      .inputs-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        //height: 85%;
+        width: 100%;
+        gap: 15px;
+        margin: 0 auto 5%;
+
+        .input {
+          width: 100%;
+
+          .input-label-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .input-label {
+            font-family: "Helvetica Neue";
+            font-size: 18px;
+            color: #fff;
+          }
+          .input-label-2 {
+            font-size: 10px;
+            font-family: "Helvetica Neue";
+            color: #fff;
+          }
+        }
+
+        .checkbox-text {
+          font-size: 16px;
+          font-family: "Helvetica Neue";
+          margin: 0 20px;
+          color: #fff;
+        }
+
+        .register-button {
+          margin-top: 20px;
+          background-color: global_variables.$yellow;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+
+          .register-button-text {
+            font-size: global_variables.$md-text;
+            color: global_variables.$primary;
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+          }
+        }
+
+        .register-button:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .right {
+      z-index: 10;
+      position: relative;
+      background-color: global_variables.$white;
+      display: flex;
+      flex-direction: column;
+      border-radius: 16px;
+      width: 90%;
+      margin: 5vh 0vw 0;
+      margin-bottom: 50px !important;
+      max-height: fit-content;
+      padding: 0% 4%;
+      .header-text {
+        text-align: center;
+        color: #090021;
+        font-size: 16px;
+        margin: 8% 0;
+        font-family: "Roobert";
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 65%;
+        overflow: auto;
+        text-align: center;
+      }
+      .text {
+        text-align: center;
+        color: #090021;
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        opacity: 0.7;
+        margin-bottom: 15px;
+      }
+
+      .sign-in-button {
+        display: flex;
+        margin: 2% auto 5%;
+        width: 80%;
+        max-height: 19%;
+        transition: background-color 1s, border 1s;
+        padding: 3vw 0;
+        border-radius: 16px;
+        background-color: #520d8c;
+        text-align: center;
+        align-items: center;
+
+        .sign-in-button-text-1 {
+          width: 90%;
+          margin: 0% auto;
+          font-family: "Helvetica Neue";
+          text-decoration: none !important;
+          color: #fff;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          width: 90%;
+          margin: 0% auto;
+          color: #fff;
+          font-size: 20px;
+          text-decoration: underline;
+        }
+      }
+
+      .sign-in-button:hover {
+        cursor: pointer;
+        background-color: #fff;
+        border: 2px solid #520d8c;
+
+        .sign-in-button-text-1 {
+          color: #520d8c;
+          font-size: global_variables.$md-text;
+        }
+
+        .sign-in-button-text-2 {
+          color: #520d8c;
+          font-size: 24px;
+          text-decoration: underline;
+        }
       }
     }
   }

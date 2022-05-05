@@ -1,24 +1,29 @@
 @use "../../utils/global_variables.scss";
 
-@media (min-width: 1901px) and (max-width: 3000px) {
+@media (min-width: 1451px) and (max-width: 3000px) {
   .main__header {
     background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 48px;
+    padding-left: 8%;
+    padding-right: 9%;
+    padding-top: 2.5%;
 
     .nav {
       .logo {
         width: 100%;
       }
+
+      .burger {
+        display: none;
+      }
     }
 
     .right {
-      width: 688px;
+      margin-bottom: 20px;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -46,7 +51,7 @@
       p {
         font-size: 24px;
         color: global_variables.$white;
-        margin-right: 66px;
+        margin-right: 50px;
         font-family: "Helvetica Neue";
         font-weight: 400;
         white-space: nowrap;
@@ -97,142 +102,30 @@
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1900px) {
+@media (min-width: 1251px) and (max-width: 1450px) {
   .main__header {
     background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 140px;
-    padding-right: 140px;
-    padding-top: 33.75px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2.5%;
 
     .nav {
       .logo {
         width: 100%;
       }
+
       .burger {
         display: none;
-        transform: rotate(90deg);
-        color: white;
-        font-size: 32px;
-      }
-
-      .burger:hover {
-        color: global_variables.$yellow;
       }
     }
 
     .right {
-      width: 688px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .account {
-        display: flex;
-        align-items: center;
-
-        p {
-          margin-left: 10.5px;
-          margin-right: 6.3px;
-        }
-
-        .money {
-          display: flex;
-          margin-left: 38.7px;
-
-          p {
-            font-size: 24px;
-            font-weight: bold;
-          }
-        }
-      }
-
-      p {
-        font-size: 24px;
-        color: global_variables.$white;
-        margin-right: 66px;
-        font-family: "Helvetica Neue" !important;
-        font-weight: 300;
-        white-space: nowrap;
-      }
-
-      p:hover {
-        cursor: pointer;
-        color: global_variables.$yellow;
-        text-decoration: underline;
-      }
-
-      .special {
-        cursor: pointer;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 228px;
-        height: 70px;
-        border-radius: 12px;
-        border: 3px solid global_variables.$yellow;
-
-        p {
-          margin-right: 13px;
-        }
-
-        p:hover {
-          text-decoration: none;
-        }
-      }
-
-      .special:hover {
-        background-color: global_variables.$yellow;
-
-        p {
-          color: black;
-        }
-
-        svg g path {
-          fill: black;
-        }
-      }
-    }
-
-    .main-mobile {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 1001px) and (max-width: 1399px) {
-  .main__header {
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 30px;
-
-    .nav {
-      .logo {
-        width: 80%;
-      }
-      .burger {
-        display: none;
-        transform: rotate(90deg);
-        color: white;
-        font-size: 32px;
-      }
-
-      .burger:hover {
-        color: global_variables.$yellow;
-      }
-    }
-
-    .right {
-      width: 500px;
+      margin-bottom: 20px;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -259,11 +152,11 @@
 
       p {
         font-size: 20px;
-        white-space: nowrap;
         color: global_variables.$white;
-        margin-right: 30px;
+        margin-right: 50px;
         font-family: "Helvetica Neue";
         font-weight: 400;
+        white-space: nowrap;
       }
 
       p:hover {
@@ -278,25 +171,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        vertical-align: middle !important;
-        width: 160px;
-        height: 50px;
+        width: 190px;
+        height: 60px;
         border-radius: 12px;
         border: 3px solid global_variables.$yellow;
-        padding-left: 26px;
-        padding-right: 26px;
 
         p {
-          margin-right: 5px;
+          margin-right: 13px;
         }
 
         p:hover {
           text-decoration: none;
-        }
-
-        svg {
-          margin-top: 2px;
-          width: 20px;
         }
       }
 
@@ -319,11 +204,11 @@
   }
 }
 
-@media (max-width: 1000px) and (min-width: 700px) {
+@media (max-width: 1250px) and (min-width: 701px) {
   .main__header {
     padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
+    padding-right: 70px;
+    padding-top: 50px;
 
     .nav {
       width: 100%;
@@ -331,20 +216,20 @@
       align-items: center;
       justify-content: space-between;
       .logo {
-        height: 65px;
+        height: 100%;
       }
 
       .burger {
         display: block;
         transform: rotate(90deg);
         color: white;
-        font-size: 32px;
+        font-size: 70px;
       }
 
       .close {
         display: block;
         color: white;
-        font-size: 32px;
+        font-size: 50px;
       }
 
       .burger:hover {
@@ -362,11 +247,11 @@
   }
 }
 
-@media (max-width: 701px) and (min-width: 0px) {
+@media (max-width: 700px) and (min-width: 0px) {
   .main__header {
     padding-left: 15px;
-    padding-right: 35px;
-    padding-top: 15px;
+    padding-right: 30px;
+    padding-top: 30px;
 
     .nav {
       width: 100%;
@@ -374,7 +259,7 @@
       align-items: center;
       justify-content: space-between;
       .logo {
-        height: 65px;
+        width: 60%;
       }
 
       .burger {

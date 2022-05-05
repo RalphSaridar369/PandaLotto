@@ -1,0 +1,396 @@
+@use "../../utils/global_variables.scss";
+
+@media (min-width: 1201px) and (max-width: 3000px) {
+  .main-reach {
+    .containers {
+      margin-left: 8%;
+      margin-top: 1.5% !important;
+      width: 100% !important;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 60px;
+
+      .left {
+        width: 55%;
+        .title {
+          font-size: 32px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .form {
+          padding: 2% 4%;
+          height: fit-content;
+          width: 90%;
+          background-color: #e6e6e6;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-radius: 8px;
+          margin-bottom: 50px;
+
+          .inputs-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            //height: 85%;
+            width: 100%;
+            gap: 15px;
+            margin: 0 auto 5%;
+
+            .input {
+              width: 100%;
+
+              .input-label-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .input-label {
+                font-weight: 500;
+                font-family: "Helvetica Neue";
+                font-size: 18px;
+                color: black;
+              }
+            }
+
+            .buttons {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .robot {
+                width: 50%;
+              }
+
+              .submit {
+                height: 50px;
+                border-radius: 8px;
+                background-color: #090121;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: global_variables.$yellow;
+                cursor: pointer;
+              }
+
+              .submit:hover {
+                background-color: global_variables.$yellow;
+                color: global_variables.$primary;
+              }
+            }
+
+            .register-button:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .right {
+        .title {
+          font-size: 32px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .contact-info {
+          .address {
+            font-family: "Roobert";
+            font-size: 18px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+
+          .value {
+            font-family: "Helvetica Neue";
+            margin-bottom: 5px;
+            color: global_variables.$white;
+            font-size: 18px;
+          }
+
+          .email {
+            font-family: "Roobert";
+            font-size: 18px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+  .main-reach {
+    overflow-x: hidden;
+    .containers {
+      width: 100% !important;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5vw;
+      margin: 0 auto;
+
+      .left {
+        margin-top: 5% !important;
+        width: 95%;
+        padding-bottom: 3%;
+
+        .title {
+          font-size: 26px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .form {
+          height: 500px;
+          width: 90%;
+          background-color: #e6e6e6;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-radius: 8px;
+
+          .inputs-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            //height: 85%;
+            width: 100%;
+            gap: 15px;
+            margin: 0 auto 5%;
+
+            .input {
+              width: 100%;
+
+              .input-label-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .input-label {
+                font-family: "Helvetica Neue";
+                font-size: 18px;
+                color: #fff;
+              }
+              .input-label-2 {
+                font-size: 10px;
+                font-family: "Helvetica Neue";
+                color: #fff;
+              }
+            }
+
+            .checkbox-text {
+              font-size: 16px;
+              font-family: "Helvetica Neue";
+              margin: 0 20px;
+              color: #fff;
+            }
+
+            .register-button {
+              margin-top: 20px;
+              background-color: global_variables.$yellow;
+              width: 100%;
+              height: 50px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              border-radius: 8px;
+
+              .register-button-text {
+                font-size: global_variables.$md-text;
+                color: global_variables.$primary;
+                font-family: "Helvetica Neue";
+                font-weight: bold;
+              }
+            }
+
+            .register-button:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .right {
+        margin-top: 5% !important;
+        width: 90%;
+        margin: 0 1%;
+        padding-bottom: 3%;
+        .title {
+          font-size: 26px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .contact-info {
+          .address {
+            font-family: "Roobert";
+            font-size: 16px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+
+          .value {
+            font-family: "Helvetica Neue";
+            margin-bottom: 5px;
+            color: global_variables.$white;
+            font-size: 16px;
+          }
+
+          .email {
+            font-family: "Roobert";
+            font-size: 1px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 251px) and (max-width: 700px) {
+  .main-reach {
+    overflow-x: hidden;
+    .containers {
+      width: 100% !important;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5vw;
+      margin: 0 auto;
+
+      .left {
+        margin-top: 5% !important;
+        width: 95%;
+        padding-bottom: 3%;
+
+        .title {
+          font-size: 26px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .form {
+          height: fit-content;
+          width: 85%;
+          //   margin: 0 auto;
+          background-color: #e6e6e6;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-radius: 8px;
+          padding: 2% 10px;
+
+          .inputs-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            //height: 85%;
+            width: 100%;
+            gap: 15px;
+            //margin: 0 auto 5%;
+
+            .input {
+              width: 100%;
+
+              .input-label-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+              }
+
+              .input-label {
+                font-family: "Helvetica Neue";
+                font-size: 18px;
+                color: #090021;
+              }
+            }
+
+            .buttons {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+
+              .robot {
+                width: 100%;
+                margin: 0 auto;
+              }
+
+              .submit {
+                margin-top: 10px;
+                height: 50px;
+                border-radius: 8px;
+                background-color: global_variables.$primary;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: global_variables.$yellow;
+                cursor: pointer;
+              }
+
+              .submit:hover {
+                background-color: global_variables.$yellow;
+                color: global_variables.$primary;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        margin-top: 5% !important;
+        width: 90%;
+        margin: 0 1%;
+        padding-bottom: 3%;
+        .title {
+          font-size: 26px;
+          color: global_variables.$white;
+          font-family: "Roobert";
+          margin-bottom: 20px;
+        }
+
+        .contact-info {
+          .address {
+            font-family: "Roobert";
+            font-size: 16px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+
+          .value {
+            font-family: "Helvetica Neue";
+            margin-bottom: 5px;
+            color: global_variables.$white;
+            font-size: 16px;
+          }
+
+          .email {
+            font-family: "Roobert";
+            font-size: 16px;
+            color: global_variables.$white;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

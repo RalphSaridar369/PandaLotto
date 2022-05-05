@@ -6,6 +6,7 @@ import Play from "../screens/Play/Play";
 import Success from "../screens/Payment/Success/Success";
 import Failed from "../screens/Payment/Failed/Failed";
 import Settings from "../screens/Settings/Settings";
+import Reachus from "../screens/ReachUs/Reachus";
 
 export const normalRoutes = [
   {
@@ -47,6 +48,11 @@ export const normalRoutes = [
   {
     path: "/settings",
     component: <Settings />,
+    header: false,
+  },
+  {
+    path: "/reach-us",
+    component: <Reachus />,
     header: false,
   },
 ];

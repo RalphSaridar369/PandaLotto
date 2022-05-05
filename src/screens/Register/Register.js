@@ -92,7 +92,12 @@ const Register = () => {
             <Checkbox
               className="checkbox"
               right={
-                <div className="checkbox-text">Accept Terms and Conditions</div>
+                <div className="checkbox-text">
+                  Accept{" "}
+                  <span style={{ textDecoration: "underline" }}>
+                    Terms and Conditions
+                  </span>
+                </div>
               }
               value={data.accept_1}
               onChange={(e) => setData({ ...data, accept_1: e.target.checked })}

@@ -1,0 +1,16 @@
+@use "../../utils/global_variables.scss";
+
+.text-input-container {
+  padding: 0 !important;
+  box-sizing: border-box;
+  padding-left: 3px !important;
+  margin: 2vh 0px;
+  width: 100% !important;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  border: 1px solid #090021;
+  width: inherit;
+  font-size: global_variables.$md-text;
+  height: 7vh;
+  color: #fff;
+}

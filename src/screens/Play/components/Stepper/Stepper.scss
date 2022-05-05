@@ -1,379 +1,356 @@
 @use "../../../../utils/global_variables.scss";
 
-.choose-character {
-}
-
-.step {
-    background-color: #090021;
-    padding: 40px 20px;
+.choose-character-container {
+  width: 55%;
+  margin-right: 4.5%;
+  .choose-character {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 
-    .step-left-mobile{
-        display: none;
-    }
+  .step-left-mobile {
+    display: none;
+  }
 
-    .step-left,
-    .step-left-mobile{
+  .step-left,
+  .step-left-mobile {
+    padding-top: 110px;
+    padding-left: 240px;
+    color: #fff;
+    align-self: flex-start;
 
-        color: #fff;
-        align-self: flex-start;
+    .step-left-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        .step-left-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+      .step-left-header {
+        color: global_variables.$yellow;
+        margin-bottom: 15px;
+      }
 
-            .step-left-header {
-                color: global_variables.$yellow;
-            }
+      .step-left-circle {
+        color: global_variables.$yellow;
 
-            .step-left-circle {
-                color: global_variables.$yellow;
-                border: 1px solid;
-                border-color: global_variables.$yellow;
-                border-radius: 100px;
-                padding: 10px 20px;
-                margin:0;
-
-                
-
-                .tick {
-                    width: 20px !important;
-                    height: 20px !important;
-                }
-            }
-
-            .step-left-circle:hover{
-                cursor: pointer;
-            }
-
-            .vertical-line {
-                border-left: 2px solid global_variables.$yellow;
-                height: 100px;
-            }
+        border: 1px solid;
+        border-color: global_variables.$yellow;
+        border-radius: 100%;
+        padding: 20px 30px;
+        margin-bottom: 15px;
+        font-size: 24px;
+        .tick {
+          width: 20px !important;
+          height: 20px !important;
         }
+      }
+
+      .step-left-circle:hover {
+        cursor: pointer;
+      }
+
+      .vertical-line {
+        border-left: 2px solid global_variables.$yellow;
+        height: 100px;
+      }
     }
+  }
 }
 
 .step-right {
-    height: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    // align-self: center;
-    // background-color: blue;
-    flex:2;
+  height: 100% !important;
+  width: 100% !important;
+  margin-left: -300px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 2;
 
-
-
-
-    .choose-character-container {
-        .choose-character {
-            width: 100%;
-            display: flex;
-            // flex
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 30px;
-
-            .box1 {
-                width: 48%;
-                height: 583px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                border-radius: 10px;
-                border: 1px solid white;
-
-                p {
-                    font-size: 24;
-                    color: white;
-                }
-            }
-
-            .box1:hover {
-                background-image: url("../../../../images/back.png");
-            }
-
-            .box2 {
-                width: 48%;
-                height: 583px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                border-radius: 10px;
-                border: 1px solid white;
-
-                p {
-                    font-size: 24;
-                    color: white;
-                }
-            }
-
-            .box2:hover {
-                background-image: url("../../../../images/back2.png");
-            }
-        }
-
-        .Buttons {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 30px;
-
-            .Button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 8px;
-                height: 65px;
-                width: 48%;
-                border: 2px solid #fad221;
-
-                h2 {
-                    font-size: 32;
-                    color: white;
-                }
-            }
-
-            .Button:hover {
-                background-color: #fad221;
-            }
-        }
-    }
-
-
-
-
-
-    .amount-container{
-        color:#fff;
-        display: flex;
-        flex-direction: column;
-
-        .tickets-image{
-            height: 100px;
-            width: 100px;
-            align-self: center;
-            margin-bottom: 100px;
-        }
-
-        h3{
-            color:#fff;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .ticket-container{
-            display: grid;
-            grid-template-columns: 15% 15% 15% 15% 15% 15%;
-            grid-gap: 10px;
-
-            .ticket-button{
-                text-align: center;
-                padding:20px 50px;
-                background-color: (0,0,0,0);
-                color:white;
-                border-radius: 10px;
-                border:1px solid white;
-                transition:background-color 0.5s, color 0.5s
-            }
-
-            .ticket-button:hover{
-                cursor: pointer;
-                background-color: global_variables.$yellow;
-                color:global_variables.$primary;
-            }
-
-            .active-ticket{
-                background-color: global_variables.$yellow;
-                color:global_variables.$primary;
-            }
-        }
-
-        .input-container{
-            margin-top: 30px;
-            display: flex;
-            flex-direction: row;
-
-            h4{
-                margin-right: 10px;
-            }
-        }
-
-        hr{
-            margin-top: 30px;
-            width: 100%;
-        }
-
-        .submit-button{
-            margin-top: 30px;
-            align-self: center;
-            font-size: 26px!important;
-            border:2px solid global_variables.$yellow;
-            padding:5px 60px;
-            border-radius: 5px;
-            transition:background-color 0.5s, color 0.5s
-        }
-
-        .submit-button:hover{
-            cursor: pointer;
-            background-color: global_variables.$yellow;
-            color:global_variables.$primary;
-        }
-    }
-
-
-
-
-
-    .payment-container{
-        display: flex;
-        flex-direction: column;
-
-        .hand-image{
-            height: 100px;
-            width: 100px;
-            align-self: center;
-            margin-bottom: 100px;
-        }
-
-        .payment-options{
-            display: flex;
-            flex-direction: row;
-
-            .payment-option{
-                border-radius: 10px;
-                border:2px solid #fff;
-                padding:20px 80px;
-                margin:0 20px
-            }
-
-            .payment-option:hover{
-                cursor: pointer;
-            }
-        }
-    }
-
-
-}
-
-@media (max-width:1100px){
-    
-    .ticket-container{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%!important;
-        grid-gap: 10px;
-
-        
-        .ticket-button{
-            padding:10px 30px!important;
-        }
-    }
-}
-
-
-
-@media (max-width:900px){
-    
+  .choose-character-container {
     .choose-character {
-        width: 300px!important;
+      width: 100%;
+      display: flex;
+      // flex
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .box1 {
+        width: 48%;
+        height: 583px;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid white;
 
-        .box1,.box2{
-            width: 300px!important;
-            margin-bottom: 10px;
+        p {
+          font-size: 24;
+          color: white;
         }
+      }
 
-    }
-    .Buttons{
-        display: none!important;
-    }
-}
+      .box1:hover {
+        background-image: url("../../../../images/back.png");
+      }
 
-
-@media (max-width:global_variables.$tablet) {
-
-
-    .ticket-container{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%!important;
-        grid-gap: 10px;
-
-        
-        .ticket-button{
-            padding:10px 30px!important;
-        }
-    }
-}
-
-@media (max-width:global_variables.$tablet) {
-    
-    
-    .step{
-        flex-direction: column!important;
-        .step-left-mobile{
-            width: 200px!important;
-            justify-content: center;
-            align-self: center;
-            align-items: center!important;
-            display: flex;
-            margin-bottom: 20px;
-            
-
-            .step-left-container{
-
-                .step-left-circle{
-                    margin:0 20px!important;
-                    border-radius: 100px;
-                    padding: 6px 12px;
-                    margin:0;
-                }
-            }
-
-            
-            .vertical-line {
-                display: none;
-            }
-
-        }   
-        .step-left{
-             display: none;
-            .step-left-container{
-                flex-direction: row!important;
-            }
-        }
-    }
-
-    .step-left-header {
-        display: none;
-    }
-
-    .ticket-container{
-        display: grid;
-        grid-template-columns: 50% 50%!important;
-        grid-gap: 10px;
-
-        
-        .ticket-button{
-            padding:10px 30px!important;
-        }
-    }
-
-      
-    .payment-options{
+      .box2 {
+        width: 48%;
+        height: 583px;
         display: flex;
-        flex-direction: column!important;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 1px solid white;
 
-          .payment-option{
-            margin-bottom: 20px!important;
-          }
+        p {
+          font-size: 24;
+          color: white;
         }
+      }
+
+      .box2:hover {
+        background-image: url("../../../../images/back2.png");
+      }
+    }
+
+    .Buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .Button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        height: 65px;
+        width: 48%;
+        border: 2px solid #fad221;
+
+        h2 {
+          font-size: 32;
+          color: white;
+        }
+      }
+
+      .Button:hover {
+        background-color: #fad221;
+      }
+    }
+  }
+
+  .amount-container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .tickets-image {
+      height: 100px;
+      width: 100px;
+      align-self: center;
+      margin-bottom: 100px;
+    }
+
+    h3 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .ticket-container {
+      display: grid;
+      grid-template-columns: 15% 15% 15% 15% 15% 15%;
+      grid-gap: 10px;
+
+      .ticket-button {
+        text-align: center;
+        padding: 20px 50px;
+        background-color: (0, 0, 0, 0);
+        color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+        transition: background-color 0.5s, color 0.5s;
+      }
+
+      .ticket-button:hover {
+        cursor: pointer;
+        background-color: global_variables.$yellow;
+        color: global_variables.$primary;
+      }
+
+      .active-ticket {
+        background-color: global_variables.$yellow;
+        color: global_variables.$primary;
+      }
+    }
+
+    .input-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+
+      h4 {
+        margin-right: 10px;
+      }
+    }
+
+    hr {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .submit-button {
+      margin-top: 30px;
+      align-self: center;
+      font-size: 26px !important;
+      border: 2px solid global_variables.$yellow;
+      padding: 5px 60px;
+      border-radius: 5px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .submit-button:hover {
+      cursor: pointer;
+      background-color: global_variables.$yellow;
+      color: global_variables.$primary;
+    }
+  }
+
+  .payment-container {
+    display: flex;
+    flex-direction: column;
+
+    .hand-image {
+      height: 100px;
+      width: 100px;
+      align-self: center;
+      margin-bottom: 100px;
+    }
+
+    .payment-options {
+      display: flex;
+      flex-direction: row;
+
+      .payment-option {
+        border-radius: 10px;
+        border: 2px solid #fff;
+        padding: 20px 80px;
+        margin: 0 20px;
+      }
+
+      .payment-option:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-gap: 10px;
+
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .choose-character {
+    width: 300px !important;
+    display: flex;
+    flex-direction: column;
+
+    .box1,
+    .box2 {
+      width: 300px !important;
+      margin-bottom: 10px;
+    }
+  }
+  .Buttons {
+    display: none !important;
+  }
+}
+
+@media (max-width: global_variables.$tablet) {
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-gap: 10px;
+
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
+}
+
+@media (max-width: global_variables.$tablet) {
+  .step {
+    flex-direction: column !important;
+    .step-left-mobile {
+      width: 200px !important;
+      justify-content: center;
+      align-self: center;
+      align-items: center !important;
+      display: flex;
+      margin-bottom: 20px;
+
+      .step-left-container {
+        .step-left-circle {
+          margin: 0 20px !important;
+          border-radius: 100px;
+          padding: 6px 12px;
+          margin: 0;
+        }
+      }
+
+      .vertical-line {
+        display: none;
+      }
+    }
+    .step-left {
+      display: none;
+      .step-left-container {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+  .step-left-header {
+    display: none;
+  }
+
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+    grid-gap: 10px;
+
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
+
+  .payment-options {
+    display: flex;
+    flex-direction: column !important;
+
+    .payment-option {
+      margin-bottom: 20px !important;
+    }
+  }
 }

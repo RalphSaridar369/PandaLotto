@@ -1,7 +1,6 @@
 import React from "react";
 import "./Play.scss";
-
-import Stepper from "./components/Stepper/Stepper";
+import Step1 from "./Step1/Step1";
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -11,7 +10,7 @@ const myStyle = {
 
 const Play = () => {
   return (
-    <div className="main"> 
+    <div className="main">
       <div className="main-play" style={myStyle}>
         <div className="containers">
           <div className="title">
@@ -26,10 +25,9 @@ const Play = () => {
             </div>
           </div>
           <div className="line"></div>
-
         </div>
       </div>
-      <Stepper />
+      <Step1 />
     </div>
   );
 };
