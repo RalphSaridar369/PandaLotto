@@ -6,6 +6,7 @@ import Play from "../screens/Play/Play";
 import Success from "../screens/Payment/Success/Success";
 import Failed from "../screens/Payment/Failed/Failed";
 import Settings from "../screens/Settings/Settings";
+import Previous from "../screens/Previous/Previous";
 
 export const normalRoutes = [
   {
@@ -47,6 +48,11 @@ export const normalRoutes = [
   {
     path: "/settings",
     component: <Settings />,
+    header: false,
+  },
+  {
+    path: "/previous",
+    component: <Previous />,
     header: false,
   },
 ];
