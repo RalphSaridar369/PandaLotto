@@ -1,12 +1,12 @@
 @use "../../utils/global_variables.scss";
 .home {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  background-image: url("../../images/dots.png");
-  background-repeat: repeat;
+  overflow: hidden !important;
+
   .title {
     width: 40vw;
     margin: 0 auto;
@@ -45,6 +45,7 @@
     position: absolute;
     top: 25%;
     left: -10%;
+    z-index: 2;
   }
   .astro {
     width: 150px;
@@ -53,6 +54,16 @@
     right: 5%;
     transform: rotateY(180deg); // Rotate 180 degrees along the y-axis
     z-index: 3;
+  }
+  .arrowDown {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
   }
 }
 .steps {
@@ -65,18 +76,95 @@
     right: 5%;
     z-index: 50;
   }
-  .step1 {
-    width: 100vw;
+  .step {
+    width: 90vw;
+    margin: 0 auto;
     height: 100vh;
-    background-image: url("../../images/dots.png");
+    background-image: url("../../images/dots.svg");
     background-repeat: repeat;
     position: relative;
+
+    .stepNumber {
+      color: #ffffff;
+      padding-top: 5%;
+      margin: 0;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        display: flex;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 120px;
+        margin: 0;
+        letter-spacing: 0;
+        margin-block-start: 0;
+        &:nth-child(1) {
+          margin-block-end: -40px;
+        }
+        &:nth-child(1) {
+          margin-block-start: -10px;
+        }
+      }
+
+      p {
+        color: #ffffff;
+        font-size: global_variables.$md-text;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 0;
+        text-align: left;
+      }
+    }
+    .box {
+      display: flex;
+      gap: 5%;
+
+      .boxColored {
+        position: relative;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 24px;
+      }
+      img {
+        position: absolute;
+        width: 60%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      p {
+        color: #e0e0e0;
+        width: 20vw;
+        font-size: global_variables.$sm-text;
+
+        &:first-of-type {
+          color: #ffffff;
+          font-weight: bold;
+          font-size: global_variables.$md-text;
+        }
+      }
+    }
+    .mainImage {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+    }
+  }
+  .step1 {
+    h1 {
+      background: linear-gradient(95deg, #78f1ff 0%, #1aedd2 54%, #9894e7 100%);
+    }
     .loopSVG {
       position: absolute;
       top: 5%;
       right: 5%;
       width: 150px;
-
       .path {
         fill: #090021;
         stroke-dasharray: 1000px;
@@ -117,61 +205,48 @@
         }
       }
     }
-    .createAccount {
-      width: 50vw;
-      margin: 0 auto;
+
+    .boxColored {
+      background-color: #1aedd242;
     }
-    .pandaLaptop {
-      position: absolute;
-      width: 250px;
-      height: 250px;
-      bottom: 5%;
-      right: 5%;
-    }
+
+    // .pandaLaptop {
+    //   position: absolute;
+    //   width: 250px;
+    //   height: 250px;
+    //   bottom: 5%;
+    //   right: 5%;
+    // }
   }
   .step2 {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../../images/dots.png");
-    background-repeat: repeat;
-    position: relative;
+    h1 {
+      background: linear-gradient(270deg, #d0a7ff 0%, #792ed3 100%);
+    }
+    .boxColored {
+      background-color: #3c096442;
+    }
   }
   .step3 {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../../images/dots.png");
-    background-repeat: repeat;
-    position: relative;
-    button {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+    h1 {
+      background: linear-gradient(to right, #fe1ad6 0%, #9620f7 100%);
+    }
+    .boxColored {
+      background-color: #f81ad742;
     }
   }
   .step4 {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../../images/dots.png");
-    background-repeat: repeat;
+    h1 {
+      background-image: linear-gradient(270deg, #f0fd01 0%, #ccfd01 100%);
+    }
+    .boxColored {
+      background-color: #d0fd0242;
+    }
   }
 }
 html {
   scroll-behavior: smooth;
 }
-#SVGDoc {
-  position: absolute;
-  bottom: 20%;
-  width: 50px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  cursor: pointer;
-}
+
 #points {
   // display: none;
   position: absolute;
@@ -187,5 +262,34 @@ html {
         stroke-width: 0px;
       }
     }
+  }
+}
+.test {
+  background-image: url("../../images/dot.svg");
+  background-position: 0;
+  background-size: 1.5vw;
+  background-repeat: repeat space;
+}
+.twinkling {
+  -webkit-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent url("../../images/twinkling.png") repeat top center;
+  z-index: 1;
+  animation: move-twink-back 200s linear infinite;
+}
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
   }
 }

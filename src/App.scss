@@ -43,7 +43,9 @@ h3 {
   background: #f1f1f1;
 }
 #body {
-  background-image: url("./images/dots.png");
+  background-image: url("./images/dot.png");
+  background-position: 0;
+  background-size: 2vw;
   background-repeat: repeat;
 }
 /* Handle */
