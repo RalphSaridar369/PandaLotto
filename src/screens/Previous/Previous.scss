@@ -1,31 +1,123 @@
 @use "../../utils/global_variables.scss";
 
-.previous-seperator{
-    height: 0.5px!important;
-    background-color: #090021!important;
-    opacity: 0.3;
-    margin-bottom: 30px;
+.previous-seperator {
+  height: 0.5px !important;
+  background-color: #090021 !important;
+  opacity: 0.3;
+  margin-bottom: 30px;
 }
 
-.previous-header-label{
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-}
-
-.show-latest-result{
-    display: none;
-}
-
-@media (max-width: global_variables.$tablet) {
-    .hide-latest-result{
-        display: none;
+.body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  .left {
+    width: 25%;
+    .label {
+      color: white;
+      font-family: "Roobert";
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .show-latest-result{
-        display: block;
+    .react-calendar {
+      background-color: #e6e6e6;
+      padding: 15px 15px 10px 5px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-radius: 8px;
+      font-family: "Helvetica Neue" !important;
     }
+
+    .react-calendar button {
+      margin: 0;
+      border: 0;
+      outline: none;
+      font-family: "Helvetica Neue" !important;
+      background-color: #e6e6e6;
+    }
+
+    .react-calendar button:hover {
+      cursor: pointer;
+    }
+
+    .react-calendar button:active {
+      border: 1px solid #090021;
+      background-color: #fad221;
+      border-radius: 5px;
+    }
+  }
+
+  .right {
+    width: 70%;
+
+    .label {
+      color: white;
+      font-family: "Roobert";
+      font-weight: 700;
+      // margin-bottom: 15px;
+    }
+
+    .container-settings {
+      width: 100%;
+      .container-my-tickets-right {
+        width: 100%;
+      }
+
+      .my-tickets-table {
+        border-collapse: collapse;
+
+        th {
+          background-color: global_variables.$primary;
+          color: white;
+          font-family: "Roobert";
+          white-space: nowrap;
+        }
+
+        tr {
+          background-color: #f2f2f2;
+
+          .left {
+            border-top-left-radius: 10px;
+          }
+          .right {
+            border-top-right-radius: 10px;
+          }
+
+          td {
+            padding: 7px 10px !important;
+            text-align: center;
+            font-family: "Helvetica Neue";
+            white-space: nowrap;
+          }
+        }
+
+        tr th {
+          padding: 5px 0;
+        }
+
+        tr td {
+          border-bottom: 1px solid #e6e6e6;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: global_variables.$phone) {
+  .body {
+    flex-direction: column;
+    gap: 20px;
+
+    .left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .right {
+      width: 100%;
+    }
+  }
 }

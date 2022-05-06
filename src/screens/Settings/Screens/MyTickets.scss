@@ -1,0 +1,93 @@
+@use "../../../utils/global_variables.scss";
+
+.container-my-tickets-right {
+  .my-tickets-header {
+    font-family: "Roobert";
+    font-size: 24px !important;
+    font-weight: 700;
+  }
+
+  .my-tickets-helper {
+    font-family: "Helvetica Neue";
+    font-weight: 500 !important;
+  }
+
+  .my-tickets-table {
+    border-collapse: collapse;
+
+    th {
+      background-color: global_variables.$primary;
+      color: white;
+      font-family: "Roobert";
+    }
+
+    tr {
+      background-color: #f2f2f2;
+
+      .left {
+        border-top-left-radius: 10px;
+      }
+      .right {
+        border-top-right-radius: 10px;
+      }
+
+      td {
+        padding: 7px 10px !important;
+        text-align: center;
+        font-family: "Helvetica Neue";
+      }
+    }
+
+    tr th {
+      padding: 5px 0;
+    }
+
+    tr td {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container-my-tickets-right {
+    max-width: 100vw !important;
+    overflow-x: auto;
+
+    .my-tickets-table {
+      border-collapse: collapse;
+
+      th {
+        background-color: global_variables.$primary;
+        color: white;
+        font-family: "Roobert";
+        white-space: nowrap;
+      }
+
+      tr {
+        background-color: #f2f2f2;
+
+        .left {
+          border-top-left-radius: 10px;
+        }
+        .right {
+          border-top-right-radius: 10px;
+        }
+
+        td {
+          white-space: nowrap;
+          padding: 7px 10px !important;
+          text-align: center;
+          font-family: "Helvetica Neue";
+        }
+      }
+
+      tr th {
+        padding: 5px 0;
+      }
+
+      tr td {
+        border-bottom: 1px solid #e6e6e6;
+      }
+    }
+  }
+}

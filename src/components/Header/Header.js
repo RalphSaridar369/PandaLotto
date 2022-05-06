@@ -6,7 +6,7 @@ import AccountLogo from "../../icons/Account.svg";
 import ArrowDown from "../../icons/down.svg";
 import Money from "../../icons/Money.svg";
 import "./Header.scss";
-import { display, style } from "@mui/system";
+// import { display, style } from "@mui/system";
 import { Link } from "react-router-dom";
 
 const Header = () => {

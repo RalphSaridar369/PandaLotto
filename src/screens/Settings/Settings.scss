@@ -1,371 +1,626 @@
 @use "../../utils/global_variables.scss";
 
 .main-settings {
-    background-color: #090021;
+  background-color: #090021;
+  height: 100%;
+  // height: 100vh!important;
+  // width: 100%;
+  padding: 3% 8%;
+
+  .header-settings {
+    color: #ffffff !important;
+    font-size: 26px;
+    letter-spacing: -0.6px;
+    margin: 0;
+  }
+
+  .container-settings {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
     height: 100%;
-    // height: 100vh!important;
-    // width: 100%;
-    padding: 3% 8%;
+    width: 100%;
+    background-color: #090021;
 
-    .header-settings {
-        color: #ffffff !important;
-        font-size: 26px;
-        letter-spacing: -0.6px;
-        margin: 0;
-    }
+    .container-settings-left {
+      width: 20%;
+      height: 27%;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      background-color: #e6e6e6;
+      margin-right: 3%;
 
-    .container-settings {
-        padding-top: 20px;
+      img {
+        display: inline;
+        height: 30px;
+        width: 30px;
+      }
+
+      .settings-option-container {
         display: flex;
         flex-direction: row;
-        height: 100%;
-        width: 100%;
-        background-color: #090021;
-        
-
-        .container-settings-left {
-            width: 20%;
-            height: 27%;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 0, 0, 0);
-            background-color: #e6e6e6;
-            margin-right: 3%;
-
-            img {
-                display: inline;
-                height: 30px;
-                width: 30px;
-            }
-
-            .settings-option-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
-                .settings-option {
-                    padding: 10px;
-                    height: 25%;
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #090121;
-                    opacity: 0.3;
-                }
-
-                hr {
-                    margin: 0;
-                    background-color: lightgray;
-                }
-
-                .active-setting {
-                    opacity: 1 !important;
-                }
-
-                .settings-option:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .container-change-password-right {
-            box-sizing:border-box!important;
-            width: 75%;
-            height: 38%;
-            border-radius: 8px;
-            padding: 20px;
-            border: 1px solid rgba(0, 0, 0, 0);
-            background-color: #e6e6e6;
-
-            .update-password-button-container {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: center;
-                // height: 100%;
-            }
-
-            .update-password-button {
-                width: 23%;
-                height: 17%;
-                padding: 10px 0;
-                border-radius: 8px;
-                background-color: #090121;
-                text-align: center;
-            }
-
-            .update-password-button:hover {
-                cursor: pointer;
-            }
-
-            .update-password-text {
-                color: #fad221;
-                font-size: 18px;
-                font-weight: 700;
-                font-style: normal;
-            }
-
-            .settings-input-label {
-                color: #090021;
-                font-size: 18px;
-                font-weight: 500;
-            }
-
-            .settings-password-container {
-                margin-top: 10px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .settings-small-label-container {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-
-        .container-my-tickets-right {
-            // overflow-x: scroll;
-            width: 75%;
-            height: 71%;
-            border-radius: 8px;
-            padding: 20px;
-            border: 1px solid rgba(0, 0, 0, 0);
-            background-color: #e6e6e6;
-            box-sizing:border-box!important;
-
-            .my-tickets-header {
-                color: #090021;
-                font-size: 20px;
-                font-weight: 700;
-            }
-
-            .my-tickets-helper {
-                opacity: 0.5;
-                color: #090021;
-                font-size: 14px;
-                font-weight: 400;
-                margin-top: 12px;
-            }
-
-            .my-tickets-table {
-                margin-top: 30px;
-                width: 100%;
-                overflow: scroll;
-
-                thead {
-                    background-color: #090021;
-                    font-size: 14px;
-                    th {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-
-        .container-my-wallet-right {
-            width: 75%;
-            height: 71%;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 0, 0, 0);
-
-            .my-wallet-right-top {
-                padding: 10px 40px;
-                border: 1px solid rgba(0, 0, 0, 0);
-                border-radius: 8px;
-                background-color: #e6e6e6;
-                height: 18%;
-
-                .labels-container-payment {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-end;
-
-                    .label-payment {
-                        font-size: 12px;
-                        color: #090021;
-                        font-weight: 200;
-                        letter-spacing: -0.27px;
-                        margin-right: 10px;
-                    }
-
-                    .label-balance {
-                        margin: 0;
-                        color: #090021;
-                        font-size: 26px;
-                        font-weight: 700;
-                    }
-                }
-            }
-
-            .my-wallet-right-bottom {
-                margin-top: 10px;
-                height: 38%;
-                border-radius: 8px;
-                padding: 40px;
-                border: 1px solid rgba(0, 0, 0, 0);
-                background-color: #e6e6e6;
-
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .my-wallet-seperator {
-                    border-left: 2px solid lightgray;
-                    height: 180px;
-                    margin: 0 20px;
-                }
-
-                .my-wallet-seperator-hr {
-                    height: 1px;
-                    margin: 20px 0;
-                    background-color: lightgray;
-                    width: 100%;
-                    display: none;
-                }
-
-                .my-wallet-right-bottom-child {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-
-                    .right-bottom-label {
-                        color: #090021;
-                        font-size: 18px;
-                        font-weight: 700;
-                    }
-
-                    .select-input {
-                        margin: 1.5vh 0px;
-                        height: 5vh;
-                        width: 100% !important;
-                        border-radius: 5px !important;
-                        width: inherit;
-                        background-color: #e6e6e6;
-                        border: 1px solid #090121;
-                    }
-
-                    .my-wallet-button {
-                        height: 40px;
-                        border-radius: 8px;
-                        background-color: #090121;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-
-                        .my-wallet-button-text {
-                            color: #fad221;
-                            font-size: 18px;
-                            font-weight: 700;
-                        }
-                    }
-
-                    .my-wallet-button:hover {
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.settings-small-label {
-    color: #090021;
-    font-size: 12px;
-}
-
-.settings-right-inputs {
-    padding: 0 !important;
-    box-sizing: border-box;
-    padding-left: 3px !important;
-    font-size: 16px !important;
-    margin: 1vh 0px;
-    width: 100% !important;
-    background-color: #e6e6e6;
-    border-radius: 5px;
-    border: 1px solid #090121;
-    width: inherit;
-    font-size: global_variables.$md-text;
-    height: 35px;
-    color: #090121;
-}
-
-.settings-right-seperator {
-    width: 40px;
-}
-
-@media (max-width: global_variables.$tablet) {
-    .container-settings {
-        flex-direction: column !important;
         align-items: center;
+        justify-content: space-between;
 
-        .container-settings-left,
-        .container-change-password-right,
-        .container-my-tickets-right{
-            width: 100% !important;
-            margin-right: 0 !important;
+        .settings-option {
+          padding: 10px;
+          height: 25%;
+          font-size: 16px;
+          font-weight: 600;
+          color: #090121;
+          opacity: 0.3;
+          font-family: "Helvetica Neue";
         }
 
-        
-        .container-change-password-right,
-        .container-my-tickets-right{
-            padding: 20px !important;
+        hr {
+          margin: 0;
+          background-color: lightgray;
         }
 
-        .container-settings-left {
-            margin-bottom: 40px;
+        .active-setting {
+          opacity: 1 !important;
         }
+
+        .settings-option:hover {
+          cursor: pointer;
+        }
+      }
     }
 
-    .container-my-wallet-right {
-        margin:0!important;
-        width: 100%!important;
-        flex:2;
-        // padding: 20px !important;
+    .container-change-password-right {
+      box-sizing: border-box !important;
+      width: 75%;
+      height: 38%;
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      background-color: #e6e6e6;
 
-        .my-wallet-right-top {
-        // width: 100%;
+      .settings-input-label {
+        font-family: "Helvetica Neue";
+        font-weight: 600 !important;
+      }
+
+      .settings-right-inputs {
+        font-family: "Helvetica Neue";
+        margin-bottom: 25px;
+      }
+
+      .settings-password-container {
+        .settings-small-label-container {
+          .settings-small-label {
+            font-family: "Helvetica Neue";
+            font-weight: 600 !important;
+          }
         }
+      }
 
-        .my-wallet-right-bottom{
+      .update-password-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        // height: 100%;
+      }
+
+      .update-password-button {
+        width: 23%;
+        height: 17%;
+        padding: 10px 0;
+        border-radius: 8px;
+        background-color: #090121;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .update-password-button:hover {
+        cursor: pointer;
+      }
+
+      .update-password-text {
+        color: #fad221;
+        font-size: 18px;
+        font-weight: 700;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+      }
+
+      .settings-input-label {
+        color: #090021;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .settings-password-container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .settings-small-label-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
         }
-    }
-}
-
-@media (max-width: global_variables.$phone) {
-    .update-password-text {
-        font-size: 14px !important;
+      }
     }
 
-    .settings-right-seperator {
-        width: 20px;
-    }
+    .container-my-tickets-right {
+      // overflow-x: scroll;
+      width: 75%;
+      height: 71%;
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      background-color: #e6e6e6;
+      box-sizing: border-box !important;
 
-    .my-tickets-table {
+      .my-tickets-header {
+        color: #090021;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .my-tickets-helper {
+        opacity: 0.5;
+        color: #090021;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 12px;
+      }
+
+      .my-tickets-table {
         margin-top: 30px;
-        width: 100;
+        width: 100%;
         overflow: scroll;
 
         thead {
-            background-color: #090021;
-            font-size: 10px !important;
-            th {
-                color: #fff;
-            }
+          background-color: #090021;
+          font-size: 14px;
+          th {
+            color: #fff;
+          }
         }
+      }
     }
 
-    .my-wallet-right-bottom {
-        flex-direction: column !important;
+    .container-my-wallet-right {
+      width: 75%;
+      height: 71%;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0);
+
+      .my-wallet-right-top {
+        padding: 10px 40px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 8px;
+        background-color: white;
+        height: 18%;
+
+        .labels-container-payment {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+
+          .label-payment {
+            font-size: 12px;
+            color: #090021;
+            font-weight: 600 !important;
+            letter-spacing: -0.27px;
+            font-family: "Helvetica Neue";
+            margin-right: 10px;
+          }
+
+          .label-balance {
+            margin: 0;
+            color: #090021;
+            font-size: 26px;
+            font-weight: 700;
+            font-family: "Roobert" !important;
+          }
+        }
+      }
+
+      .my-wallet-right-bottom {
+        margin-top: 10px;
+        height: 38%;
+        border-radius: 8px;
+        padding: 40px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        background-color: #e6e6e6;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .my-wallet-seperator {
+          border-left: 2px solid lightgray;
+          height: 180px;
+          margin: 0 40px;
+        }
+
+        .my-wallet-seperator-hr {
+          height: 1px;
+          margin: 20px 0;
+          background-color: lightgray;
+          width: 100%;
+          display: none;
+        }
+
+        .my-wallet-right-bottom-child {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          .settings-right-inputs {
+            height: 7vh;
+            font-family: "Helvetica Neue";
+            padding-left: 20px !important;
+          }
+
+          .right-bottom-label {
+            color: #090021;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: "Roobert";
+          }
+
+          .select-input {
+            margin: 1.5vh 0px;
+            height: 7vh;
+            width: 100% !important;
+            border-radius: 5px !important;
+            width: inherit;
+            background-color: #e6e6e6;
+            border: 1px solid #090121;
+            font-family: "Helvetica Neue";
+            font-weight: 500;
+            color: black;
+            padding-left: 20px !important;
+          }
+
+          .my-wallet-button {
+            height: 7vh;
+            border-radius: 8px;
+            background-color: #090121;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .my-wallet-button-text {
+              font-family: "Helvetica Neue";
+              color: #fad221;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+
+          .my-wallet-button:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.settings-small-label {
+  color: #090021;
+  font-size: 12px;
+}
+
+.settings-right-inputs {
+  padding: 0 !important;
+  box-sizing: border-box;
+  padding-left: 3px !important;
+  font-size: 16px !important;
+  margin: 1vh 0px;
+  width: 100% !important;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  border: 1px solid #090121;
+  width: inherit;
+  font-size: global_variables.$md-text;
+  height: 35px;
+  color: #090121;
+}
+
+.settings-right-seperator {
+  width: 40px;
+}
+
+@media (max-width: global_variables.$tablet) {
+  .container-settings {
+    flex-direction: column !important;
+    align-items: center;
+
+    .container-settings-left,
+    .container-change-password-right,
+    .container-my-tickets-right {
+      width: 100% !important;
+      margin-right: 0 !important;
     }
 
-    .my-wallet-seperator {
-        display: none;
+    .container-change-password-right,
+    .container-my-tickets-right {
+      padding: 20px !important;
     }
 
-    .my-wallet-seperator-hr {
-        display: block !important;
+    .container-settings-left {
+      margin-bottom: 40px;
     }
+  }
+
+  .container-my-wallet-right {
+    margin: 0 !important;
+    width: 100% !important;
+    flex: 2;
+    // padding: 20px !important;
+
+    // .my-wallet-right-top {
+    //   // width: 100%;
+    // }
+
+    // .my-wallet-right-bottom {
+    // }
+  }
+}
+
+@media (max-width: global_variables.$phone) {
+  .main-settings {
+    .container-settings {
+      .container-change-password-right {
+        box-sizing: border-box !important;
+        width: 75%;
+        height: 38%;
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        background-color: #e6e6e6;
+
+        .settings-input-label {
+          font-family: "Helvetica Neue";
+          font-weight: 600 !important;
+        }
+
+        .settings-right-inputs {
+          font-family: "Helvetica Neue";
+          margin-bottom: 25px;
+        }
+
+        .settings-password-container {
+          display: flex;
+          flex-direction: column !important;
+        }
+
+        .update-password-button-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: center;
+          // height: 100%;
+        }
+
+        .update-password-button {
+          width: 100%;
+          height: 17%;
+          padding: 10px 0;
+          border-radius: 8px;
+          background-color: #090121;
+          text-align: center;
+          margin-top: 0 !important;
+        }
+
+        .update-password-button:hover {
+          cursor: pointer;
+        }
+
+        .update-password-text {
+          color: #fad221;
+          font-size: 18px;
+          font-weight: 700;
+          font-family: "Helvetica Neue";
+          font-style: normal;
+        }
+
+        .settings-input-label {
+          color: #090021;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .settings-password-container {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .settings-small-label-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .container-my-tickets-right {
+        // overflow-x: scroll;
+        width: 75%;
+        height: 71%;
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        background-color: #e6e6e6;
+        box-sizing: border-box !important;
+
+        .my-tickets-header {
+          color: #090021;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .my-tickets-helper {
+          opacity: 0.5;
+          color: #090021;
+          font-size: 14px;
+          font-weight: 400;
+          margin-top: 12px;
+        }
+
+        .my-tickets-table {
+          margin-top: 30px;
+          width: 100%;
+          overflow: scroll;
+
+          thead {
+            background-color: #090021;
+            font-size: 14px;
+            th {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .container-my-wallet-right {
+        width: 75%;
+        height: 71%;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0);
+
+        .my-wallet-right-top {
+          padding: 10px 40px;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-radius: 8px;
+          background-color: #e6e6e6;
+          height: 18%;
+
+          .labels-container-payment {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            .label-payment {
+              font-size: 12px;
+              color: #090021;
+              font-weight: 200;
+              letter-spacing: -0.27px;
+              margin-right: 10px;
+            }
+
+            .label-balance {
+              margin: 0;
+              color: #090021;
+              font-size: 26px;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .my-wallet-right-bottom {
+          margin-top: 10px;
+          height: 38%;
+          border-radius: 8px;
+          padding: 40px;
+          border: 1px solid rgba(0, 0, 0, 0);
+          background-color: #e6e6e6;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .my-wallet-seperator {
+            border-left: 2px solid lightgray;
+            height: 180px;
+            margin: 0 20px;
+          }
+
+          .my-wallet-seperator-hr {
+            height: 1px;
+            margin: 20px 0;
+            background-color: lightgray;
+            width: 100%;
+            display: none;
+          }
+
+          .my-wallet-right-bottom-child {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .right-bottom-label {
+              color: #090021;
+              font-size: 18px;
+              font-weight: 700;
+            }
+
+            .select-input {
+              margin: 1.5vh 0px;
+              height: 5vh;
+              width: 100% !important;
+              border-radius: 5px !important;
+              width: inherit;
+              background-color: #e6e6e6;
+              border: 1px solid #090121;
+            }
+
+            .my-wallet-button {
+              height: 40px;
+              border-radius: 8px;
+              background-color: #090121;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              .my-wallet-button-text {
+                color: #fad221;
+                font-size: 18px;
+                font-weight: 700;
+              }
+            }
+
+            .my-wallet-button:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .update-password-text {
+    font-size: 14px !important;
+  }
+
+  .settings-right-seperator {
+    width: 20px;
+  }
+
+  .my-tickets-table {
+    margin-top: 30px;
+    width: 100;
+    overflow: scroll;
+
+    thead {
+      background-color: #090021;
+      font-size: 10px !important;
+      th {
+        color: #fff;
+      }
+    }
+  }
+
+  .my-wallet-right-bottom {
+    flex-direction: column !important;
+  }
+
+  .my-wallet-seperator {
+    display: none;
+  }
+
+  .my-wallet-seperator-hr {
+    display: block !important;
+  }
 }
