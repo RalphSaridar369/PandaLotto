@@ -21,6 +21,7 @@ function App() {
 
   const returnNormalRoutes = () => {
     return normalRoutes.map((item, index) => {
+      // let component = <><Header type=""/>{item.component}</>
       return (
         <Route
           key={index}
@@ -33,14 +34,17 @@ function App() {
   };
 
   const returnLoggedRoutes = () => {
-    return loggedInRoutes.map((item, index) => (
-      <Route
-        key={index}
-        path={item.path}
-        exact={item.exact}
-        element={item.component}
-      />
-    ));
+    return loggedInRoutes.map((item, index) => {
+      // let component = <><Header type=""/>{item.component}</>
+      return (
+        <Route
+          key={index}
+          path={item.path}
+          exact={item.exact}
+          element={item.component}
+        />
+      );
+    });
   };
 
   return (

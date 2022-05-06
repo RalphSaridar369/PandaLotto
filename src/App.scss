@@ -39,7 +39,7 @@ h3 {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
   height: 5px;
 }
 
@@ -47,7 +47,12 @@ h3 {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
+#body {
+  background-image: url("./images/dot.png");
+  background-position: 0;
+  background-size: 2vw;
+  background-repeat: repeat;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
   /* background: #090021; */
