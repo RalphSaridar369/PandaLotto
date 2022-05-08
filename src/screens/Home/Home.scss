@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden !important;
+  z-index: 10000;
 
   .title {
     width: 40vw;
@@ -23,10 +24,24 @@
   .rocket {
     position: absolute;
     top: 10%;
-    left: 75%;
-    width: 100px;
-    height: 100px;
+    left: 55%;
+    // min-width: 100px;
     z-index: 2;
+    transform: scale(1);
+    animation: 5s linear 0s infinite normal forwards running rocket;
+    @keyframes rocket {
+      0% {
+        transform: scale(0);
+      }
+      25% {
+        transform: scale(0.2);
+      }
+      100% {
+        transform: scale(0.7);
+        top: -30%;
+        left: 150%;
+      }
+    }
   }
   .rocketSmall {
     position: absolute;
@@ -95,7 +110,7 @@
       flex-direction: column;
       h1 {
         display: flex;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 120px;
         margin: 0;
@@ -128,6 +143,9 @@
         width: 10vw;
         height: 10vw;
         border-radius: 24px;
+        &:hover {
+          transform: rotateY(360deg);
+        }
       }
       img {
         position: absolute;
@@ -142,6 +160,7 @@
         color: #e0e0e0;
         width: 20vw;
         font-size: global_variables.$sm-text;
+        white-space: nowrap;
 
         &:first-of-type {
           color: #ffffff;
@@ -159,6 +178,17 @@
   .step1 {
     h1 {
       background: linear-gradient(95deg, #78f1ff 0%, #1aedd2 54%, #9894e7 100%);
+      // animation: 5s linear 0s infinite alternate forwards running titless;
+      // @keyframes titless {
+      //   to {
+      //     background: linear-gradient(
+      //       95deg,
+      //       #9894e7 0%,
+      //       #1aedd2 54%,
+      //       #78f1ff 100%
+      //     );
+      //   }
+      // }
     }
     .loopSVG {
       position: absolute;
@@ -208,6 +238,7 @@
 
     .boxColored {
       background-color: #1aedd242;
+      transition: transform 0.6s;
     }
 
     .pandaLaptop {
@@ -234,7 +265,43 @@
       background-color: #f81ad742;
     }
     .Missile {
-      width: 45vw;
+      width: 40vw;
+      height: 40vh;
+      visibility: visible;
+      .missileFire {
+        opacity: 0;
+        animation: 0.2s linear 0s infinite alternate forwards running
+          missileFire;
+        @keyframes missileFire {
+          25% {
+            opacity: 0.7;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+      .missileWind {
+        visibility: 0;
+        animation: 5s linear 0s infinite alternate forwards running missileWind;
+        @keyframes missileWind {
+          25% {
+            opacity: 1;
+          }
+          25% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
   .step4 {
@@ -271,31 +338,29 @@ html {
   }
 }
 .test {
-  // background-image: url("../../images/dot.svg");
-  // background-position: 0;
-  // background-size: 1.5vw;
-  // background-repeat: repeat space;
   position: relative;
-}
-.test::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-image: url("../../images/dot.svg");
-  background-position: 0;
-  background-size: 1.5vw;
-  background-repeat: repeat space;
-  opacity: 1;
-  animation: 1s linear 0s infinite alternate forwards running stars;
-  @keyframes stars {
-    to {
-      opacity: 0.1;
+  overflow-y: auto;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../../images/dot.svg");
+    background-position: 0;
+    background-size: 1.5vw;
+    background-repeat: repeat space;
+    opacity: 1;
+    animation: 1s linear 0s infinite alternate forwards running stars;
+    @keyframes stars {
+      to {
+        opacity: 0.1;
+      }
     }
   }
 }
+
 .twinkling {
   -webkit-filter: hue-rotate(180deg);
   filter: hue-rotate(180deg);

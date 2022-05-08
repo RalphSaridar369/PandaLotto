@@ -20,6 +20,10 @@ import FlyingCar from "../../images/FlyingCar.png";
 import astro from "../../images/panda.png";
 import "./Home.scss";
 import { Step, Stepper, Box, StepButton } from "@mui/material";
+import useWindowDimensions from "../../hooks/WindowDimensions";
+import SvgDot from "../../images/SvgDot";
+import SvgRocket from "../../images/svgRocket";
+import SvgMissile from "../../images/SvgMissile";
 
 const useMountEffect = (fun) => useEffect(fun, []);
 const steps = ["", "", ""];
@@ -44,7 +48,7 @@ const Home = () => {
 
   // useMountEffect(executeScroll);
   let scrolltest = window.scrollY;
-  console.log(scrolltest);
+  // console.log(scrolltest);
   useEffect(() => {
     const onScroll = (e) => {
       window.addEventListener("onScroll", (e) => console.log(e));
@@ -72,16 +76,37 @@ const Home = () => {
   var x = window.matchMedia("(max-width: 700px)");
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
+  const prevScrollY = useRef(0);
+  const [goingUp, setGoingUp] = useState(false);
+  const [pos, setPos] = useState(0);
+
+  const onScroll = (e) => {
+    const currentScrollY = e.target.scrollTop;
+    setPos(e.target.scrollTop);
+    if (prevScrollY.current < currentScrollY && goingUp) {
+      setGoingUp(false);
+    }
+    if (prevScrollY.current > currentScrollY && !goingUp) {
+      setGoingUp(true);
+    }
+    prevScrollY.current = currentScrollY;
+    console.log(e.target);
+  };
+  const { height, width } = useWindowDimensions();
+  console.log("position:", pos, "width:", width, "height:", height);
 
   return (
     // <div>Loggedin: {!loggedIn?"No":"Yes"}</div>
     // onScroll={onScroll}
-    <div className="test">
+    <div
+      className="test"
+      // style={{ height: "100vh" }}
+    >
       {/* <div className="twinkling"></div> */}
       <div className="cube"></div>
 
       <div className="home" style={myStyle}>
-        <img src={rocket} className="rocket" alt="rocket" />
+        <SvgRocket className="rocket" />
         <img src={rocketSmall} className="rocketSmall" alt="rocketSmall" />
         <img src={mercury} className="mercury" alt="mercury" />
         <img src={title} className="title" alt="title" />
@@ -116,14 +141,13 @@ const Home = () => {
           </defs>
           <desc>Generated with Avocode.</desc>
           <g>
-            {" "}
             <g>
               <path
                 d="M25.49998,29.87787c-0.60573,0 -1.21143,-0.23364 -1.67004,-0.69226l-5.64177,-5.64175c-0.25093,-0.25095 -0.25093,-0.66629 0,-0.91721c0.25095,-0.25096 0.66629,-0.25096 0.91722,0l5.64178,5.64175c0.41534,0.41534 1.09027,0.41534 1.5056,0l5.64178,-5.64175c0.25095,-0.25096 0.66631,-0.25096 0.91722,0c0.25093,0.25092 0.25093,0.66626 0,0.91721l-5.64177,5.64175c-0.45862,0.45862 -1.06432,0.69226 -1.67003,0.69226z"
                 fill="#ffffff"
                 fill-opacity="1"
               ></path>
-            </g>{" "}
+            </g>
             <g>
               <path
                 d="M25,50c-13.80712,0 -25,-11.19288 -25,-25v0c0,-13.80712 11.19288,-25 25,-25h0c13.80712,0 25,11.19288 25,25v0c0,13.80712 -11.19288,25 -25,25z"
@@ -164,7 +188,7 @@ const Home = () => {
           </g>
         </svg>
       </div>
-      <div className="steps">
+      <div className="steps" onScroll={onScroll}>
         <Box sx={{ width: "100%" }}>
           <Stepper
             nonLinear
@@ -334,7 +358,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <img src={Missile} className="Missile mainImage" alt="Missile" />
+          <SvgMissile className="Missile mainImage" />
         </div>
         <div className="step4 step" ref={myRef3}>
           <p className="stepNumber">Step 4</p>
