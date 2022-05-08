@@ -271,10 +271,30 @@ html {
   }
 }
 .test {
+  // background-image: url("../../images/dot.svg");
+  // background-position: 0;
+  // background-size: 1.5vw;
+  // background-repeat: repeat space;
+  position: relative;
+}
+.test::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   background-image: url("../../images/dot.svg");
   background-position: 0;
   background-size: 1.5vw;
   background-repeat: repeat space;
+  opacity: 1;
+  animation: 1s linear 0s infinite alternate forwards running stars;
+  @keyframes stars {
+    to {
+      opacity: 0.1;
+    }
+  }
 }
 .twinkling {
   -webkit-filter: hue-rotate(180deg);
