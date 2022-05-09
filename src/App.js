@@ -11,6 +11,7 @@ import { loggedInRoutes, normalRoutes } from "./utils/Routes";
 import { getItem } from "./utils/LocalStorage";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import "./App.scss";
+import Stepper from "./screens/Play/Stepper/Stepper";
 
 function App() {
   useEffect(() => {

@@ -2,7 +2,10 @@
 
 @media (min-width: 1451px) and (max-width: 3000px) {
   .main__header {
-    background-color: transparent;
+    background-image: url("../../images/dot.svg");
+    background-position: 0;
+    background-size: 1.5vw;
+    background-repeat: repeat space;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -104,7 +107,10 @@
 
 @media (min-width: 1251px) and (max-width: 1450px) {
   .main__header {
-    background-color: transparent;
+    background-image: url("../../images/dot.svg");
+    background-position: 0;
+    background-size: 1.5vw;
+    background-repeat: repeat space;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -206,6 +212,10 @@
 
 @media (max-width: 1250px) and (min-width: 701px) {
   .main__header {
+    background-image: url("../../images/dot.svg");
+    background-position: 0;
+    background-size: 1.5vw;
+    background-repeat: repeat space;
     padding-left: 50px;
     padding-right: 70px;
     padding-top: 50px;
@@ -249,6 +259,10 @@
 
 @media (max-width: 700px) and (min-width: 0px) {
   .main__header {
+    background-image: url("../../images/dot.svg");
+    background-position: 0;
+    background-size: 1.5vw;
+    background-repeat: repeat space;
     padding-left: 15px;
     padding-right: 30px;
     padding-top: 30px;
