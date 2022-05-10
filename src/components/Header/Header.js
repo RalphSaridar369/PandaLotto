@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { clear, getItem, removeItem, setItem } from "../../utils/LocalStorage";
 import { MainContext } from "../../utils/MainContext";
 import Logo from "../../images/PandaLotto.png";
@@ -13,6 +13,11 @@ import Dot from '../../images/dot.svg'
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { loggedIn, setLogIn } = useContext(MainContext);
+
+  useEffect(()=>{
+
+  },[window.location.pathname])
+
   const handleLogin = () => {
     if (loggedIn) {
       clear();
