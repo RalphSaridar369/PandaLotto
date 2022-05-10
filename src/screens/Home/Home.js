@@ -179,7 +179,7 @@ const Home = () => {
             <p>Easy & Quick account registration.</p>
           </div>
           <div className="box">
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img
                   src={fingerClick}
@@ -190,7 +190,7 @@ const Home = () => {
               <p>One Click Registration</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={file} className="file" alt="file" />
               </div>
@@ -215,14 +215,14 @@ const Home = () => {
             <p>Select the Panda you’d like to invest with.</p>
           </div>
           <div className="box">
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={helmet} className="helmet" alt="helmet" />
               </div>
               <p>Space Panda</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={helmetOld} className="helmetOld" alt="helmetOld" />
               </div>
@@ -246,14 +246,14 @@ const Home = () => {
             <p>Select the budget you’d like to buy your ticket!</p>
           </div>
           <div className="box">
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={Secured} className="Secured" alt="Secured" />
               </div>
               <p>100% Secure Payment</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={Betcoin} className="Betcoin" alt="Betcoin" />
               </div>
@@ -275,14 +275,14 @@ const Home = () => {
             </p>
           </div>
           <div className="box">
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={Dollar} className="Dollar" alt="Dollar" />
               </div>
               <p>Earnings Fast Withdrawal</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div>
+            <div className="box1">
               <div className="boxColored">
                 <img src={Clock} className="Clock" alt="Clock" />
               </div>
