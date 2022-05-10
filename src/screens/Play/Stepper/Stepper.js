@@ -149,7 +149,7 @@ export default function VerticalLinearStepper() {
             return <div key={index} className="step-left-container">
               <div className="step-left-circle" onClick={()=>{
                if(activeStep + 1 > item.step)
-               setActiveStep(index)
+                  setActiveStep(index)
               }}>
                 {activeStep + 1 > item.step ?
                   <img src={require("../../../icons/tick.png")} className="tick" />

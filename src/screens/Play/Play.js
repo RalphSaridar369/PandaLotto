@@ -13,24 +13,25 @@ const myStyle = {
 };
 
 const Play = () => {
-  const [active1, setActive1] = useState(false);
-  const [active2, setActive2] = useState(false);
-  const [active3, setActive3] = useState(false);
-  const [ticket, setTicket] = useState();
-  const tickets = [
-    { id: 1, value: 20 },
-    { id: 2, value: 50 },
-    { id: 3, value: 100 },
-    { id: 4, value: 200 },
-    { id: 5, value: 300 },
-    { id: 6, value: 400 },
-    { id: 7, value: 500 },
-    { id: 8, value: 750 },
-    { id: 9, value: 1000 },
-    { id: 10, value: 2000 },
-    { id: 11, value: 3000 },
-    { id: 12, value: 5000 },
-  ];
+  
+  // const [active1, setActive1] = useState(false);
+  // const [active2, setActive2] = useState(false);
+  // const [active3, setActive3] = useState(false);
+  // const [ticket, setTicket] = useState();
+  // const tickets = [
+  //   { id: 1, value: 20 },
+  //   { id: 2, value: 50 },
+  //   { id: 3, value: 100 },
+  //   { id: 4, value: 200 },
+  //   { id: 5, value: 300 },
+  //   { id: 6, value: 400 },
+  //   { id: 7, value: 500 },
+  //   { id: 8, value: 750 },
+  //   { id: 9, value: 1000 },
+  //   { id: 10, value: 2000 },
+  //   { id: 11, value: 3000 },
+  //   { id: 12, value: 5000 },
+  // ];
 
   return (
     <div className="main">
@@ -52,7 +53,6 @@ const Play = () => {
         <div>
         </div>
       </div>
-        <Stepper />
     </div>
   );
 };

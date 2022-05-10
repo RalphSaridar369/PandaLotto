@@ -8,6 +8,7 @@ import Money from "../../icons/Money.svg";
 import "./Header.scss";
 // import { display, style } from "@mui/system";
 import { Link } from "react-router-dom";
+import Dot from '../../images/dot.svg'
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,8 +21,13 @@ const Header = () => {
     }
     setLogIn(loggedIn ? false : true);
   };
+
+  let style = window.location.pathname == "/"?
+  {backgroundImage:`url(${Dot})`}:
+  {backgroundImage:null}
+
   return (
-    <div className="main__header">
+    <div className="main__header" style={style}>
       <div
         style={{
           width: "100%",
