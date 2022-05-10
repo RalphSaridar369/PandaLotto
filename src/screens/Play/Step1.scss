@@ -1,0 +1,56 @@
+@use "../../utils/global_variables.scss";
+
+    .main-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 7.5%;
+        margin-top: 10%;
+  
+        .main-left-circle {
+          border-radius: 60px;
+          padding: 5px 10px;
+          margin: 5px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .active-circle{
+            color: global_variables.$yellow;
+            border: 1px solid global_variables.$yellow;
+        }
+        
+        .inactive-circle{
+            color: gray;
+            border: 1px solid gray;
+        }
+        .active-label{
+            color: global_variables.$yellow;
+        }
+        
+        .inactive-label{
+            color: gray;
+        }
+
+        .main-left-label {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+  
+        .main-left-seperator {
+          border-left: 1px solid lightgray;
+          height: 100px;
+          align-self: center;
+        }
+    }
+
+    .main-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: red;
+        flex:1
+    }

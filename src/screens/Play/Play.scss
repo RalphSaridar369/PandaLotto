@@ -7,6 +7,13 @@
     margin: 0;
     margin-bottom: 15px;
   }
+
+  .main-containers {
+    display: flex;
+    flex-direction: row;
+
+  }
+
   .main-play {
     overflow-x: hidden;
     padding: 2% 23% !important;
@@ -432,172 +439,6 @@
             h2 {
               font-size: 32px;
             }
-          }
-        }
-      }
-
-      .step1 {
-        .choose-character {
-          flex-direction: column;
-          gap: 30px;
-
-          .box1 {
-            width: 80vw;
-            padding-bottom: 20px;
-          }
-
-          .box2 {
-            padding-bottom: 20px;
-            width: 80vw;
-          }
-        }
-      }
-
-      .Buttons {
-        display: none !important;
-      }
-
-      .step2 {
-        .amount-container {
-          margin-top: 40px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          .tickets-image {
-            height: 100%;
-            align-self: center;
-            margin-bottom: 20px;
-          }
-
-          h3 {
-            font-family: "Roobert" !important;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 30px;
-          }
-
-          .ticket-container {
-            width: 90vw;
-            margin-left: 5vw;
-            display: grid;
-            grid-template-columns: 30% 30% 30%;
-          }
-
-          .input-container {
-            margin-top: 15px;
-            width: 90vw;
-            display: flex;
-            flex-direction: column;
-
-            h4 {
-              font-family: "Helvetica Neue";
-              font-weight: normal;
-              color: white;
-            }
-          }
-
-          .line {
-            display: none;
-          }
-
-          .submit-button {
-            margin-top: 10px;
-            margin-bottom: 30px;
-            align-self: center;
-            font-size: 26px !important;
-            border: 2px solid global_variables.$yellow;
-            padding: 5px 100px;
-            font-family: "Helvetica Neue";
-            font-size: 24px !important;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.5s, color 0.5s;
-          }
-
-          .submit-button:hover {
-            cursor: pointer;
-            background-color: global_variables.$yellow;
-            color: global_variables.$primary;
-          }
-        }
-      }
-
-      .step3 {
-        .payment-container {
-          margin-top: 40px;
-          display: flex;
-          flex-direction: column;
-
-          .hand-image {
-            margin-bottom: 20px;
-            align-self: center;
-          }
-
-          .payment-options {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-
-            .option {
-              .title {
-                margin: 5px 0 15px 0;
-                color: white;
-                text-align: center;
-                font-family: "Helvetica Neue";
-              }
-            }
-
-            .payment-option {
-              border-radius: 8px;
-              border: 1px solid #e0e0e0;
-              height: 50px;
-              padding: 20px 80px;
-              margin: 0 20px;
-            }
-
-            .payment-option:hover {
-              cursor: pointer;
-              background-color: #7aa9e2;
-              border: 1px solid #7aa9e2;
-            }
-          }
-        }
-
-        .paypal {
-          margin-top: 20px;
-          width: 95% !important;
-
-          // .TextInput::placeholder {
-          //   margin-left: 20px;
-          // }
-
-          .subtitle {
-            font-family: "Helvetica Neue";
-            color: white;
-          }
-        }
-
-        .wallet {
-          margin-top: 20px;
-          width: 95% !important;
-          display: flex;
-          gap: 5px;
-          align-items: center;
-          // .TextInput::placeholder {
-          //   margin-left: 20px;
-          // }
-
-          .subtitle {
-            font-family: "Helvetica Neue";
-            color: white;
-            font-size: 20px;
-          }
-
-          .balance {
-            font-family: "Roobert";
-            color: white;
-            font-size: 28px;
           }
         }
       }

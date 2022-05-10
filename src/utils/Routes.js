@@ -2,7 +2,7 @@ import Home from "../screens/Home/Home";
 import Login from "../screens/Login/Login";
 import ProtectedPath from "../screens/ProtectedPath/ProtectedPath";
 import Register from "../screens/Register/Register";
-import Play from "../screens/Play/Play";
+import Step1 from "../screens/Play/Step1";
 import Success from "../screens/Payment/Success/Success";
 import Failed from "../screens/Payment/Failed/Failed";
 import Settings from "../screens/Settings/Settings";
@@ -31,8 +31,8 @@ export const normalRoutes = [
   //this needs to be in the loggednRoutes
   {
     exact: false,
-    path: "/play",
-    component: <Play />,
+    path: "/step1",
+    component: <Step1 />,
     header: false,
   },
   {

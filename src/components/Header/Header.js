@@ -68,7 +68,7 @@ const Header = () => {
               {/* )} */}
             </p>
           </Link>
-          <Link to="/play" className="header__link">
+          <Link to="/step1" className="header__link">
             <div className="special">
               <p>Let's Play</p>
               <svg
