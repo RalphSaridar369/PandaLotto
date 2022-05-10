@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { TextInput } from "../../components/TextInput/Textinput";
 import "./Play.scss";
-import "./Step1.scss";
+import "./Step2.scss";
 import Panda1 from "../../images/panda.png";
 import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";
+import { useNavigate } from "react-router-dom";
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -12,7 +13,7 @@ const myStyle = {
   backgroundRepeat: "no-repeat",
 };
 
-const Play = () => {
+const Step2 = () => {
 
   // const [active1, setActive1] = useState(false);
   // const [active2, setActive2] = useState(false);
@@ -33,12 +34,16 @@ const Play = () => {
   //   { id: 12, value: 5000 },
   // ];
 
+  const navigate = useNavigate();
+
 
   const steps = [
     {
       step: 1,
       label: "Choose your panda",
-      active: true
+      active: true,
+      completed:true,
+      onClick:()=>navigate('/step1')
       // description: (
       //   <div className="choose-character-container">
       //     <div className="choose-character">
@@ -67,7 +72,8 @@ const Play = () => {
     {
       step: 2,
       label: "Place your bet",
-      active: false
+      active: true,
+      completed:false
       // description:(
       // <div className="amount-container">
       //   <img src={require('../../icons/Tickets.png')} className="tickets-image"/>
@@ -93,7 +99,8 @@ const Play = () => {
     {
       step: 3,
       label: "Select Payment Method",
-      active: false
+      active: false,
+      completed:false
       // description: (
       //   <div className="payment-container">
       //     <img src={require('../../icons/hand.png')} className="hand-image"/>
@@ -138,7 +145,7 @@ const Play = () => {
           {steps.map((item, index) => {
             return (
               <>
-                <div className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"}`}>{index + 1}</div>
+                <div className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"} ${item.onClick && "hoverable" }`} onClick={item.onClick}>{ !item.completed?index + 1:<img src={require('../../icons/tick.png')} className="left-tick-icon"/>}</div>
                 <div className={`main-left-label ${item.active ? "active-label" : "inactive-label"}`}>{item.label}</div>
                 {index != 2 && <div className="main-left-seperator"></div>}
               </>
@@ -174,4 +181,4 @@ const Play = () => {
   );
 };
 
-export default Play;
+export default Step2;
