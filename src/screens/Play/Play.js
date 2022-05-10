@@ -49,9 +49,10 @@ const Play = () => {
           </div>
           <div className="line"></div>
         </div>
-
-        <div></div>
+        <div>
+        </div>
       </div>
+        <Stepper />
     </div>
   );
 };

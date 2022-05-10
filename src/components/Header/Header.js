@@ -42,7 +42,7 @@ const Header = () => {
         </div>
         <div className="right">
           <p>Previous Results</p>
-          <Link to="/login">
+          <Link to="/login" className="header__link">
             <p onClick={handleLogin}>
               {/* {loggedIn ? (
                 <div className="account">
@@ -62,7 +62,7 @@ const Header = () => {
               {/* )} */}
             </p>
           </Link>
-          <Link to="/play">
+          <Link to="/play" className="header__link">
             <div className="special">
               <p>Let's Play</p>
               <svg
