@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextInput } from "../../components/TextInput/Textinput";
 import "./Play.scss";
-import "./Step2.scss";
+import "./Step3.scss";
 import Panda1 from "../../images/panda.png";
 import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";

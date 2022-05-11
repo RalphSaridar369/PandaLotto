@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { TextInput } from "../../components/TextInput/Textinput";
 import "./Play.scss";
 import "./Step1.scss";
+import "./Stepper/Stepper.scss";
 import Panda1 from "../../images/panda.png";
 import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";
+import {useNavigate} from 'react-router-dom'
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -14,6 +16,8 @@ const myStyle = {
 
 const Play = () => {
 
+
+  const navigate = useNavigate()
   // const [active1, setActive1] = useState(false);
   // const [active2, setActive2] = useState(false);
   // const [active3, setActive3] = useState(false);
@@ -113,6 +117,11 @@ const Play = () => {
     },
   ];
 
+
+  const choosePanda = () =>{
+    navigate('/step2')
+  }
+
   return (
     <div className="main">
       <div className="main-play" style={myStyle}>
@@ -149,21 +158,21 @@ const Play = () => {
           <div className="choose-character-container">
             <div className="choose-character">
               <div className="box1" >
-                <img src={Panda1} />
+                <img src={Panda1} className="panda-img"/>
                 <p>Space Panda</p>
               </div>
 
               <div className="box2" >
-                <img src={Panda2} />
+                <img src={Panda2} className="panda-img"/>
                 <p>Viking Panda</p>
               </div>
             </div>
 
             <div className="Buttons">
-              <div className="Button"   >
+              <div className="Button" onClick={choosePanda}>
                 <h2>Select</h2>
               </div>
-              <div className="Button"   >
+              <div className="Button" onClick={choosePanda}>
                 <h2>Select</h2>
               </div>
             </div>

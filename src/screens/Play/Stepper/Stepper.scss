@@ -1,15 +1,7 @@
 @use "../../../utils/global_variables.scss";
 
-.choose-character-container {
-  width: 55%;
-  margin-right: 4.5%;
-  .choose-character {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
+
+
 .step {
   display: flex;
   align-items: center;
@@ -52,7 +44,7 @@
         }
       }
 
-      .step-left-circle:hover {
+      .step-left-circle:choose-character-container {
         cursor: pointer;
       }
 
@@ -74,83 +66,6 @@
   justify-content: center;
   flex: 2;
 
-  .choose-character-container {
-    .choose-character {
-      width: 100%;
-      display: flex;
-      // flex
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 30px;
-
-      .box1 {
-        width: 48%;
-        height: 583px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        border-radius: 10px;
-        border: 1px solid white;
-
-        p {
-          font-size: 24;
-          color: white;
-        }
-      }
-
-      .box1:hover {
-        background-image: url("../../../images/back.png");
-      }
-
-      .box2 {
-        width: 48%;
-        height: 583px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        border-radius: 10px;
-        border: 1px solid white;
-
-        p {
-          font-size: 24;
-          color: white;
-        }
-      }
-
-      .box2:hover {
-        background-image: url("../../../images/back2.png");
-      }
-    }
-
-    .Buttons {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 30px;
-
-      .Button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        height: 65px;
-        width: 48%;
-        border: 2px solid #fad221;
-
-        h2 {
-          font-size: 32;
-          color: white;
-        }
-      }
-
-      .Button:hover {
-        background-color: #fad221;
-      }
-    }
-  }
 
   .amount-container {
     color: #fff;
