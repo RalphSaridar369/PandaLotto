@@ -18,32 +18,35 @@ const Step2 = () => {
   // const [active1, setActive1] = useState(false);
   // const [active2, setActive2] = useState(false);
   // const [active3, setActive3] = useState(false);
-  // const [ticket, setTicket] = useState();
-  // const tickets = [
-  //   { id: 1, value: 20 },
-  //   { id: 2, value: 50 },
-  //   { id: 3, value: 100 },
-  //   { id: 4, value: 200 },
-  //   { id: 5, value: 300 },
-  //   { id: 6, value: 400 },
-  //   { id: 7, value: 500 },
-  //   { id: 8, value: 750 },
-  //   { id: 9, value: 1000 },
-  //   { id: 10, value: 2000 },
-  //   { id: 11, value: 3000 },
-  //   { id: 12, value: 5000 },
-  // ];
+  const [ticket, setTicket] = useState();
+  const tickets = [
+    { id: 1, value: 20 },
+    { id: 2, value: 50 },
+    { id: 3, value: 100 },
+    { id: 4, value: 200 },
+    { id: 5, value: 300 },
+    { id: 6, value: 400 },
+    { id: 7, value: 500 },
+    { id: 8, value: 750 },
+    { id: 9, value: 1000 },
+    { id: 10, value: 2000 },
+    { id: 11, value: 3000 },
+    { id: 12, value: 5000 },
+  ];
 
   const navigate = useNavigate();
 
+  const checkTicket = () =>{
+    navigate('/step3')
+  }
 
   const steps = [
     {
       step: 1,
       label: "Choose your panda",
       active: true,
-      completed:true,
-      onClick:()=>navigate('/step1')
+      completed: true,
+      onClick: () => navigate('/step1')
       // description: (
       //   <div className="choose-character-container">
       //     <div className="choose-character">
@@ -73,7 +76,7 @@ const Step2 = () => {
       step: 2,
       label: "Place your bet",
       active: true,
-      completed:false
+      completed: false
       // description:(
       // <div className="amount-container">
       //   <img src={require('../../icons/Tickets.png')} className="tickets-image"/>
@@ -100,7 +103,7 @@ const Step2 = () => {
       step: 3,
       label: "Select Payment Method",
       active: false,
-      completed:false
+      completed: false
       // description: (
       //   <div className="payment-container">
       //     <img src={require('../../icons/hand.png')} className="hand-image"/>
@@ -145,7 +148,7 @@ const Step2 = () => {
           {steps.map((item, index) => {
             return (
               <>
-                <div className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"} ${item.onClick && "hoverable" }`} onClick={item.onClick}>{ !item.completed?index + 1:<img src={require('../../icons/tick.png')} className="left-tick-icon"/>}</div>
+                <div className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"} ${item.onClick && "hoverable"}`} onClick={item.onClick}>{!item.completed ? index + 1 : <img src={require('../../icons/tick.png')} className="left-tick-icon" />}</div>
                 <div className={`main-left-label ${item.active ? "active-label" : "inactive-label"}`}>{item.label}</div>
                 {index != 2 && <div className="main-left-seperator"></div>}
               </>
@@ -153,26 +156,23 @@ const Step2 = () => {
           })}
         </div>
         <div className="main-right">
-          <div className="choose-character-container">
-            <div className="choose-character">
-              <div className="box1" >
-                <img src={Panda1} />
-                <p>Space Panda</p>
-              </div>
-
-              <div className="box2" >
-                <img src={Panda2} />
-                <p>Viking Panda</p>
-              </div>
+          <div className="amount-container">
+            <img src={require('../../icons/Tickets.png')} className="tickets-image" />
+            <h3>
+              Select a ticket or add an amount:
+            </h3>
+            <div className="ticket-container">
+              {tickets.map((item, index) => <div onClick={() => setTicket(item.id)} className={`ticket-button ${ticket == item.id && "active-ticket"}`} key={index}>{item.value}$</div>)}
             </div>
-
-            <div className="Buttons">
-              <div className="Button"   >
-                <h2>Select</h2>
-              </div>
-              <div className="Button"   >
-                <h2>Select</h2>
-              </div>
+            <div className="input-container">
+              <h4>
+                Add Amount:
+              </h4>
+              <TextInput type="number" style={{ borderRadius: '5px', color:'black'}} />
+            </div>
+            <hr></hr>
+            <div className="submit-button" onClick={checkTicket}>
+              Next
             </div>
           </div>
         </div>

@@ -1,5 +1,21 @@
 @use "../../utils/global_variables.scss";
 
+@media (max-width: 900px) {
+    .choose-character {
+      width: 300px !important;
+      display: flex;
+      flex-direction: column;
+  
+      .box1,
+      .box2 {
+        width: 300px !important;
+        margin-bottom: 10px;
+      }
+    }
+    .Buttons {
+      display: none !important;
+    }
+  }
     .main-left {
         display: flex;
         flex-direction: column;

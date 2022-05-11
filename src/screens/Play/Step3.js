@@ -153,28 +153,20 @@ const Step2 = () => {
           })}
         </div>
         <div className="main-right">
-          <div className="choose-character-container">
-            <div className="choose-character">
-              <div className="box1" >
-                <img src={Panda1} />
-                <p>Space Panda</p>
-              </div>
-
-              <div className="box2" >
-                <img src={Panda2} />
-                <p>Viking Panda</p>
-              </div>
-            </div>
-
-            <div className="Buttons">
-              <div className="Button"   >
-                <h2>Select</h2>
-              </div>
-              <div className="Button"   >
-                <h2>Select</h2>
-              </div>
-            </div>
-          </div>
+         <div className="payment-container">
+           <img src={require('../../icons/hand.png')} className="hand-image"/>
+           <div className="payment-options">
+             <div className="payment-option">
+               <img src={require('../../icons/Paypal.png')} />
+             </div>
+             <div className="payment-option">
+               <img src={require('../../icons/BTC.png')} />
+             </div>
+             <div className="payment-option">
+               <img src={require('../../icons/Wallet.png')} />
+             </div>
+           </div>
+         </div>
         </div>
       </div>
     </div>
