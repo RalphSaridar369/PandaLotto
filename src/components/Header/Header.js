@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { clear, getItem, removeItem, setItem } from "../../utils/LocalStorage";
 import { MainContext } from "../../utils/MainContext";
 import Logo from "../../images/PandaLotto.png";
@@ -8,10 +8,16 @@ import Money from "../../icons/Money.svg";
 import "./Header.scss";
 // import { display, style } from "@mui/system";
 import { Link } from "react-router-dom";
+import Dot from '../../images/dot.svg'
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { loggedIn, setLogIn } = useContext(MainContext);
+
+  useEffect(()=>{
+
+  },[window.location.pathname])
+
   const handleLogin = () => {
     if (loggedIn) {
       clear();
@@ -20,8 +26,13 @@ const Header = () => {
     }
     setLogIn(loggedIn ? false : true);
   };
+
+  let style = window.location.pathname == "/"?
+  {backgroundImage:`url(${Dot})`}:
+  {backgroundImage:null}
+
   return (
-    <div className="main__header">
+    <div className="main__header" style={style}>
       <div
         style={{
           width: "100%",
@@ -42,7 +53,7 @@ const Header = () => {
         </div>
         <div className="right">
           <p>Previous Results</p>
-          <Link to="/login">
+          <Link to="/login" className="header__link">
             <p onClick={handleLogin}>
               {/* {loggedIn ? (
                 <div className="account">
@@ -62,7 +73,7 @@ const Header = () => {
               {/* )} */}
             </p>
           </Link>
-          <Link to="/play">
+          <Link to="/step1" className="header__link">
             <div className="special">
               <p>Let's Play</p>
               <svg

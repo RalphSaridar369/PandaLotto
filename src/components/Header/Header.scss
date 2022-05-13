@@ -1,8 +1,11 @@
 @use "../../utils/global_variables.scss";
 
+.header__link{
+  text-decoration: none!important;
+}
 @media (min-width: 1451px) and (max-width: 3000px) {
   .main__header {
-    background-image: url("../../images/dot.svg");
+    // background-image: url("../../images/dot.svg");
     background-position: 0;
     background-size: 1.5vw;
     background-repeat: repeat space;
@@ -107,7 +110,6 @@
 
 @media (min-width: 1251px) and (max-width: 1450px) {
   .main__header {
-    background-image: url("../../images/dot.svg");
     background-position: 0;
     background-size: 1.5vw;
     background-repeat: repeat space;
@@ -212,7 +214,6 @@
 
 @media (max-width: 1250px) and (min-width: 701px) {
   .main__header {
-    background-image: url("../../images/dot.svg");
     background-position: 0;
     background-size: 1.5vw;
     background-repeat: repeat space;
@@ -259,7 +260,6 @@
 
 @media (max-width: 700px) and (min-width: 0px) {
   .main__header {
-    background-image: url("../../images/dot.svg");
     background-position: 0;
     background-size: 1.5vw;
     background-repeat: repeat space;

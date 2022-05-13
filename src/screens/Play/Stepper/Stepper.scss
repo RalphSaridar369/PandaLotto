@@ -1,359 +1,258 @@
-// @use "../../../../utils/global_variables.scss";
+@use "../../../utils/global_variables.scss";
 
-// .choose-character-container {
-//   width: 55%;
-//   margin-right: 4.5%;
-//   .choose-character {
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//   }
-// }
-// .step {
-//   display: flex;
-//   align-items: center;
-//   width: 100%;
-//   justify-content: space-between;
 
-//   .step-left-mobile {
-//     display: none;
-//   }
 
-//   .step-left,
-//   .step-left-mobile {
-//     padding-top: 110px;
-//     padding-left: 240px;
-//     color: #fff;
-//     align-self: flex-start;
+.step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 
-//     .step-left-container {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
+  .step-left-mobile {
+    display: none;
+  }
 
-//       .step-left-header {
-//         color: global_variables.$yellow;
-//         margin-bottom: 15px;
-//       }
+  .step-left,
+  .step-left-mobile {
+    padding-top: 110px;
+    padding-left: 120px;
+    color: #fff;
+    align-self: flex-start;
 
-//       .step-left-circle {
-//         color: global_variables.$yellow;
+    .step-left-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-//         border: 1px solid;
-//         border-color: global_variables.$yellow;
-//         border-radius: 100%;
-//         padding: 20px 30px;
-//         margin-bottom: 15px;
-//         font-size: 24px;
-//         .tick {
-//           width: 20px !important;
-//           height: 20px !important;
-//         }
-//       }
+      .step-left-header {
+        color: global_variables.$yellow;
+        margin-bottom: 15px;
+      }
 
-//       .step-left-circle:hover {
-//         cursor: pointer;
-//       }
+      .step-left-circle {
+        color: global_variables.$yellow;
 
-//       .vertical-line {
-//         border-left: 2px solid global_variables.$yellow;
-//         height: 100px;
-//       }
-//     }
-//   }
-// }
+        border: 1px solid;
+        border-color: global_variables.$yellow;
+        border-radius: 100%;
+        padding: 20px 30px;
+        margin-bottom: 15px;
+        font-size: 24px;
+        .tick {
+          width: 20px !important;
+          height: 20px !important;
+        }
+      }
 
-// .step-right {
-//   height: 100% !important;
-//   width: 100% !important;
-//   margin-left: -300px;
-//   align-items: center;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   flex: 2;
+      .step-left-circle:choose-character-container {
+        cursor: pointer;
+      }
 
-//   .choose-character-container {
-//     .choose-character {
-//       width: 100%;
-//       display: flex;
-//       // flex
-//       align-items: center;
-//       justify-content: space-between;
-//       margin-top: 30px;
+      .vertical-line {
+        border-left: 2px solid global_variables.$yellow;
+        height: 100px;
+      }
+    }
+  }
+}
 
-//       .box1 {
-//         width: 48%;
-//         height: 583px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         flex-direction: column;
-//         border-radius: 10px;
-//         border: 1px solid white;
+.step-right {
+  height: 100% !important;
+  width: 100% !important;
+  margin-left: -300px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 2;
 
-//         p {
-//           font-size: 24;
-//           color: white;
-//         }
-//       }
 
-//       .box1:hover {
-//         background-image: url("../../../../images/back.png");
-//       }
+  .amount-container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
 
-//       .box2 {
-//         width: 48%;
-//         height: 583px;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         flex-direction: column;
-//         border-radius: 10px;
-//         border: 1px solid white;
+    .tickets-image {
+      height: 100px;
+      width: 100px;
+      align-self: center;
+      margin-bottom: 100px;
+    }
 
-//         p {
-//           font-size: 24;
-//           color: white;
-//         }
-//       }
+    h3 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-//       .box2:hover {
-//         background-image: url("../../../../images/back2.png");
-//       }
-//     }
+    .ticket-container {
+      display: grid;
+      grid-template-columns: 15% 15% 15% 15% 15% 15%;
+      grid-gap: 10px;
 
-//     .Buttons {
-//       width: 100%;
-//       display: flex;
-//       align-items: center;
-//       justify-content: space-between;
-//       margin-top: 30px;
+      .ticket-button {
+        text-align: center;
+        padding: 20px 50px;
+        background-color: (0, 0, 0, 0);
+        color: white;
+        border-radius: 10px;
+        border: 1px solid white;
+        transition: background-color 0.5s, color 0.5s;
+      }
 
-//       .Button {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         border-radius: 8px;
-//         height: 65px;
-//         width: 48%;
-//         border: 2px solid #fad221;
+      .ticket-button:hover {
+        cursor: pointer;
+        background-color: global_variables.$yellow;
+        color: global_variables.$primary;
+      }
 
-//         h2 {
-//           font-size: 32;
-//           color: white;
-//         }
-//       }
+      .active-ticket {
+        background-color: global_variables.$yellow;
+        color: global_variables.$primary;
+      }
+    }
 
-//       .Button:hover {
-//         background-color: #fad221;
-//       }
-//     }
-//   }
+    .input-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
 
-//   .amount-container {
-//     color: #fff;
-//     display: flex;
-//     flex-direction: column;
+      h4 {
+        margin-right: 10px;
+      }
+    }
 
-//     .tickets-image {
-//       height: 100px;
-//       width: 100px;
-//       align-self: center;
-//       margin-bottom: 100px;
-//     }
+    hr {
+      margin-top: 30px;
+      width: 100%;
+    }
 
-//     h3 {
-//       color: #fff;
-//       text-align: center;
-//       margin-bottom: 50px;
-//     }
+    .submit-button {
+      margin-top: 30px;
+      align-self: center;
+      font-size: 26px !important;
+      border: 2px solid global_variables.$yellow;
+      padding: 5px 60px;
+      border-radius: 5px;
+      transition: background-color 0.5s, color 0.5s;
+    }
 
-//     .ticket-container {
-//       display: grid;
-//       grid-template-columns: 15% 15% 15% 15% 15% 15%;
-//       grid-gap: 10px;
+    .submit-button:hover {
+      cursor: pointer;
+      background-color: global_variables.$yellow;
+      color: global_variables.$primary;
+    }
+  }
 
-//       .ticket-button {
-//         text-align: center;
-//         padding: 20px 50px;
-//         background-color: (0, 0, 0, 0);
-//         color: white;
-//         border-radius: 10px;
-//         border: 1px solid white;
-//         transition: background-color 0.5s, color 0.5s;
-//       }
+  .payment-container {
+    display: flex;
+    flex-direction: column;
 
-//       .ticket-button:hover {
-//         cursor: pointer;
-//         background-color: global_variables.$yellow;
-//         color: global_variables.$primary;
-//       }
+    .hand-image {
+      height: 100px;
+      width: 100px;
+      align-self: center;
+      margin-bottom: 100px;
+    }
 
-//       .active-ticket {
-//         background-color: global_variables.$yellow;
-//         color: global_variables.$primary;
-//       }
-//     }
+    .payment-options {
+      display: flex;
+      flex-direction: row;
 
-//     .input-container {
-//       margin-top: 30px;
-//       display: flex;
-//       flex-direction: row;
+      .payment-option {
+        border-radius: 10px;
+        border: 2px solid #fff;
+        padding: 20px 80px;
+        margin: 0 20px;
+      }
 
-//       h4 {
-//         margin-right: 10px;
-//       }
-//     }
+      .payment-option:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
 
-//     hr {
-//       margin-top: 30px;
-//       width: 100%;
-//     }
+@media (max-width: 1100px) {
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-gap: 10px;
 
-//     .submit-button {
-//       margin-top: 30px;
-//       align-self: center;
-//       font-size: 26px !important;
-//       border: 2px solid global_variables.$yellow;
-//       padding: 5px 60px;
-//       border-radius: 5px;
-//       transition: background-color 0.5s, color 0.5s;
-//     }
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
+}
 
-//     .submit-button:hover {
-//       cursor: pointer;
-//       background-color: global_variables.$yellow;
-//       color: global_variables.$primary;
-//     }
-//   }
 
-//   .payment-container {
-//     display: flex;
-//     flex-direction: column;
+@media (max-width: global_variables.$tablet) {
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-gap: 10px;
 
-//     .hand-image {
-//       height: 100px;
-//       width: 100px;
-//       align-self: center;
-//       margin-bottom: 100px;
-//     }
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
+}
 
-//     .payment-options {
-//       display: flex;
-//       flex-direction: row;
+@media (max-width: global_variables.$tablet) {
+  .step {
+    flex-direction: column !important;
+    .step-left-mobile {
+      width: 200px !important;
+      justify-content: center;
+      align-self: center;
+      align-items: center !important;
+      display: flex;
+      margin-bottom: 20px;
 
-//       .payment-option {
-//         border-radius: 10px;
-//         border: 2px solid #fff;
-//         padding: 20px 80px;
-//         margin: 0 20px;
-//       }
+      .step-left-container {
+        .step-left-circle {
+          margin: 0 20px !important;
+          border-radius: 100px;
+          padding: 6px 12px;
+          margin: 0;
+        }
+      }
 
-//       .payment-option:hover {
-//         cursor: pointer;
-//       }
-//     }
-//   }
-// }
+      .vertical-line {
+        display: none;
+      }
+    }
+    .step-left {
+      display: none;
+      .step-left-container {
+        flex-direction: row !important;
+      }
+    }
+  }
 
-// @media (max-width: 1100px) {
-//   .ticket-container {
-//     display: grid;
-//     grid-template-columns: 25% 25% 25% 25% !important;
-//     grid-gap: 10px;
+  .step-left-header {
+    display: none;
+  }
 
-//     .ticket-button {
-//       padding: 10px 30px !important;
-//     }
-//   }
-// }
+  .ticket-container {
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+    grid-gap: 10px;
 
-// @media (max-width: 900px) {
-//   .choose-character {
-//     width: 300px !important;
-//     display: flex;
-//     flex-direction: column;
+    .ticket-button {
+      padding: 10px 30px !important;
+    }
+  }
 
-//     .box1,
-//     .box2 {
-//       width: 300px !important;
-//       margin-bottom: 10px;
-//     }
-//   }
-//   .Buttons {
-//     display: none !important;
-//   }
-// }
+  .payment-options {
+    display: flex;
+    flex-direction: column !important;
 
-// @media (max-width: global_variables.$tablet) {
-//   .ticket-container {
-//     display: grid;
-//     grid-template-columns: 25% 25% 25% 25% !important;
-//     grid-gap: 10px;
-
-//     .ticket-button {
-//       padding: 10px 30px !important;
-//     }
-//   }
-// }
-
-// @media (max-width: global_variables.$tablet) {
-//   .step {
-//     flex-direction: column !important;
-//     .step-left-mobile {
-//       width: 200px !important;
-//       justify-content: center;
-//       align-self: center;
-//       align-items: center !important;
-//       display: flex;
-//       margin-bottom: 20px;
-
-//       .step-left-container {
-//         .step-left-circle {
-//           margin: 0 20px !important;
-//           border-radius: 100px;
-//           padding: 6px 12px;
-//           margin: 0;
-//         }
-//       }
-
-//       .vertical-line {
-//         display: none;
-//       }
-//     }
-//     .step-left {
-//       display: none;
-//       .step-left-container {
-//         flex-direction: row !important;
-//       }
-//     }
-//   }
-
-//   .step-left-header {
-//     display: none;
-//   }
-
-//   .ticket-container {
-//     display: grid;
-//     grid-template-columns: 50% 50% !important;
-//     grid-gap: 10px;
-
-//     .ticket-button {
-//       padding: 10px 30px !important;
-//     }
-//   }
-
-//   .payment-options {
-//     display: flex;
-//     flex-direction: column !important;
-
-//     .payment-option {
-//       margin-bottom: 20px !important;
-//     }
-//   }
-// }
+    .payment-option {
+      margin-bottom: 20px !important;
+    }
+  }
+}
 
 .stepper {
   margin-left: 160px;
