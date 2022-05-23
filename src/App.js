@@ -65,7 +65,7 @@ function App() {
             <Route element={<ProtectedRoute />}>{returnLoggedRoutes()}</Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </MainContext.Provider>
     </Router>

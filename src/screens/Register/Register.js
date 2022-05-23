@@ -6,6 +6,7 @@ import { Checkbox } from "../../components/Checkbox/Checkbox";
 import Background from "../../images/background.png";
 import { formValidator } from "../../utils/FormValidator";
 import clock from "../../images/Meteoroid@1.5x.svg";
+import { signup } from "../../utils/ApiCalls";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,8 +26,15 @@ const Register = () => {
 
   const handleRegister = () => {
     formValidator(data, "register", () => {
+      let apiData = {
+        email: data.email,
+        password: data.password,
+        devicetype:1,
+        displayname:"1111"
+      }
+      signup(apiData)
       alert("User registered successfully! please check your email");
-      navigate("/login");
+      // navigate("/login");
     });
   };
 

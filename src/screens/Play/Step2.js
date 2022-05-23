@@ -147,11 +147,11 @@ const Step2 = () => {
         <div className="main-left">
           {steps.map((item, index) => {
             return (
-              <>
+              <div key={index}>
                 <div className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"} ${item.onClick && "hoverable"}`} onClick={item.onClick}>{!item.completed ? index + 1 : <img src={require('../../icons/tick.png')} className="left-tick-icon" />}</div>
                 <div className={`main-left-label ${item.active ? "active-label" : "inactive-label"}`}>{item.label}</div>
                 {index != 2 && <div className="main-left-seperator"></div>}
-              </>
+              </div>
             )
           })}
         </div>
