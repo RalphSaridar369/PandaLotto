@@ -77,6 +77,10 @@ const Login = () => {
             <div className="input">
               <div className="input-label">User ID*</div>
               <TextInput
+                style={{
+                  backgroundColor: " #090121",
+                  border: "1px solid white",
+                }}
                 value={data.userId}
                 onChange={(e) => setData({ ...data, userId: e.target.value })}
               />
@@ -84,6 +88,10 @@ const Login = () => {
             <div className="input">
               <div className="input-label">Password*</div>
               <TextInput
+                style={{
+                  backgroundColor: " #090121",
+                  border: "1px solid white",
+                }}
                 value={data.password}
                 hideText
                 onChange={(e) => setData({ ...data, password: e.target.value })}

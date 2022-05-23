@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MainContext } from "./utils/MainContext";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/footer";
+
 import {
   Routes,
   Route,
@@ -63,6 +65,7 @@ function App() {
             <Route element={<ProtectedRoute />}>{returnLoggedRoutes()}</Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          <Footer />
         </div>
       </MainContext.Provider>
     </Router>

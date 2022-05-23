@@ -27,6 +27,7 @@ import Ancient from "../../images/Ancient";
 import RocketSmall from "../../images/RocketSmall";
 import GooglePlay from "../../images/GooglePlay";
 import AppStore from "../../images/AppStore";
+import Footer from "../../components/Footer/footer";
 
 const useMountEffect = (fun) => useEffect(fun, []);
 const steps = ["", "", ""];
@@ -190,7 +191,7 @@ const Home = () => {
               <p>One Click Registration</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div className="box1">
+            <div className="box1" style={{ marginRight: "800px" }}>
               <div className="boxColored">
                 <img src={file} className="file" alt="file" />
               </div>
@@ -222,7 +223,7 @@ const Home = () => {
               <p>Space Panda</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div className="box1">
+            <div className="box1" style={{ marginRight: "800px" }}>
               <div className="boxColored">
                 <img src={helmetOld} className="helmetOld" alt="helmetOld" />
               </div>
@@ -253,7 +254,7 @@ const Home = () => {
               <p>100% Secure Payment</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div className="box1">
+            <div className="box1" style={{ marginRight: "800px" }}>
               <div className="boxColored">
                 <img src={Betcoin} className="Betcoin" alt="Betcoin" />
               </div>
@@ -282,7 +283,7 @@ const Home = () => {
               <p>Earnings Fast Withdrawal</p>
               <p>Easy registration by using your Gmail or Facebook Account.</p>
             </div>
-            <div className="box1">
+            <div className="box1" style={{ marginRight: "800px" }}>
               <div className="boxColored">
                 <img src={Clock} className="Clock" alt="Clock" />
               </div>
@@ -299,6 +300,8 @@ const Home = () => {
           />
         </div>
       </div>
+
+      {/* <Footer /> */}
     </div>
   );
 };

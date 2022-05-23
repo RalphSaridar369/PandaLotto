@@ -8,7 +8,7 @@
     display: flex;
     position: relative;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #090021;
     margin: 0 auto;
     padding: 0 5vw;
@@ -167,6 +167,7 @@ iteration-count | direction | fill-mode | play-state | name */
         border-radius: 16px;
         background-color: #520d8c;
         text-align: center;
+        border: 2px solid #520d8c;
         align-items: center;
 
         .sign-in-button-text-1 {
