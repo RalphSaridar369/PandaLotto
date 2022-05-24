@@ -34,6 +34,8 @@ const Step2 = () => {
   //   { id: 12, value: 5000 },
   // ];
   const [paymentType, setPaymentType] = useState();
+  const [email, setEmail] = useState('');
+  const [balance, setBalance] = useState(500)
 
   const navigate = useNavigate();
 
@@ -186,7 +188,42 @@ const Step2 = () => {
                 </div>
               </div>
 
+
             </div>
+            {paymentType && <>
+              {paymentType != "wallet" ?
+                <>
+
+                  <div className="payment-option-input-label">Email</div>
+                  <TextInput
+                    style={{
+                      backgroundColor: " #090121",
+                      border: "1px solid white",
+                    }}
+                    placeholder="example@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </>
+                :
+                <div style={{marginTop:'60px'}}>
+                <hr style={{width:'100%'}}></hr>
+                <div style={{display:'flex', alignItems:'center', justifyContent:'center', color:'#fff', fontSize:'24px', margin:'20px 0px'}}>
+                  Available balance:   
+                  <h2 style={{alignItems:'center', margin:0, padding:0, fontSize:'28px'}}>&nbsp;&nbsp;${balance}</h2>
+                </div>
+                <hr style={{width:'100%'}}></hr>
+                </div>
+              }
+            </>
+            }
+
+
+            {paymentType && <div className="submit-button" onClick={() => console.log(1)}>
+              Continue
+            </div>}
+
+
           </div>
         </div>
       </div>
