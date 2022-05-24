@@ -144,7 +144,7 @@ const Step2 = () => {
         </div>
       </div>
       <div className="main-containers">
-        <div className="main-left">
+        {/* <div className="main-left">
           {steps.map((item, index) => {
             return (
               <div key={index}>
@@ -154,7 +154,7 @@ const Step2 = () => {
               </div>
             )
           })}
-        </div>
+        </div> */}
         <div className="main-right">
           <div className="amount-container">
             <img src={require('../../icons/Tickets.png')} className="tickets-image" />

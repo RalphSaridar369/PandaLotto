@@ -33,6 +33,7 @@ const Step2 = () => {
   //   { id: 11, value: 3000 },
   //   { id: 12, value: 5000 },
   // ];
+  const [paymentType, setPaymentType] = useState();
 
   const navigate = useNavigate();
 

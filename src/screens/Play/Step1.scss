@@ -1,7 +1,7 @@
 @use "../../utils/global_variables.scss";
 
 @media (max-width: 900px) {
-  .main-containers {
+  .main-container {
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
@@ -29,6 +29,17 @@
     display: none !important;
   }
 }
+
+.main-container {
+  height: 100%;
+}
+
+.main-label{
+  color:#fff;
+  text-align: center;
+  font-size: 18px;
+}
+
 .main-left {
   display: flex;
   flex-direction: column;
@@ -87,12 +98,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
 }
 
 .choose-character-container {
   margin-bottom: 10px;
-  margin-right: 200px !important;
+  // margin-right: 200px !important;
 
   .panda-img {
     height: 80%;
@@ -105,7 +115,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    gap: 20px;
+    gap: 20px;  
 
     .box1 {
       padding: 0 20px;
@@ -172,6 +182,8 @@
       h2 {
         font-size: 32;
         color: white;
+        padding:0!important;
+        margin:0!important;
       }
     }
 

@@ -60,22 +60,20 @@ const Play = () => {
         </div>
         <div></div>
       </div>
-      <div className="main-containers">
-        <div className="main-left">
+      <div className="main-container">
+        {/* <div className="main-left">
           {steps.map((item, index) => {
             return (
               <>
                 <div
-                  className={`main-left-circle ${
-                    item.active ? "active-circle" : "inactive-circle"
-                  }`}
+                  className={`main-left-circle ${item.active ? "active-circle" : "inactive-circle"
+                    }`}
                 >
                   {index + 1}
                 </div>
                 <div
-                  className={`main-left-label ${
-                    item.active ? "active-label" : "inactive-label"
-                  }`}
+                  className={`main-left-label ${item.active ? "active-label" : "inactive-label"
+                    }`}
                 >
                   {item.label}
                 </div>
@@ -83,7 +81,8 @@ const Play = () => {
               </>
             );
           })}
-        </div>
+        </div> */}
+        <div className="main-label">Please choose your panda</div>
         <div className="main-right">
           <div className="choose-character-container">
             <div className="choose-character">
@@ -99,7 +98,10 @@ const Play = () => {
             </div>
 
             <div className="Buttons">
-              <Popup
+              <div className="Button" onClick={choosePanda}>
+                <h2>Select</h2>
+              </div>
+              {/* <Popup
                 trigger={
                   <div className="Button" onClick={choosePanda}>
                     <h2>Select</h2>
@@ -109,7 +111,7 @@ const Play = () => {
               >
                 {" "}
                 <div>Popup content here !!</div>{" "}
-              </Popup>
+              </Popup> */}
               <div className="Button" onClick={choosePanda}>
                 <h2>Select</h2>
               </div>

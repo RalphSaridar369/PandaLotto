@@ -65,7 +65,7 @@ const Reachus = () => {
               <div className="buttons">
                 <div className="robot">
                   <ReCAPTCHA
-                    sitekey="Your client site key"
+                    sitekey="6Les0BQgAAAAACCZa2usK3CyVmYO19P3OLE2kfjR"
                     // onChange={onChange}
                   />
                 </div>

@@ -52,7 +52,9 @@ const Header = () => {
           ) : null}
         </div>
         <div className="right">
+          <Link to="/previous" className="header__link">
           <p>Previous Results</p>
+          </Link>
           <Link to="/login" className="header__link">
             <p onClick={handleLogin}>
               {/* {loggedIn ? (
