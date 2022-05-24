@@ -43,44 +43,44 @@ const Step2 = () => {
       step: 1,
       label: "Choose your panda",
       active: true,
-      completed:true,
+      completed: true,
       // description: (
-          //   <div className="choose-character-container">
-          //     <div className="choose-character">
-          //       <div className="box1" onClick={()=>setActiveStep(1)}>
-          //         <img src={Panda1} />
-          //         <p>Space Panda</p>
-          //       </div>
-          
-          //       <div className="box2" onClick={()=>setActiveStep(1)}>
-          //         <img src={Panda2} />
-          //         <p>Viking Panda</p>
-          //       </div>
-          //     </div>
-          
-          //     <div className="Buttons">
-          //       <div className="Button" onClick={()=>setActiveStep(1)}  >
-          //         <h2>Select</h2>
-          //       </div>
-          //       <div className="Button" onClick={()=>setActiveStep(1)}  >
-          //         <h2>Select</h2>
-          //       </div>
-          //     </div>
-          //   </div>
-          // ),
-        },
-        {
-            step: 2,
-            label: "Place your bet",
-            active: true,
-            completed:true,
-            onClick:()=>navigate('/step2')
-            // description:(
-                // <div className="amount-container">
-                //   <img src={require('../../icons/Tickets.png')} className="tickets-image"/>
-                //   <h3>
-                //     Select a ticket or add an amount:
-                //   </h3>
+      //   <div className="choose-character-container">
+      //     <div className="choose-character">
+      //       <div className="box1" onClick={()=>setActiveStep(1)}>
+      //         <img src={Panda1} />
+      //         <p>Space Panda</p>
+      //       </div>
+
+      //       <div className="box2" onClick={()=>setActiveStep(1)}>
+      //         <img src={Panda2} />
+      //         <p>Viking Panda</p>
+      //       </div>
+      //     </div>
+
+      //     <div className="Buttons">
+      //       <div className="Button" onClick={()=>setActiveStep(1)}  >
+      //         <h2>Select</h2>
+      //       </div>
+      //       <div className="Button" onClick={()=>setActiveStep(1)}  >
+      //         <h2>Select</h2>
+      //       </div>
+      //     </div>
+      //   </div>
+      // ),
+    },
+    {
+      step: 2,
+      label: "Place your bet",
+      active: true,
+      completed: true,
+      onClick: () => navigate('/step2')
+      // description:(
+      // <div className="amount-container">
+      //   <img src={require('../../icons/Tickets.png')} className="tickets-image"/>
+      //   <h3>
+      //     Select a ticket or add an amount:
+      //   </h3>
       //   <div className="ticket-container">
       //     {tickets.map((item,index)=><div onClick={()=>setTicket(item.id)} className={`ticket-button ${ticket==item.id && "active-ticket"}`} key={index}>{item.value}$</div>)}
       //   </div>
@@ -101,7 +101,7 @@ const Step2 = () => {
       step: 3,
       label: "Select Payment Method",
       active: false,
-      completed:false
+      completed: false
       // description: (
       //   <div className="payment-container">
       //     <img src={require('../../icons/hand.png')} className="hand-image"/>
@@ -142,7 +142,7 @@ const Step2 = () => {
         </div>
       </div>
       <div className="main-containers">
-        <div className="main-left">
+        {/* <div className="main-left">
           {steps.map((item, index) => {
             return (
               <>
@@ -152,22 +152,42 @@ const Step2 = () => {
               </>
             )
           })}
-        </div>
+        </div> */}
         <div className="main-right">
-         <div className="payment-container">
-           <img src={require('../../icons/hand.png')} className="hand-image"/>
-           <div className="payment-options">
-             <div className="payment-option">
-               <img src={require('../../icons/Paypal.png')} />
-             </div>
-             <div className="payment-option">
-               <img src={require('../../icons/BTC.png')} />
-             </div>
-             <div className="payment-option">
-               <img src={require('../../icons/Wallet.png')} />
-             </div>
-           </div>
-         </div>
+          <div className="payment-container">
+            <img src={require('../../icons/hand.png')} className="hand-image" />
+            <div className="payment-label-method">Please select your payment method</div>
+            <div className="payment-options">
+
+              <div className="payment-option-container">
+                <div className={`payment-option ${paymentType == "paypal" && "active-payment-option"}`} onClick={() => setPaymentType("paypal")}>
+                  <img src={require('../../icons/Paypal.png')} />
+                </div>
+                <div className={`payment-option-label ${paymentType == "paypal" && "active-payment-label"}`}>
+                  Paypal
+                </div>
+              </div>
+
+              <div className="payment-option-container">
+                <div className={`payment-option ${paymentType == "btc" && "active-payment-option"}`} onClick={() => setPaymentType("btc")}>
+                  <img src={require('../../icons/BTC.png')} />
+                </div>
+                <div className={`payment-option-label ${paymentType == "btc" && "active-payment-label"}`}>
+                  Crypto
+                </div>
+              </div>
+
+              <div className="payment-option-container">
+                <div className={`payment-option ${paymentType == "wallet" && "active-payment-option"}`} onClick={() => setPaymentType("wallet")}>
+                  <img src={require('../../icons/Wallet.png')} />
+                </div>
+                <div className={`payment-option-label ${paymentType == "wallet" && "active-payment-label"}`}>
+                  My Wallet
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
