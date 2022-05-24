@@ -19,6 +19,15 @@ const Step2 = () => {
   // const [active2, setActive2] = useState(false);
   // const [active3, setActive3] = useState(false);
   const [ticket, setTicket] = useState();
+  const [amount, setAmount] = useState();
+
+  const handleOnChange = (e) =>{
+    if (typeof e.target.value === 'string' && e.target.value.trim() !== '') {
+      setAmount(e.target.value)
+    }
+  
+  }
+  
   const tickets = [
     { id: 1, value: 20 },
     { id: 2, value: 50 },
@@ -168,7 +177,14 @@ const Step2 = () => {
               <h4>
                 Add Amount:
               </h4>
-              <TextInput type="number" style={{ borderRadius: '5px', color:'black'}} />
+              <TextInput
+                    style={{
+                      backgroundColor: " #090121",
+                      border: "1px solid white",
+                      width:'20%'
+                    }}
+                onChange={handleOnChange}
+                value={amount} />
             </div>
             <hr></hr>
             <div className="submit-button" onClick={checkTicket}>
