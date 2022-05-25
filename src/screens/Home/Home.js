@@ -105,7 +105,8 @@ const Home = () => {
       <div className="home" style={myStyle}>
         <div className="step0">
           <img src={title} className="title" alt="title" />
-          <p>Play, Invest and win Everyday, every hour</p>
+          <p>Play, Invest and win</p>
+          <p> Everyday, every hour</p>
           <div className="stores">
             <GooglePlay className="store googlePlay" />
             <AppStore className="store appStore" />
@@ -196,8 +197,8 @@ const Home = () => {
                 Lorum ipsum dolor sit met niet das Auto estetuer de copicada
               </p>
             </div>
+            <PandaLaptop className="pandaLaptop mainImage" />
           </div>
-          <PandaLaptop className="pandaLaptop mainImage" />
           <Circles className="loopSVG" />
         </div>
         <div className="step2 step" ref={myRef1}>
@@ -224,8 +225,8 @@ const Home = () => {
                 Lorum ipsum dolor sit met niet das Auto estetuer de copicada
               </p>
             </div>
+            <PandasTwo className="pandasTwo mainImage" />
           </div>
-          <PandasTwo className="pandasTwo mainImage" />
         </div>
         <div className="step3 step" ref={myRef2}>
           <p className="stepNumber">Step 3</p>
@@ -251,8 +252,8 @@ const Home = () => {
                 Lorum ipsum dolor sit met niet das Auto estetuer de copicada
               </p>
             </div>
+            <SvgMissile className="Missile mainImage" />
           </div>
-          <SvgMissile className="Missile mainImage" />
         </div>
         <div className="step4 step" ref={myRef3}>
           <p className="stepNumber">Step 4</p>
@@ -280,8 +281,8 @@ const Home = () => {
                 Lorum ipsum dolor sit met niet das Auto estetuer de copicada
               </p>
             </div>
+            <FlyingCar className="FlyingCar mainImage" />
           </div>
-          <FlyingCar className="FlyingCar mainImage" />
         </div>
       </div>
     </div>
