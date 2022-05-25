@@ -204,11 +204,14 @@
     .title {
       display: flex;
       flex-direction: column;
+      @media screen and (max-width: 600px) {
+        margin-bottom: 5%;
+      }
       h1 {
         display: flex;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 8vw;
+        font-size: max(8vw, 60px);
         margin: 0;
         letter-spacing: 0;
         margin-block-start: 0;
@@ -235,6 +238,7 @@
       display: flex;
       gap: 5%;
       position: relative;
+      z-index: 5;
       @media screen and (max-width: 600px) {
         width: 100%;
         justify-content: space-between;
@@ -251,6 +255,8 @@
         height: 10vw;
         border-radius: 24px;
         transition: opacity 0.5s linear;
+        z-index: 5;
+
         @media screen and (max-width: 600px) {
           width: 15.5vw;
           height: 15.5vw;
@@ -296,6 +302,11 @@
       bottom: 5%;
       right: 5%;
       height: fit-content;
+      @media screen and (max-width: 600px) {
+        bottom: -40vh;
+        right: 5%;
+        width: 80vw !important;
+      }
     }
   }
   .step1 {
@@ -318,6 +329,7 @@
       top: 5%;
       right: 5%;
       width: 150px;
+      z-index: 0;
       .path {
         fill: #090021;
         stroke-dasharray: 1000px;
@@ -366,6 +378,9 @@
 
     .pandaLaptop {
       width: 35vw;
+      @media screen and (max-width: 600px) {
+        bottom: -50vh;
+      }
     }
   }
   .step2 {
