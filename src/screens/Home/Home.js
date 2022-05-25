@@ -2,19 +2,14 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { MainContext } from "../../utils/MainContext";
 import title from "../../images/title.png";
 import mercury from "../../images/mercury.png";
-import rocketSmall from "../../images/rocketSmall.png";
-import pandaLaptop from "../../images/pandaLaptop.png";
-import ancient from "../../images/Character_ancient.png";
 import fingerClick from "../../images/fingerClick.png";
 import file from "../../images/file.png";
 import helmet from "../../images/helmet.png";
 import helmetOld from "../../images/helmetOld.png";
-import pandasTwo from "../../images/pandasTwo.png";
 import Secured from "../../images/Secured.png";
 import Betcoin from "../../images/Betcoin.png";
 import Dollar from "../../images/Dollar.png";
 import Clock from "../../images/Clock.png";
-import FlyingCar from "../../images/FlyingCar.png";
 import "./Home.scss";
 import { Step, Stepper, Box, StepButton } from "@mui/material";
 import useWindowDimensions from "../../hooks/WindowDimensions";
@@ -27,6 +22,9 @@ import Ancient from "../../images/Ancient";
 import RocketSmall from "../../images/RocketSmall";
 import GooglePlay from "../../images/GooglePlay";
 import AppStore from "../../images/AppStore";
+import PandaLaptop from "../../images/PandaLaptop";
+import PandasTwo from "../../images/PandasTwo";
+import FlyingCar from "../../images/FlyingCar";
 
 const useMountEffect = (fun) => useEffect(fun, []);
 const steps = ["", "", ""];
@@ -70,7 +68,6 @@ const Home = () => {
   function myFunction(x) {
     if (x.matches) {
       // If media query matches
-      // console.log("huhu");
     } else {
       // console.log("huhuhuh");
     }
@@ -200,11 +197,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <img
-            src={pandaLaptop}
-            className="pandaLaptop mainImage"
-            alt="pandaLaptop"
-          />
+          <PandaLaptop className="pandaLaptop mainImage" />
           <Circles className="loopSVG" />
         </div>
         <div className="step2 step" ref={myRef1}>
@@ -232,11 +225,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <img
-            src={pandasTwo}
-            className="pandasTwo mainImage"
-            alt="pandasTwo"
-          />
+          <PandasTwo className="pandasTwo mainImage" />
         </div>
         <div className="step3 step" ref={myRef2}>
           <p className="stepNumber">Step 3</p>
@@ -292,11 +281,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <img
-            src={FlyingCar}
-            className="FlyingCar mainImage"
-            alt="FlyingCar"
-          />
+          <FlyingCar className="FlyingCar mainImage" />
         </div>
       </div>
     </div>
