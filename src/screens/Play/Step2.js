@@ -24,10 +24,7 @@ const Step2 = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleOnChange = (e) =>{
-    if (typeof e.target.value === 'string' && e.target.value.trim() !== '') {
       setAmount(e.target.value)
-    }
-  
   }
   
   const tickets = [
@@ -67,6 +64,16 @@ const Step2 = () => {
   const settingTicket =(id) =>{
     setTicket(id);
     setModalIsOpen(true)
+  }
+
+  const checkAmount =() =>{
+    if(/[a-zA-Z]/.test(amount))
+      alert("input must be a number");
+    else if(parseInt(amount)<1)
+      alert("input must be greater than 0")
+    else{
+      setModalIsOpen(true)
+    }
   }
 
   const steps = [
@@ -183,7 +190,7 @@ const Step2 = () => {
           <div className="panda-modal-container">
             <div className="panda-modal-child">
               <h2>Your selected ticket is:</h2>
-              <h1 className="panda-name">{tickets[ticket - 1]?.value}$</h1>
+              <h1 className="panda-name">{amount || tickets[ticket - 1]?.value}$</h1>
               <p>Are you sure you want to continue ?</p>
               <div className="modal-buttons-container">
                 <div className="modal-button" style={{backgroundColor:'lightgray'}}
@@ -235,7 +242,7 @@ const Step2 = () => {
                 value={amount} />
             </div>
             <hr></hr>
-            <div className="submit-button" onClick={()=>setModalIsOpen(true)}>
+            <div className="submit-button" onClick={()=>checkAmount()}>
               Buy Ticket
             </div>
           </div>
