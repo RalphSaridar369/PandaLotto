@@ -76,7 +76,7 @@ const Footer = () => {
       <div className="sec1">
         <div className="title">Frequently Asked Questions</div>
 
-        <Accordion className="accordion">
+        <Accordion allowZeroExpanded className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
               <AccordionItemButton className="head">
@@ -93,7 +93,7 @@ const Footer = () => {
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion className="accordion">
+        <Accordion allowZeroExpanded className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
               <AccordionItemButton className="head">
@@ -110,7 +110,7 @@ const Footer = () => {
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion className="accordion">
+        <Accordion allowZeroExpanded className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
               <AccordionItemButton className="head">
@@ -127,7 +127,7 @@ const Footer = () => {
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion className="accordion">
+        <Accordion allowZeroExpanded className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
               <AccordionItemButton className="head">
@@ -144,7 +144,7 @@ const Footer = () => {
             </AccordionItemPanel>
           </AccordionItem>
         </Accordion>
-        <Accordion className="accordion">
+        <Accordion allowZeroExpanded className="accordion">
           <AccordionItem className="item">
             <AccordionItemHeading>
               <AccordionItemButton className="head">

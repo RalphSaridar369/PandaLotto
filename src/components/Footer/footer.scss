@@ -32,12 +32,20 @@
           font-family: "Helvetica Neue";
         }
 
+        .head:hover{
+          cursor: pointer;
+        }
+
         p {
           font-family: "Helvetica Neue";
           color: #e0e0e0;
         }
       }
     }
+
+    // .accordion:hover{
+    //   cursor: pointer;
+    // }
   }
 
   .sec2 {
