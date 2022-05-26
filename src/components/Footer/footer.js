@@ -39,9 +39,10 @@ const Footer = () => {
       top: '50%',
       left: '50%',
       right: 'auto',
+      width:'60%',
       bottom: 'auto',
       marginRight: '-50%',
-      margin:'20px',
+      // margin:'20px',
       transform: 'translate(-50%, -50%)',
       padding:'10px 50px',
       overflow:'auto'
@@ -65,8 +66,8 @@ const Footer = () => {
             <img src={require('../../icons/Close.png')} className="modal-close-icon"
             onClick={()=>setModalIsOpen(false)}/>
           </div>
-          <div className="panda-modal-container">
-            <div className="panda-modal-child">
+          <div className="">
+            <div className="">
               <h1>{modalTitles[modalTitle]}</h1>
               <p className="footer-modal-paragraph">{modalParagraphs[modalParagraph]}</p>
             </div>
