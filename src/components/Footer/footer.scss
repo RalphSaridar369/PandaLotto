@@ -95,3 +95,37 @@
   max-height: 300px;
   overflow: auto;
 }
+
+@media (max-width:900px){
+  .sec2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer__panda__img{
+      height: 400px;
+      width: 400px;
+      margin: 20px 0px;
+    }
+    
+    a{
+
+      .footer__social__icon{
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width:800px){
+  .sec3-1 {
+    flex-direction: column;
+
+    
+    .sub {
+      margin-bottom: 10px;
+    }
+
+  }
+}

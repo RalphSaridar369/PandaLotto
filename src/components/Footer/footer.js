@@ -164,11 +164,11 @@ const Footer = () => {
 
       <div className="sec2">
         <a href="https://facebook.com" target="_blank">
-          <img src={Fb} />
+          <img src={Fb} className="footer__social__icon"/>
         </a>
-        <img src={charc} />
+        <img src={charc} className="footer__panda__img"/>
         <a href="https://instagram.com" target="_blank">
-          <img src={Insta} />
+          <img src={Insta} className="footer__social__icon"/>
         </a>
       </div>
 
