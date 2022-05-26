@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Footer/footer.scss";
 import {
   Accordion,
@@ -12,10 +12,66 @@ import Fb from "../../icons/fb.svg";
 import Insta from "../../icons/insta.svg";
 import { Link } from "react-router-dom";
 import charc from "../../icons/charac.svg";
+import Modal from 'react-modal';
 
-const footer = () => {
+const Footer = () => {
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalTitle, setModalTitle] = useState();
+  const [modalParagraph, setModalParagraph] = useState();
+
+
+  const modalTitles = [
+    "Why Panda Lotto",
+    "Terms & Conditions",
+    "Privacy Policy"
+  ]
+
+  const modalParagraphs = [
+    "Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto Why Panda Lotto ",
+    "Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions Terms & Conditions ",
+    "Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy Privacy Policy "
+  ]
+
+  const customStyles = {
+    content: {
+      borderRadius:'10px',
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      margin:'20px',
+      transform: 'translate(-50%, -50%)',
+      padding:'10px 50px',
+      overflow:'auto'
+    },
+  };
+
+  const showModal =(id)=>{
+    setModalTitle(id)
+    setModalParagraph(id)
+    setModalIsOpen(true)
+  }
+
   return (
     <div className="footer">
+      
+      
+      <Modal
+        style={customStyles}
+        isOpen={modalIsOpen}>
+          <div className="modal-close-icon-container">
+            <img src={require('../../icons/Close.png')} className="modal-close-icon"
+            onClick={()=>setModalIsOpen(false)}/>
+          </div>
+          <div className="panda-modal-container">
+            <div className="panda-modal-child">
+              <h1>{modalTitles[modalTitle]}</h1>
+              <p className="footer-modal-paragraph">{modalParagraphs[modalParagraph]}</p>
+            </div>
+          </div>
+        </Modal>
       <div className="sec1">
         <div className="title">Frequently Asked Questions</div>
 
@@ -118,18 +174,18 @@ const footer = () => {
 
       <div className="sec3">
         <div className="sec3-1">
-          <Link to="/previous">
+          <Link classname="footer__link" style={{textDecoration:'none'}} to="/previous">
             <div className="sub">Previous Results</div>
           </Link>
-          <Link to='/step'>
+          <Link classname="footer__link" style={{textDecoration:'none'}} to='/step1'>
             <div className="sub">Let's Play</div>
           </Link>
-          <div className="sub">Why Panda Lotto</div>
-          <Link to="/reach-us">
+          <div className="sub" onClick={()=>showModal(0)}>Why Panda Lotto</div>
+          <Link classname="footer__link" style={{textDecoration:'none'}} to="/reach-us">
             <div className="sub">Contact</div>
           </Link>
-          <div className="sub">Terms & Conditions</div>
-          <div className="sub">Privacy Policy</div>
+          <div className="sub" onClick={()=>showModal(1)}>Terms & Conditions</div>
+          <div className="sub" onClick={()=>showModal(2)}>Privacy Policy</div>
         </div>
 
         <div className="sec3-2">
@@ -143,4 +199,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

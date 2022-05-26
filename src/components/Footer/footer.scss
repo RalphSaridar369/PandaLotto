@@ -50,6 +50,8 @@
     }
   }
 
+
+  
   .sec3 {
     width: 80%;
     display: flex;
@@ -61,6 +63,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
 
       .sub {
         cursor: pointer;
@@ -84,4 +87,11 @@
       }
     }
   }
+}
+
+
+.footer-modal-paragraph{
+  display: flex;
+  max-height: 300px;
+  overflow: auto;
 }

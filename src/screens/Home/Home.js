@@ -25,13 +25,16 @@ import AppStore from "../../images/AppStore";
 import PandaLaptop from "../../images/PandaLaptop";
 import PandasTwo from "../../images/PandasTwo";
 import FlyingCar from "../../images/FlyingCar";
-import Footer from '../../components/Footer/footer'
+import Footer from '../../components/Footer/footer';
 
 const useMountEffect = (fun) => useEffect(fun, []);
 const steps = ["", "", ""];
 
 const Home = () => {
+  
   const { loggedIn } = useContext(MainContext);
+
+
   const myStyle = {
     // backgroundImage: `url(${Background})`,
     backgroundSize: "cover",
