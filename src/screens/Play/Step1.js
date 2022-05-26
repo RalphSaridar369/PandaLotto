@@ -9,6 +9,8 @@ import Panda2 from "../../images/panda2.png";
 import { useNavigate } from "react-router-dom";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
+import Modal from 'react-modal';
+
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -18,6 +20,8 @@ const myStyle = {
 
 const Play = () => {
   const navigate = useNavigate();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [panda,setPanda] = useState();
 
   const steps = [
     {
@@ -37,7 +41,25 @@ const Play = () => {
     },
   ];
 
-  const choosePanda = () => {
+  const customStyles = {
+    content: {
+      borderRadius:'10px',
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding:'10px 50px'
+    },
+  };
+
+  const choosePanda = (id) =>{
+    setPanda(id);
+    setModalIsOpen(true)
+  }
+
+  const confirmPanda = () => {
     navigate("/step2");
   };
 
@@ -83,27 +105,56 @@ const Play = () => {
           })}
         </div> */}
         <div className="main-label">Please choose your panda</div>
+        <Modal
+        style={customStyles}
+        isOpen={modalIsOpen}>
+          <div className="modal-close-icon-container">
+            <img src={require('../../icons/Close.png')} className="modal-close-icon"
+            onClick={()=>setModalIsOpen(false)}/>
+          </div>
+          <div className="panda-modal-container">
+            <div className="panda-modal-child">
+              <h2>you are selecting</h2>
+              <h1 className="panda-name">{panda == 1 ? "Space Panda" : "Viking Panda"}</h1>
+              <p>Are you sure you want to continue ?</p>
+              <div className="modal-buttons-container">
+                <div className="modal-button" style={{backgroundColor:'lightgray'}}
+                onClick={()=>setModalIsOpen(false)}>
+                  Cancel
+                </div>
+                <div className="modal-button" style={{backgroundColor:'#fad221'}}
+                onClick={confirmPanda}>
+                  Continue
+                </div>
+              </div>
+            </div>
+            <div className="panda-modal-child">
+              <img src={panda == 1?Panda1:Panda2} className="panda-modal-img" />
+            </div>
+          </div>
+        </Modal>
         <div className="main-right">
           <div className="choose-character-container">
             <div className="choose-character">
               <div className="box1">
-                <img src={Panda1} className="panda-img" />
+                <img src={Panda1} className="panda-img" onClick={()=>choosePanda(1)} />
                 <p>Space Panda</p>
               </div>
 
               <div className="box2">
-                <img src={Panda2} className="panda-img" />
+                <img src={Panda2} className="panda-img" onClick={()=>choosePanda(2)} />
                 <p>Viking Panda</p>
               </div>
+              
             </div>
 
             <div className="Buttons">
-              <div className="Button" onClick={choosePanda}>
+              <div className="Button" onClick={()=>choosePanda(1)}>
                 <h2>Select</h2>
               </div>
               {/* <Popup
                 trigger={
-                  <div className="Button" onClick={choosePanda}>
+                  <div className="Button" onClick={()=>choosePanda(1)}>
                     <h2>Select</h2>
                   </div>
                 }
@@ -112,7 +163,7 @@ const Play = () => {
                 {" "}
                 <div>Popup content here !!</div>{" "}
               </Popup> */}
-              <div className="Button" onClick={choosePanda}>
+              <div className="Button" onClick={()=>choosePanda(2)}>
                 <h2>Select</h2>
               </div>
             </div>
