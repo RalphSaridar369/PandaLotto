@@ -22,13 +22,10 @@ import Ancient from "../../images/Ancient";
 import RocketSmall from "../../images/RocketSmall";
 import GooglePlay from "../../images/GooglePlay";
 import AppStore from "../../images/AppStore";
-<<<<<<< HEAD
-import Footer from "../../components/Footer/footer";
-=======
 import PandaLaptop from "../../images/PandaLaptop";
 import PandasTwo from "../../images/PandasTwo";
 import FlyingCar from "../../images/FlyingCar";
->>>>>>> 80daf068a1f63366bc57626546b72e9537df5731
+import Footer from '../../components/Footer/footer'
 
 const useMountEffect = (fun) => useEffect(fun, []);
 const steps = ["", "", ""];
@@ -288,9 +285,9 @@ const Home = () => {
             <FlyingCar className="FlyingCar mainImage" />
           </div>
         </div>
+      <Footer />
       </div>
 
-      <Footer />
     </div>
   );
 };

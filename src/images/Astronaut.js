@@ -8,7 +8,7 @@ const Astronaut = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 346 567"
     className={props.className}
   >
@@ -25,7 +25,7 @@ const Astronaut = (props) => (
       </clipPath>
     </defs>
     <g>
-      <g clip-path='url("#ClipPath1123")'>
+      <g clipPath='url("#ClipPath1123")'>
         <use
           xlinkHref="#Image1121"
           transform="translate(0 0),scale(0.5133531157270029 0.5154545454545455)"

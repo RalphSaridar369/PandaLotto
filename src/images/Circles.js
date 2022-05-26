@@ -8,7 +8,7 @@ const Circles = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 294 225"
     className={props.className}
   >

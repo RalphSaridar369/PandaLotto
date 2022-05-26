@@ -8,7 +8,7 @@ const Ancient = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 678 654"
     className={props.className}
   >
@@ -21,9 +21,9 @@ const Ancient = (props) => (
         x2="339"
         y2="437.28999999999996"
       >
-        <stop stop-opacity="1" stop-color="#66337c" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#752e33" offset="0.28"></stop>
-        <stop stop-opacity="1" stop-color="#4a2232" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#66337c" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#752e33" offset="0.28"></stop>
+        <stop stopOpacity="1" stopColor="#4a2232" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1461"
@@ -33,8 +33,8 @@ const Ancient = (props) => (
         x2="-3.2900000000000205"
         y2="468.9699999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1469"
@@ -44,8 +44,8 @@ const Ancient = (props) => (
         x2="309.23"
         y2="560.9699999999998"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1477"
@@ -55,8 +55,8 @@ const Ancient = (props) => (
         x2="109.05"
         y2="545.6599999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1485"
@@ -66,8 +66,8 @@ const Ancient = (props) => (
         x2="567.03"
         y2="484.46000000000004"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1493"
@@ -77,8 +77,8 @@ const Ancient = (props) => (
         x2="512.3"
         y2="508.39999999999986"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1501"
@@ -88,8 +88,8 @@ const Ancient = (props) => (
         x2="212.92"
         y2="560.24"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1509"
@@ -99,8 +99,8 @@ const Ancient = (props) => (
         x2="215.08"
         y2="545.4000000000001"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1517"
@@ -110,8 +110,8 @@ const Ancient = (props) => (
         x2="595.5799999999999"
         y2="523.8800000000001"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1525"
@@ -121,8 +121,8 @@ const Ancient = (props) => (
         x2="512.3"
         y2="496.3299999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1538"
@@ -132,8 +132,8 @@ const Ancient = (props) => (
         x2="-3.2900000000000205"
         y2="554.8400000000001"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1546"
@@ -143,8 +143,8 @@ const Ancient = (props) => (
         x2="31.639999999999986"
         y2="489.30999999999995"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1559"
@@ -154,8 +154,8 @@ const Ancient = (props) => (
         x2="195.1"
         y2="552.06"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1572"
@@ -165,8 +165,8 @@ const Ancient = (props) => (
         x2="164.94"
         y2="502.0999999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1580"
@@ -176,8 +176,8 @@ const Ancient = (props) => (
         x2="215.08"
         y2="529.55"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1598"
@@ -187,8 +187,8 @@ const Ancient = (props) => (
         x2="243.17000000000002"
         y2="553.5799999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1633"
@@ -198,8 +198,8 @@ const Ancient = (props) => (
         x2="308.03"
         y2="298.65999999999997"
       >
-        <stop stop-opacity="1" stop-color="#633d4c" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#685c5c" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#633d4c" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#685c5c" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1641"
@@ -209,8 +209,8 @@ const Ancient = (props) => (
         x2="248.62"
         y2="401.28"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1649"
@@ -220,8 +220,8 @@ const Ancient = (props) => (
         x2="396.06"
         y2="393.36"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1657"
@@ -231,8 +231,8 @@ const Ancient = (props) => (
         x2="202.53"
         y2="422.53"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1690"
@@ -242,8 +242,8 @@ const Ancient = (props) => (
         x2="266.64"
         y2="326.64"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1698"
@@ -253,8 +253,8 @@ const Ancient = (props) => (
         x2="150.87"
         y2="369.18000000000006"
       >
-        <stop stop-opacity="1" stop-color="#000000" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#005995" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#000000" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#005995" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1711"
@@ -264,8 +264,8 @@ const Ancient = (props) => (
         x2="133.39"
         y2="512.3599999999999"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1724"
@@ -275,8 +275,8 @@ const Ancient = (props) => (
         x2="405.45"
         y2="496.75"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1732"
@@ -286,8 +286,8 @@ const Ancient = (props) => (
         x2="293.53"
         y2="473.6300000000001"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1740"
@@ -297,8 +297,8 @@ const Ancient = (props) => (
         x2="260.74"
         y2="497.3100000000002"
       >
-        <stop stop-opacity="1" stop-color="#c37cb3" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#974578" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#c37cb3" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#974578" offset="1"></stop>
       </linearGradient>
       <clipPath></clipPath>
       <image
@@ -390,7 +390,7 @@ const Ancient = (props) => (
           <path
             d="M467.2972,529.10079v0l-21.243,-41.04579v0l16.56221,-50.76701v0h62.64879v0l-0.36,26.64351v0l-12.6017,36.7252v0l3.96071,9.36139v0l-11.1615,43.92621v0z"
             fill="#c57538"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -412,7 +412,7 @@ const Ancient = (props) => (
           <path
             d="M414.9097,536.66198v0l21.063,-40.32588v0l10.0815,-8.2811v0l21.24298,41.04579v0z"
             fill="#94552f"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -427,7 +427,7 @@ const Ancient = (props) => (
           <path
             d="M624.99957,517.21909v0v-16.56239v0l45.5994,-42.60461v0l-22.9162,64.92792v0z"
             fill="#be752f"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -449,7 +449,7 @@ const Ancient = (props) => (
           <path
             d="M239.95599,552.0541v0l3.20901,-8.19101v0l54.995,-30.23799v0l40.599,-39.972v0v-15.60101v0l14.04199,-13.743v0l4.05099,-7.021v0h-4.05099v0l-1.25998,6.75099v0l-14.31201,15.21201v0c0,0 -0.73199,12.40601 -1.62,15.392c-0.88901,2.98601 -45.99701,37.715 -45.99701,37.715v0l-55.08801,34.38501v0l3.42102,1.07999v0z"
             fill="#281119"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -457,7 +457,7 @@ const Ancient = (props) => (
           <path
             d="M338.759,473.6531v0l-3.51041,5.2206v0l-25.47348,26.82401v0l-11.61511,7.92719v0z"
             fill="#be752f"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -472,7 +472,7 @@ const Ancient = (props) => (
           <path
             d="M129.56958,437.28799v0l-26.64386,40.6855v0l-7.37354,2.8277v0l8.09363,-7.14809v0l7.9212,-12.24191v0l7.92108,-24.1232v0z"
             fill="#281119"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -480,7 +480,7 @@ const Ancient = (props) => (
           <path
             d="M569.604,512.3583v0l15.42979,-9.58621v0l23.4073,-53.24269v0l2.7865,-12.24141v0h-9.2717v0l-18.0022,65.16911v0l-16.9223,8.2811v0z"
             fill="#35131a"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -488,7 +488,7 @@ const Ancient = (props) => (
           <path
             d="M0.073,437.28809v0h677.854v0c0,0 -90.013,12.241 -321.07501,12.241c-178.651,0 -307.505,-7.31599 -356.77899,-10.636z"
             fill="#f6936c"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -496,7 +496,7 @@ const Ancient = (props) => (
           <path
             d="M174.64349,602.7802v0l-10.7851,-35.18411v0l-12.99152,29.3808v0z"
             fill="#78352e"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -504,7 +504,7 @@ const Ancient = (props) => (
           <path
             d="M555.2711,492.60439v0l-22.3475,-13.3233v0l2.2034,11.23491v0z"
             fill="#80352d"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -542,7 +542,7 @@ const Ancient = (props) => (
             <path
               d="M153.3869,422.52479v0c0,0 85.78302,6.121 99.01398,2.341c13.23206,-3.78 68.22601,-17.55299 89.74103,-41.586c21.51501,-24.033 28.12701,-40.95 26.37,-42.454c-1.75598,-1.504 -65.70398,-41.438 -77.94501,-42.158c-12.242,-0.72 -71.26599,41.237 -76.51099,46.807c-5.245,5.569 -60.66901,77.05 -60.66901,77.05z"
               fill="#aba6b4"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -550,7 +550,7 @@ const Ancient = (props) => (
             <path
               d="M451.7359,426.09879v0c0,0 -24.216,6.76199 -35.96201,3.80699c-11.745,-2.95399 -30.547,-8.946 -36.995,-36.545c0,0 25.01602,-2.731 30.24402,0c5.22897,2.73201 42.71298,32.73801 42.71298,32.73801v0z"
               fill="#aba6b4"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -558,7 +558,7 @@ const Ancient = (props) => (
             <path
               d="M339.0899,386.38779v0l-6.815,18.109v0c0,0 -9.96298,6.952 -37.89697,7.089z"
               fill="#8a6f8a"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -566,7 +566,7 @@ const Ancient = (props) => (
             <path
               d="M263.40192,421.78379v0l-11.00104,5.782v0l-19.98199,-0.53999v0c0,0 16.16302,-0.73401 30.98303,-5.242z"
               fill="#8a6f8a"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -574,7 +574,7 @@ const Ancient = (props) => (
             <path
               d="M427.66992,430.45779l-9.285,1.429v0l-11.55103,-4.718v0c0,0 11.04001,2.94 20.83603,3.289z"
               fill="#8a6f8a"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -597,7 +597,7 @@ const Ancient = (props) => (
           <path
             d="M72.6637,567.59609v0l3.51373,-8.06421v0l86.5777,-2.4541v0l60.7948,34.30441v0l-2.10254,-19.30261v0l-56.50818,-38.6582v0l-97.65839,6.62912v0l-6.94745,4.36679v0z"
             fill="#96542f"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -612,7 +612,7 @@ const Ancient = (props) => (
           <path
             d="M595.5784,463.9315v0l-64.9834,10.8918v0l-14.87109,13.2317v0l-61.7998,-24.1235v0l-104.94189,16.86969v0h-15.564v0l-2.11301,2.22491v0l35.53799,-2.22491v0l85.4366,-11.82899v0l62.7867,23.6322v0l17.85709,-13.3233v0l60.84232,-12.3445v0z"
             fill="#d8772c"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
@@ -639,10 +639,10 @@ const Ancient = (props) => (
         <path
           d="M303.48099,512.35809c0.71301,13.87 8.05801,26.22601 14.97101,29.46701c2.65701,1.25299 5.056,2.052 7,2.59201c1.08002,-11.255 1.51199,-34.26201 -0.99399,-38.82001c-3.13202,-5.66 -10.54199,-12.789 -18.51401,-18.86c-0.99399,4.53699 -3.02399,15.12199 -2.46301,25.62099z"
           fill="#090121"
-          fill-opacity="1"
+          fillOpacity="1"
         ></path>
       </g>
-      <g clip-path='url("#ClipPath1757")'>
+      <g clipPath='url("#ClipPath1757")'>
         <use
           xlinkHref="#Image1755"
           transform="translate(224 0),scale(0.44577006507592193 0.44634377967711303)"

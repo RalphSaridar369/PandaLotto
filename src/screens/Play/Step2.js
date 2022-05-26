@@ -7,6 +7,7 @@ import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";
 import { useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
+import Footer from '../../components/Footer/footer';
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -248,6 +249,7 @@ const Step2 = () => {
           </div>
         </div>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 };

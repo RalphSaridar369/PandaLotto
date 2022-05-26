@@ -107,11 +107,11 @@ const footer = () => {
       </div>
 
       <div className="sec2">
-        <a href="https://facebook.com">
+        <a href="https://facebook.com" target="_blank">
           <img src={Fb} />
         </a>
         <img src={charc} />
-        <a href="https://instagram.com">
+        <a href="https://instagram.com" target="_blank">
           <img src={Insta} />
         </a>
       </div>
@@ -121,9 +121,13 @@ const footer = () => {
           <Link to="/previous">
             <div className="sub">Previous Results</div>
           </Link>
-          <div className="sub">Let's Play</div>
+          <Link to='/step'>
+            <div className="sub">Let's Play</div>
+          </Link>
           <div className="sub">Why Panda Lotto</div>
-          <div className="sub">Contact</div>
+          <Link to="/reach-us">
+            <div className="sub">Contact</div>
+          </Link>
           <div className="sub">Terms & Conditions</div>
           <div className="sub">Privacy Policy</div>
         </div>

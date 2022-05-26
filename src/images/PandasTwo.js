@@ -8,7 +8,7 @@ const PandasTwo = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 1077 647"
     {...props}
   >
@@ -24,7 +24,7 @@ const PandasTwo = (props) => (
       </clipPath>
     </defs>
 
-    <g clip-path='url("#ClipPath1046")'>
+    <g clipPath='url("#ClipPath1046")'>
       <use
         xlinkHref="#Image1044"
         transform="translate(0 0),scale(0.8945182724252492 0.902370990237099)"

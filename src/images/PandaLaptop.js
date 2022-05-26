@@ -8,7 +8,7 @@ const PandaLaptop = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 689 786"
     {...props}
   >
@@ -21,7 +21,7 @@ const PandaLaptop = (props) => (
         <path d="M0,786v0v-786v0h689v0v786v0z" />
       </clipPath>
     </defs>
-    <g clip-path='url("#ClipPath1018")'>
+    <g clipPath='url("#ClipPath1018")'>
       <use
         xlinkHref="#Image1016"
         transform="translate(0 0),scale(0.7472885032537961 0.7464387464387464)"

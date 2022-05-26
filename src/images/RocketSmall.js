@@ -8,7 +8,7 @@ const RocketSmall = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    xmlnsAvocode="https://avocode.com/"
+    // xmlnsAvocode="https://avocode.com/"
     viewBox="0 0 82 72"
     className={props.className}
   >
@@ -20,16 +20,16 @@ const RocketSmall = (props) => (
         cy="46.69986441850665"
         r="31.828691413402566"
       >
-        <stop stop-opacity="1" stop-color="#ffffff" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#fcfcfc" offset="0.18"></stop>
-        <stop stop-opacity="1" stop-color="#f2f2f2" offset="0.31"></stop>
-        <stop stop-opacity="1" stop-color="#e2e2e2" offset="0.43"></stop>
-        <stop stop-opacity="1" stop-color="#cbcbcb" offset="0.54"></stop>
-        <stop stop-opacity="1" stop-color="#aeaeae" offset="0.64"></stop>
-        <stop stop-opacity="1" stop-color="#8a8a8a" offset="0.74"></stop>
-        <stop stop-opacity="1" stop-color="#5f5f5f" offset="0.83"></stop>
-        <stop stop-opacity="1" stop-color="#2f2f2f" offset="0.92"></stop>
-        <stop stop-opacity="1" stop-color="#000000" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#ffffff" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#fcfcfc" offset="0.18"></stop>
+        <stop stopOpacity="1" stopColor="#f2f2f2" offset="0.31"></stop>
+        <stop stopOpacity="1" stopColor="#e2e2e2" offset="0.43"></stop>
+        <stop stopOpacity="1" stopColor="#cbcbcb" offset="0.54"></stop>
+        <stop stopOpacity="1" stopColor="#aeaeae" offset="0.64"></stop>
+        <stop stopOpacity="1" stopColor="#8a8a8a" offset="0.74"></stop>
+        <stop stopOpacity="1" stopColor="#5f5f5f" offset="0.83"></stop>
+        <stop stopOpacity="1" stopColor="#2f2f2f" offset="0.92"></stop>
+        <stop stopOpacity="1" stopColor="#000000" offset="1"></stop>
       </radialGradient>
       <linearGradient
         id="LinearGradient1787"
@@ -39,12 +39,12 @@ const RocketSmall = (props) => (
         x2="38.16999999999996"
         y2="15.019999999999982"
       >
-        <stop stop-opacity="1" stop-color="#55fbff" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#51f7fd" offset="0.28"></stop>
-        <stop stop-opacity="1" stop-color="#48eef9" offset="0.49"></stop>
-        <stop stop-opacity="1" stop-color="#38def1" offset="0.68"></stop>
-        <stop stop-opacity="1" stop-color="#21c7e7" offset="0.85"></stop>
-        <stop stop-opacity="1" stop-color="#0ab0dd" offset="0.99"></stop>
+        <stop stopOpacity="1" stopColor="#55fbff" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#51f7fd" offset="0.28"></stop>
+        <stop stopOpacity="1" stopColor="#48eef9" offset="0.49"></stop>
+        <stop stopOpacity="1" stopColor="#38def1" offset="0.68"></stop>
+        <stop stopOpacity="1" stopColor="#21c7e7" offset="0.85"></stop>
+        <stop stopOpacity="1" stopColor="#0ab0dd" offset="0.99"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1799"
@@ -54,10 +54,10 @@ const RocketSmall = (props) => (
         x2="37.719999999999914"
         y2="49.039999999999964"
       >
-        <stop stop-opacity="1" stop-color="#f94e41" offset="0.01"></stop>
-        <stop stop-opacity="1" stop-color="#f2473a" offset="0.12"></stop>
-        <stop stop-opacity="1" stop-color="#d62d20" offset="0.68"></stop>
-        <stop stop-opacity="1" stop-color="#cc2417" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#f94e41" offset="0.01"></stop>
+        <stop stopOpacity="1" stopColor="#f2473a" offset="0.12"></stop>
+        <stop stopOpacity="1" stopColor="#d62d20" offset="0.68"></stop>
+        <stop stopOpacity="1" stopColor="#cc2417" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1809"
@@ -67,10 +67,10 @@ const RocketSmall = (props) => (
         x2="65.57000000000005"
         y2="44.14999999999998"
       >
-        <stop stop-opacity="1" stop-color="#f94e41" offset="0.01"></stop>
-        <stop stop-opacity="1" stop-color="#f2473a" offset="0.12"></stop>
-        <stop stop-opacity="1" stop-color="#d62d20" offset="0.68"></stop>
-        <stop stop-opacity="1" stop-color="#cc2417" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#f94e41" offset="0.01"></stop>
+        <stop stopOpacity="1" stopColor="#f2473a" offset="0.12"></stop>
+        <stop stopOpacity="1" stopColor="#d62d20" offset="0.68"></stop>
+        <stop stopOpacity="1" stopColor="#cc2417" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1819"
@@ -80,10 +80,10 @@ const RocketSmall = (props) => (
         x2="9.170000000000073"
         y2="44.14999999999998"
       >
-        <stop stop-opacity="1" stop-color="#f94e41" offset="0.01"></stop>
-        <stop stop-opacity="1" stop-color="#f2473a" offset="0.12"></stop>
-        <stop stop-opacity="1" stop-color="#d62d20" offset="0.68"></stop>
-        <stop stop-opacity="1" stop-color="#cc2417" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#f94e41" offset="0.01"></stop>
+        <stop stopOpacity="1" stopColor="#f2473a" offset="0.12"></stop>
+        <stop stopOpacity="1" stopColor="#d62d20" offset="0.68"></stop>
+        <stop stopOpacity="1" stopColor="#cc2417" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1829"
@@ -93,11 +93,11 @@ const RocketSmall = (props) => (
         x2="73.46000000000004"
         y2="18.159999999999968"
       >
-        <stop stop-opacity="1" stop-color="#ffe6dc" offset="0.23"></stop>
-        <stop stop-opacity="1" stop-color="#f4dbda" offset="0.34"></stop>
-        <stop stop-opacity="1" stop-color="#d8c0d7" offset="0.54"></stop>
-        <stop stop-opacity="1" stop-color="#ab94d3" offset="0.79"></stop>
-        <stop stop-opacity="1" stop-color="#826ccf" offset="0.99"></stop>
+        <stop stopOpacity="1" stopColor="#ffe6dc" offset="0.23"></stop>
+        <stop stopOpacity="1" stopColor="#f4dbda" offset="0.34"></stop>
+        <stop stopOpacity="1" stopColor="#d8c0d7" offset="0.54"></stop>
+        <stop stopOpacity="1" stopColor="#ab94d3" offset="0.79"></stop>
+        <stop stopOpacity="1" stopColor="#826ccf" offset="0.99"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1840"
@@ -107,8 +107,8 @@ const RocketSmall = (props) => (
         x2="73.46000000000004"
         y2="48.34000000000003"
       >
-        <stop stop-opacity="1" stop-color="#8365bf" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#61379d" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#8365bf" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#61379d" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1869"
@@ -118,8 +118,8 @@ const RocketSmall = (props) => (
         x2="37.01999999999998"
         y2="-15.330000000000041"
       >
-        <stop stop-opacity="1" stop-color="#8365bf" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#61379d" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#8365bf" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#61379d" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1884"
@@ -129,11 +129,11 @@ const RocketSmall = (props) => (
         x2="73.45999999999992"
         y2="18.16999999999996"
       >
-        <stop stop-opacity="1" stop-color="#ffffff" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#ece9f9" offset="0.16"></stop>
-        <stop stop-opacity="1" stop-color="#c5bcee" offset="0.54"></stop>
-        <stop stop-opacity="1" stop-color="#ada0e7" offset="0.83"></stop>
-        <stop stop-opacity="1" stop-color="#a496e5" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#ffffff" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#ece9f9" offset="0.16"></stop>
+        <stop stopOpacity="1" stopColor="#c5bcee" offset="0.54"></stop>
+        <stop stopOpacity="1" stopColor="#ada0e7" offset="0.83"></stop>
+        <stop stopOpacity="1" stopColor="#a496e5" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1904"
@@ -143,8 +143,8 @@ const RocketSmall = (props) => (
         x2="36.80000000000007"
         y2="6.980000000000018"
       >
-        <stop stop-opacity="1" stop-color="#b98fbd" offset="0.3"></stop>
-        <stop stop-opacity="1" stop-color="#8365bf" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#b98fbd" offset="0.3"></stop>
+        <stop stopOpacity="1" stopColor="#8365bf" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1912"
@@ -154,8 +154,8 @@ const RocketSmall = (props) => (
         x2="36.799999999999955"
         y2="7.909999999999968"
       >
-        <stop stop-opacity="1" stop-color="#8365bf" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#61379d" offset="1"></stop>
+        <stop stopOpacity="1" stopColor="#8365bf" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#61379d" offset="1"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1920"
@@ -165,11 +165,11 @@ const RocketSmall = (props) => (
         x2="36.799999999999955"
         y2="12.590000000000032"
       >
-        <stop stop-opacity="1" stop-color="#ff871a" offset="0.01"></stop>
-        <stop stop-opacity="1" stop-color="#ff911c" offset="0.18"></stop>
-        <stop stop-opacity="1" stop-color="#ffad21" offset="0.47"></stop>
-        <stop stop-opacity="1" stop-color="#ffda2b" offset="0.85"></stop>
-        <stop stop-opacity="1" stop-color="#ffee2f" offset="0.99"></stop>
+        <stop stopOpacity="1" stopColor="#ff871a" offset="0.01"></stop>
+        <stop stopOpacity="1" stopColor="#ff911c" offset="0.18"></stop>
+        <stop stopOpacity="1" stopColor="#ffad21" offset="0.47"></stop>
+        <stop stopOpacity="1" stopColor="#ffda2b" offset="0.85"></stop>
+        <stop stopOpacity="1" stopColor="#ffee2f" offset="0.99"></stop>
       </linearGradient>
       <linearGradient
         id="LinearGradient1933"
@@ -179,12 +179,12 @@ const RocketSmall = (props) => (
         x2="36.799999999999955"
         y2="12.590000000000032"
       >
-        <stop stop-opacity="1" stop-color="#ffffff" offset="0"></stop>
-        <stop stop-opacity="1" stop-color="#ffddd3" offset="0.18"></stop>
-        <stop stop-opacity="1" stop-color="#ffad95" offset="0.46"></stop>
-        <stop stop-opacity="1" stop-color="#ff8a67" offset="0.7"></stop>
-        <stop stop-opacity="1" stop-color="#ff754b" offset="0.89"></stop>
-        <stop stop-opacity="1" stop-color="#ff6d41" offset="0.99"></stop>
+        <stop stopOpacity="1" stopColor="#ffffff" offset="0"></stop>
+        <stop stopOpacity="1" stopColor="#ffddd3" offset="0.18"></stop>
+        <stop stopOpacity="1" stopColor="#ffad95" offset="0.46"></stop>
+        <stop stopOpacity="1" stopColor="#ff8a67" offset="0.7"></stop>
+        <stop stopOpacity="1" stopColor="#ff754b" offset="0.89"></stop>
+        <stop stopOpacity="1" stopColor="#ff6d41" offset="0.99"></stop>
       </linearGradient>
     </defs>
     <desc>Generated with Avocode.</desc>
@@ -242,7 +242,7 @@ const RocketSmall = (props) => (
               <path
                 d="M13.65081,49.7532c-0.3551,0.55249 -0.74921,1.14416 -1.1832,1.75549c-3.74805,-0.57227 -6.66757,-1.14416 -8.52188,-1.53857c-0.11838,-0.67041 -0.2168,-1.32166 -0.29611,-1.95276c2.091,0.45337 5.52347,1.12415 10.00119,1.73584z"
                 fill="#9185e7"
-                fill-opacity="1"
+                fillOpacity="1"
               ></path>
             </g>
           </g>
@@ -251,7 +251,7 @@ const RocketSmall = (props) => (
               <path
                 d="M43.16097,51.1732c-0.2168,0.61157 -0.47342,1.28247 -0.76913,2.01245c-3.29413,0.13794 -6.47034,0.13794 -9.52771,0.07886c-0.25623,-0.72998 -0.51291,-1.40088 -0.71017,-1.99268c3.49142,0.09888 7.18005,0.0791 11.00702,-0.09863z"
                 fill="#9185e7"
-                fill-opacity="1"
+                fillOpacity="1"
               ></path>
             </g>
           </g>
@@ -260,7 +260,7 @@ const RocketSmall = (props) => (
               <path
                 d="M71.2509,47.01151c-0.09845,0.65076 -0.19733,1.40027 -0.31567,2.1499c-2.99841,0.76917 -5.97693,1.42041 -8.93597,1.95276c-0.43396,-0.65076 -0.84796,-1.26257 -1.18359,-1.81445c3.45239,-0.59204 6.94379,-1.34143 10.43524,-2.28821z"
                 fill="#9185e7"
-                fill-opacity="1"
+                fillOpacity="1"
               ></path>
             </g>
           </g>
@@ -274,7 +274,7 @@ const RocketSmall = (props) => (
             <path
               d="M35.66525,51.647c-11.40158,-0.07886 -20.98871,-1.38086 -26.96567,-2.44629c-0.0195,0 -0.47342,-0.49316 -0.47342,-0.49316c-0.86798,-22.62549 22.31018,-56.39648 27.7742,-64.0105c0.21722,-0.02002 0.45395,-0.03955 0.67075,-0.02002c-6.41095,21.83667 -2.6828,55.05493 -1.00586,66.96997z"
               fill="#ffffff"
-              fill-opacity="1"
+              fillOpacity="1"
             ></path>
           </g>
           <g>
@@ -291,7 +291,7 @@ const RocketSmall = (props) => (
                 <path
                   d="M20.1907,28.42062c0,-10.20553 8.27322,-18.47875 18.47875,-18.47875c10.20553,0 18.47875,8.27322 18.47875,18.47875c0,10.20553 -8.27322,18.47875 -18.47875,18.47875c-10.20553,0 -18.47875,-8.27322 -18.47875,-18.47875z"
                   fill="#61379d"
-                  fill-opacity="1"
+                  fillOpacity="1"
                 ></path>
               </g>
               <g transform="rotate(-83.0568833944233 36.80000000000001 25.460000000000036)">
@@ -325,21 +325,21 @@ const RocketSmall = (props) => (
               <path
                 d="M31.09449,32.65c1.36468,1.06689 2.10065,2.40576 1.64337,2.99072c-0.45721,0.58447 -1.93402,0.19409 -3.29871,-0.87231c-1.36468,-1.06689 -2.10059,-2.40576 -1.64331,-2.99048c0.45721,-0.58496 1.93402,-0.19434 3.29864,0.87207z"
                 fill="#ffffff"
-                fill-opacity="1"
+                fillOpacity="1"
               ></path>
             </g>
           </g>
           <path
             d="M63.77466,49.20083c6.94373,-7.31836 2.38708,-22.68518 -3.9848,-36.35498c10.19849,18.1875 13.67029,34.08667 13.67029,34.08667c-3.23517,0.90698 -6.48981,1.65674 -9.68549,2.26831z"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
         <g>
           <path
             d="M48.33186,28.30239c-0.17566,0.92908 -0.65991,1.61719 -1.08228,1.53735c-0.422,-0.07971 -0.62213,-0.89697 -0.4469,-1.82605c0.17529,-0.92896 0.65991,-1.61755 1.08191,-1.53772c0.4223,0.07971 0.6225,0.89734 0.44727,1.82642z"
             fill="#ffffff"
-            fill-opacity="1"
+            fillOpacity="1"
           ></path>
         </g>
       </g>
