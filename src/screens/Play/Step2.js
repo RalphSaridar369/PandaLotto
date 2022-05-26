@@ -6,6 +6,7 @@ import Panda1 from "../../images/panda.png";
 import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";
 import { useNavigate } from "react-router-dom";
+import Modal from 'react-modal';
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -20,6 +21,7 @@ const Step2 = () => {
   // const [active3, setActive3] = useState(false);
   const [ticket, setTicket] = useState();
   const [amount, setAmount] = useState();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleOnChange = (e) =>{
     if (typeof e.target.value === 'string' && e.target.value.trim() !== '') {
@@ -45,8 +47,26 @@ const Step2 = () => {
 
   const navigate = useNavigate();
 
+  const customStyles = {
+    content: {
+      borderRadius:'10px',
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding:'10px 50px'
+    },
+  };
+
   const checkTicket = () =>{
     navigate('/step3')
+  }
+
+  const settingTicket =(id) =>{
+    setTicket(id);
+    setModalIsOpen(true)
   }
 
   const steps = [
@@ -153,6 +173,34 @@ const Step2 = () => {
         </div>
       </div>
       <div className="main-containers">
+      <Modal
+        style={customStyles}
+        isOpen={modalIsOpen}>
+          <div className="modal-close-icon-container">
+            <img src={require('../../icons/Close.png')} className="modal-close-icon"
+            onClick={()=>setModalIsOpen(false)}/>
+          </div>
+          <div className="panda-modal-container">
+            <div className="panda-modal-child">
+              <h2>Your selected ticket is:</h2>
+              <h1 className="panda-name">{tickets[ticket - 1]?.value}$</h1>
+              <p>Are you sure you want to continue ?</p>
+              <div className="modal-buttons-container">
+                <div className="modal-button" style={{backgroundColor:'lightgray'}}
+                onClick={()=>setModalIsOpen(false)}>
+                  Cancel
+                </div>
+                <div className="modal-button" style={{backgroundColor:'#fad221'}}
+                onClick={checkTicket}>
+                  Continue
+                </div>
+              </div>
+            </div>
+            <div className="panda-modal-child">
+              <img src={require('../../images/ticket_panda.png')} className="panda-modal-img" />
+            </div>
+          </div>
+        </Modal>
         {/* <div className="main-left">
           {steps.map((item, index) => {
             return (
@@ -171,7 +219,7 @@ const Step2 = () => {
               Select a ticket or add an amount:
             </h3>
             <div className="ticket-container">
-              {tickets.map((item, index) => <div onClick={() => setTicket(item.id)} className={`ticket-button ${ticket == item.id && "active-ticket"}`} key={index}>{item.value}$</div>)}
+              {tickets.map((item, index) => <div onClick={() => settingTicket(item.id)} className={`ticket-button ${ticket == item.id && "active-ticket"}`} key={index}>{item.value}$</div>)}
             </div>
             <div className="input-container">
               <h4>
@@ -187,8 +235,8 @@ const Step2 = () => {
                 value={amount} />
             </div>
             <hr></hr>
-            <div className="submit-button" onClick={checkTicket}>
-              Next
+            <div className="submit-button" onClick={()=>setModalIsOpen(true)}>
+              Buy Ticket
             </div>
           </div>
         </div>
