@@ -175,7 +175,7 @@ const Footer = () => {
 
       <div className="sec3">
         <div className="sec3-1">
-          <Link classname="footer__link" style={{textDecoration:'none'}} to="/previous">
+          <Link className="footer__link" style={{textDecoration:'none'}} to="/previous">
             <div className="sub">Previous Results</div>
           </Link>
           <Link classname="footer__link" style={{textDecoration:'none'}} to='/step1'>

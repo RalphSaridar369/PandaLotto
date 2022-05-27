@@ -59,12 +59,12 @@ const Login = () => {
     }
   };
 
-  const handleLogin = () => {
+  const handleLogin = async() => {
     let { userId, password } = data;
     formValidator({ userId, password }, "login", () => {
       setItem("user-data", { userId, password });
       setItem("token", 1231);
-      navigate("/");
+      // navigate("/");
     });
   };
 

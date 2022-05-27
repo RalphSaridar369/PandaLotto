@@ -3,7 +3,7 @@ import axios from 'axios'
 export let api = axios.create({
     baseURL:"http://camabulo.com/api/v2/",
     headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"application/x-www-form-urlencoded"
     }
 })
 

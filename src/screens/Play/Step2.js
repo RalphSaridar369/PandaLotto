@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TextInput } from "../../components/TextInput/Textinput";
 import "./Play.scss";
 import "./Step2.scss";
@@ -8,6 +8,7 @@ import Panda2 from "../../images/panda2.png";
 import { useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
 import Footer from '../../components/Footer/footer';
+import {useLocation} from 'react-router-dom';
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -17,12 +18,16 @@ const myStyle = {
 
 const Step2 = () => {
 
-  // const [active1, setActive1] = useState(false);
-  // const [active2, setActive2] = useState(false);
-  // const [active3, setActive3] = useState(false);
+  const location = useLocation();
   const [ticket, setTicket] = useState();
   const [amount, setAmount] = useState();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [routeData, setRouteData] = useState();
+
+  useEffect(()=>{
+    console.log(location.state)
+    setRouteData(location.state.panda)
+  },[])
 
   const handleOnChange = (e) =>{
       setAmount(e.target.value)
@@ -59,7 +64,7 @@ const Step2 = () => {
   };
 
   const checkTicket = () =>{
-    navigate('/step3')
+    navigate('/step3',{state:{amount:amount || tickets[ticket - 1]?.value, panda:routeData}})
   }
 
   const settingTicket =(id) =>{

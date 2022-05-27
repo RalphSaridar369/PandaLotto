@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TextInput } from "../../components/TextInput/Textinput";
 import "./Play.scss";
 import "./Step3.scss";
 import Panda1 from "../../images/panda.png";
 import Panda2 from "../../images/panda2.png";
 // import Stepper from "./components/Stepper/Stepper";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const myStyle = {
   backgroundColor: "#090021",
@@ -36,9 +36,15 @@ const Step2 = () => {
   const [paymentType, setPaymentType] = useState();
   const [email, setEmail] = useState('');
   const [balance, setBalance] = useState(500)
+  const [routeData, setRouteData] = useState()
 
   const navigate = useNavigate();
+  const location = useLocation(); 
 
+  useEffect(()=>{
+    // console.log(location.state)
+    setRouteData(location.state)
+  },[])
 
   const steps = [
     {

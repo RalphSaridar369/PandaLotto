@@ -60,7 +60,7 @@ const Play = () => {
   }
 
   const confirmPanda = () => {
-    navigate("/step2");
+    navigate("/step2",{state:{panda:panda}});
   };
 
   return (
